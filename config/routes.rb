@@ -1,4 +1,5 @@
 StarterRubyRails::Application.routes.draw do
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -57,6 +58,8 @@ StarterRubyRails::Application.routes.draw do
   # # Home page
   # GET     /                                           controllers.Application.index(ref: Option[String])
   root 'application#index'
+
+  get 'application/jobs'
 
   # # Document detail
   get '/document/:id/:slug', to: 'application#document', constraints: {id: /[-_a-zA-Z0-9]{16}/}, as: :document

@@ -4,6 +4,17 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
+  # before_action :configure_permitted_parameters, if: :devise_controller?
+
+  # protected
+
+  def configure_permitted_parameters
+      devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:first_name, :last_name, :email, :password, :remember_me)}
+      devise_parameter_sanitizer.permit(:sign_in) { |u| u.permit(:email, :password, :remember_me)}
+      devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:first_name, :last_name, :email, :password, :current_password, :remember_me)}
+  end
+
+
   # Rescue bad preview cookies errors for some actions
   rescue_from Prismic::Error, with: :clearcookies
 
@@ -17,6 +28,14 @@ class ApplicationController < ActionController::Base
     })
   end
 
+  def jobs
+    @google_id = api.experiments.current
+    @documents = api.all({
+      "page" => params[:page] ? params[:page] : "1",
+      "page_size" => params[:page_size] ? params[:page_size] : "20",
+      "ref" => ref
+    })
+  end
   # Single-document page action: mostly, setting the @document instance variable, and checking the URL
   def document
     id = params[:id]

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>StarterRubyRails</title>
+  <title>Metas</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -10,9 +10,27 @@
 
 <header>
   <a href="/">
-    <h1>Your prismic.io project</h1>
+    <h1>METAS</h1>
   </a>
 </header>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+<nav>
+    <% if user_signed_in? %>
+       <li><%= link_to "Home", root_path %></li> 
+       <li><%= link_to "Jobs", application_jobs_path %></li> 
+       <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "log_out" %></li>
+    <% else %>
+    <div id = "sign_in">
+       <li><%= link_to "Home", root_path %></li> 
+       <li><%= link_to "Signup", new_user_registration_path %></li>
+       <li><%= link_to "Login", new_user_session_path %></li>
+    <% end %>
+   </div><!--signup_in-->
+</nav>
+
 
 <%= yield %>
 
