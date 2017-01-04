@@ -2,7 +2,7 @@ header{
   margin-top: -125px;
 }
 .nav.navbar-nav.navbar-right a{
-  color: #32004A;
+  color: #281868;
 }
 
 .heading-font {
@@ -29,7 +29,7 @@ a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  color: #fdcc52;
+  color: #05d5fa;
 }
 a:hover,
 a:focus {
@@ -74,7 +74,7 @@ p {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
-  color: #32004a;
+  color: #281868;
 }
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
@@ -114,7 +114,7 @@ p {
     border-color: transparent;
   }
   .navbar-default .navbar-header .navbar-brand {
-    color: #32004a;
+    color: #281868;
   }
   .navbar-default .navbar-header .navbar-brand:hover,
   .navbar-default .navbar-header .navbar-brand:focus {
@@ -159,7 +159,7 @@ header {
   /* Chrome 10-25, Safari 5.1-6 */
   background: url("metas-main-img.jpg");
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: #32004A;
+  color: #281868;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -262,14 +262,58 @@ header .device-container .screen img {
   text-shadow: none;
   background: #222222;
 }
-img::selection {
-  color: white;
-  background: transparent;
+// **************** RESOURCES **************** //
+.service-img{
+  background-image: url(placeholder-img.jpg);
+  background-size: cover;
+  height: 300px;
 }
-img::-moz-selection {
-  color: white;
-  background: transparent;
+#services{
+  padding: 2em 0em 5em 0em;
 }
-body {
-  webkit-tap-highlight-color: #222222;
+#services h2{
+  color: #281868;
+}
+// **************** FOOTER **************** //
+#footer{
+  background-color: #281868;
+  padding: 2em 0em 2em 0em;
+}
+#footer h4{
+  color: #05d5fa;
+}
+#footer li{
+  color: white;
+  font-size: 14px;
+  font-weight: 100;
+  text-align: left;
+  list-style-type: none;
+}
+#social-icons-display a{
+  display: inline-block;
+}
+.fb-icon{
+  background-image: url(fb-icon.svg);
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  margin-left: 1em;
+}
+.ig-icon{
+  background-image: url(ig-icon.svg);
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+}
+.in-icon{
+  background-image: url(in-icon.svg);
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+}
+.tw-icon{
+  background-image: url(tw-icon.svg);
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
 }
