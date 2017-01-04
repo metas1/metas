@@ -8,30 +8,40 @@
 </head>
 <body>
 
-<header>
-  <a href="/">
-    <h1>METAS</h1>
-  </a>
-</header>
+<nav id="mainNav" class="navbar navbar-default">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="/">METAS</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+            <% if user_signed_in? %>
+              <li><%= link_to "Jobs", application_jobs_path %></li> 
+              <li><%= link_to "Resources", application_resources_path %></li>
+              <li><%= link_to "About", application_about_path %></li>
+              <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "log_out" %></li>
+            <% else %>
+              <li><%= link_to "Jobs", application_jobs_path %></li> 
+              <li><%= link_to "Resources", application_resources_path %></li>
+              <li><%= link_to "About", application_about_path %></li>
+              <li><%= link_to "Signup", new_user_registration_path %></li>
+              <li><%= link_to "Login", user_session_path %></li>
+            <% end %>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
-
-<nav>
-    <% if user_signed_in? %>
-       <li><%= link_to "Home", root_path %></li> 
-       <li><%= link_to "Jobs", application_jobs_path %></li> 
-       <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "log_out" %></li>
-    <% else %>
-    <div id = "sign_in">
-       <li><%= link_to "Home", root_path %></li> 
-       <li><%= link_to "Signup", new_user_registration_path %></li>
-       <li><%= link_to "Login", new_user_session_path %></li>
-    <% end %>
-   </div><!--signup_in-->
-</nav>
-
-
 <%= yield %>
 
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -43,6 +53,7 @@
 <script src="//static.cdn.prismic.io/prismic.min.js"></script>
 <% # You can safely remove this block if you don't use experiments - your Google Analytics block should be before this tag %>
 <% render 'partials/experiments', :google_id => @google_id %>
+
 
 </body>
 </html>

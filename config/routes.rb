@@ -61,6 +61,10 @@ StarterRubyRails::Application.routes.draw do
 
   get 'application/jobs'
 
+  get 'application/resources'
+
+  get 'application/about'
+
   # # Document detail
   get '/document/:id/:slug', to: 'application#document', constraints: {id: /[-_a-zA-Z0-9]{16}/}, as: :document
 

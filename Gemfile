@@ -4,6 +4,11 @@ gem 'devise', '~> 4.0.2'
 
 gem 'railties', '~> 4.2.7.1' 
 
+gem 'bootstrap-sass', '~> 3.2.0'
+
+gem 'autoprefixer-rails'
+
+gem 'sprockets', '2.8'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~>4.2.7.1'
 
