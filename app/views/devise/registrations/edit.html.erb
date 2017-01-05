@@ -25,14 +25,14 @@
     <%= f.email_field :email, autofocus: true %>
   </div>
 
-  <div class="field">
-    <%= f.label :about %><br />
-    <%= f.text_field :about, autofocus: true %>
-  </div>
+  <div class="field"> 
+      <%= f.label :about %><br />
+      <%= f.text_area :about, autofocus: true, class: "form-control" %>
+  </div>  
 
   <div class="field">
     <%= f.label :skills %><br />
-    <%= f.text_field :skills, autofocus: true %>
+    <%= f.text_area :skills, autofocus: true, class: "form-control" %>
   </div>
 
   <div class="field">
