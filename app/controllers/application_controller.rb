@@ -4,6 +4,9 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
+  # This code makes sure not to allow anyone to view any page other than 'index', unless they are signed in
+  before_action :authenticate_user!, :except => [:index]
+
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   # protected  // For some reason uncommenting this "protected" code prevents application/jobs from showing
