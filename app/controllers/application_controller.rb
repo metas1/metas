@@ -14,6 +14,10 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:first_name, :last_name, :email, :about, :skills, :password, :current_password, :remember_me)}
   end
 
+  # This block of code is what routes users to welcome page after login
+  def after_sign_in_path_for(resource)
+    request.env['omniauth.origin'] || stored_location_for(resource) || application_welcome_path
+  end
 
   # Rescue bad preview cookies errors for some actions
   rescue_from Prismic::Error, with: :clearcookies
@@ -35,6 +39,7 @@ class ApplicationController < ActionController::Base
       "page_size" => params[:page_size] ? params[:page_size] : "20",
       "ref" => ref
     })
+
   end
   # Single-document page action: mostly, setting the @document instance variable, and checking the URL
   def document
@@ -70,5 +75,4 @@ class ApplicationController < ActionController::Base
     cookies[Prismic::PREVIEW_COOKIE] = { value: preview_token, expires: 30.minutes.from_now }
     redirect_to redirect_url
   end
-
 end

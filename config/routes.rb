@@ -63,6 +63,8 @@ StarterRubyRails::Application.routes.draw do
   # GET     /                                           controllers.Application.index(ref: Option[String])
   root 'application#index'
 
+  get 'application/welcome'
+
   get 'application/jobs'
 
   get 'application/resources'

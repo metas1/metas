@@ -8,38 +8,14 @@
 </head>
 <body>
 
-<nav id="mainNav" class="navbar navbar-default">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand page-scroll" href="/">METAS</a>
-        </div>
+  <% if user_signed_in? %>
+    <%= render 'usernavbar' %>
+  <% else %>
+    <%= render 'guestnavbar' %>
+  <% end %>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-            <% if user_signed_in? %>
-              <li><%= link_to "Jobs", application_jobs_path %></li> 
-              <li><%= link_to "Resources", application_resources_path %></li>
-              <li><%= link_to "About", application_about_path %></li>
-              <li><%= link_to "My Profile", edit_user_registration_path%></li>
-              <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "log_out" %></li>
-            <% else %>
-              <li><a class="modal-cursor" data-toggle="modal" data-target="#myModal-2">LOGIN</a></li>
-              <li><a class="modal-cursor" data-toggle="modal" data-target="#myModal">SIGNUP</a></li>
-            <% end %>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-</nav>
-
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
 <%= yield %>
 
@@ -48,7 +24,6 @@
 <!-- Modal for Sign up -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
-
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
@@ -56,7 +31,7 @@
         <h4 class="modal-title">SIGN UP</h4>
       </div>
       <div class="modal-body">
-        <p>for exlusive job opportunities and career resources</p>
+        <p>For exlusive job opportunities and career resources</p>
         <%= render :template=> 'devise/registrations/new' %>
       </div>
     </div>
@@ -66,7 +41,6 @@
 <!-- Modal for Log in-->
 <div id="myModal-2" class="modal fade" role="dialog">
   <div class="modal-dialog">
-
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
@@ -74,7 +48,6 @@
         <h4 class="modal-title">LOG IN</h4>
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
         <%= render :template=> 'devise/sessions/new' %>
       </div>
     </div>
@@ -90,7 +63,6 @@
 <script src="//static.cdn.prismic.io/prismic.min.js"></script>
 <% # You can safely remove this block if you don't use experiments - your Google Analytics block should be before this tag %>
 <% render 'partials/experiments', :google_id => @google_id %>
-
 
 </body>
 </html>
