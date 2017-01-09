@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'devise', '~> 4.0.2'
 
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
+
 gem 'railties', '~> 4.2.7.1' 
 
 gem 'bootstrap-sass', '~> 3.2.0'

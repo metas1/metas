@@ -38,7 +38,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
@@ -237,7 +238,18 @@ header .device-container .screen img {
   cursor: pointer;
   background-color: #261762;
 }
-
+.btn-modals{
+  color: white;
+  background-color: #261762;
+}
+.btn-modals:hover{
+  color: #261762;
+  background-color: white;
+  border: 3px solid #261762;
+}
+.modal-backdrop {
+   background-color: rgba(38, 23, 98, 1);
+}
 // **************** NAVBARS**************** //
 
 nav {border-radius: 0 !important; }
@@ -294,11 +306,55 @@ nav {border-radius: 0 !important; }
 .user-navbar-links{
   margin-top: 1em;
 }
-
-#guestNavBar ul li a { color: #05d5fa }
+#userNavBar a:hover {
+  color: #05d5fa;
+}
+#guestNavBar ul li a { 
+  color: white
+}
+#guestNavBar ul li a:hover { 
+  color: #261762
+}
 .metas-logo {
   background-image: url(metas_logo.png);
   background-repeat: no-repeat;
   height: 80px;
   width: 700px;
+}
+
+// **************** EDIT PROFILE **************** //
+
+
+.editprofile h1 {
+  color: #0EF4B5;
+}
+
+.editprofile  h3{
+  color: #0EF4B5
+}
+
+.editprofile .btn-custom {
+  margin-top: 1.5em;
+  border: 4px solid #261762;
+  color: #261762;
+  background-color: white;
+}
+.editprofile .btn-custom:hover{
+  background-color: #0EF4B5;
+}
+.default-img{
+  // border: 4px solid red;
+  // background-image: url(userphoto.png);
+  // background-repeat: no-repeat;
+  // height: 290px;
+  // width: 290px;
+}
+
+.editprofile input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin-top: 1em;
+    width: 260px;
+    height: 35px;
 }
