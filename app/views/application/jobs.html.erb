@@ -1,36 +1,42 @@
+<div class="container">
+  <form action="/search" method="GET">
+    <input type="text" name="q" value="">
+    <input type="submit" class="btn btn-info" value="Search Jobs by Keyword">
+  </form>
 
-<form action="/search" method="GET">
-  <input type="text" name="q" value="">
-  <input type="submit" value="Search Jobs by Keyword">
-</form>
+  <h2>
+    <%=
+      case @documents.total_results_size
+      when 0
+        "No document found"
+      when 1
+        "One document found"
+      else
+        "#{@documents.total_results_size} Current Available Jobs"
+      end
+    %>
+  </h2>
 
-<h2>
-  <%=
-    case @documents.total_results_size
-    when 0
-      "No document found"
-    when 1
-      "One document found"
-    else
-      "#{@documents.total_results_size} Current Available Jobs"
-    end
-  %>
-</h2>
-<p></p>
-<ul>
-  <% @documents.each do |doc| %>
-    <li>
-      <%= link_to doc.slug, link_resolver().link_to(doc) %>
-      <%#
-        We could have written document_path(id: doc.id, slug: doc.slug, ref: maybe_ref);
-        but it's better to use the link_resolver, as it allows you to maintain in one place
-        the way all the documents' URLs are supposed to be written, whatever their types.
-      %>
-    </li>
-  <% end %>
-</ul>
+    <% @documents.each do |doc| %>
 
+    <table class="table table-striped">
+
+      <tbody>
+        <tr>
+          <td>
+            <h2>
+              <%= doc.first_title %>
+              <% doc.id %>
+            </h2>
+            <p>
+              Click here for more info <%= link_to doc.slug, link_resolver().link_to(doc) %>
+            </p>
+            <div class="btn btn-success pull-right">Apply</div>
+          <td>
+        </tr>
+      </tbody>
+    </table>
+     <% end %>
 <hr>
-
 <%= paginate @documents %>
-
+</div>
