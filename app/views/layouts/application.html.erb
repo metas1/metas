@@ -9,13 +9,13 @@
 <body>
 
   <% if user_signed_in? %>
-    <%= render 'usernavbar' %>
+    <%= render 'usernavbar'  unless current_page?(application_welcome_path)%> 
   <% else %>
     <%= render 'guestnavbar' %>
   <% end %>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 
 <%= yield %>
 

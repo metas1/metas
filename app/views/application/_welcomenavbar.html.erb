@@ -1,4 +1,4 @@
-<nav id="guestNavBar" class="navbar navbar-default">
+<nav id="welcomeNavBar" class="navbar navbar-default">
     <div class="container">
         <div class="navbar-header col-md-6">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -12,9 +12,8 @@
                 <li><%= link_to "Jobs", application_jobs_path %></li> 
                 <li><%= link_to "Resources", application_resources_path %></li>
                 <li><%= link_to "About", application_about_path %></li>
-                <li><%#= link_to "My Profile", edit_user_registration_path%></li>
-                <li class="test"><a class="btn-to-modal" data-toggle="modal" data-target="#myModal-2">LOGIN</a></li>
-                <li class="test"><a class="btn-to-modal" data-toggle="modal" data-target="#myModal">SIGNUP</a></li>
+                <li><%= link_to "My Profile", edit_user_registration_path%></li>
+                <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "log_out" %></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
