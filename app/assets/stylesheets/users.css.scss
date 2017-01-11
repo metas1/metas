@@ -1,3 +1,75 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// **************** 	SIGN-UP-FORM-ON-MAIN-PAGE **************** //
+
+.not-modal-sign-up-form-submit-btn{
+  color: white;
+  background-color: $metas-purple;
+}
+.not-modal-sign-up-form-submit-btn:hover{
+  color: white;
+  background-color: #200c6e;
+  border: 3px solid $metas-purple;
+}
+.signup-title-index-form{
+  color: $metas-purple;
+  font-weight: 800;
+  margin-left: 2.3em;
+}
+// **************** MODALS **************** //
+
+.btn-to-modal{                      //on navbar
+  cursor: pointer;
+  background-color: $metas-purple;
+}
+.btn-in-modals{
+  color: white;
+  background-color: $metas-purple;
+}
+.btn-in-modals:hover{
+  color: white;
+  background-color: white;
+  background-color: #200c6e;
+}
+.modal-backdrop {
+   background-color: rgba(38, 23, 98, 1);
+}
+.modal-header{                //overrides bootstrap class for border bottom in modal forms
+  border-bottom: none;
+}
+.modal-title {
+    line-height: 1.428571429;
+    font-size: 2.5em;
+    color: $metas-purple;
+    margin-left: 0.8em;
+}
+.modal-body p{
+  margin-left: 2.5em;
+}
+
+// **************** EDIT PROFILE **************** //
+
+.editprofile h1, h3 {
+  color: #0EF4B5;
+}
+.editprofile .btn-custom {
+  margin-top: 1.5em;
+  border: 4px solid $metas-purple;
+  color: $metas-purple;
+  background-color: white;
+}
+.editprofile .btn-custom:hover{
+  background-color: #0EF4B5;
+}
+.editprofile input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin-top: 1em;
+    width: 260px;
+    height: 35px;
+}
+

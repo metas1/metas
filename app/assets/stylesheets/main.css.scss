@@ -224,43 +224,11 @@ header .device-container .screen img {
   width: 380px;
   background-size: contain;
 }
-// **************** MODALS **************** //
 
-.btn-to-modal{                      //on navbar
-  cursor: pointer;
-  background-color: $metas-purple;
-}
-.btn-in-modals{
-  color: white;
-  background-color: $metas-purple;
-}
-.btn-in-modals:hover{
-  color: white;
-  background-color: white;
-  background-color: #200c6e;
-}
-.modal-backdrop {
-   background-color: rgba(38, 23, 98, 1);
-}
-
-// **************** FORM-ON-MAIN-PAGE **************** //
-
-.not-modal-sign-up-form-submit-btn{
-  color: white;
-  background-color: $metas-purple;
-}
-.not-modal-sign-up-form-submit-btn:hover{
-  color: white;
-  background-color: #200c6e;
-  border: 3px solid $metas-purple;
-}
 // **************** NAVBARS**************** //
 
 nav {border-radius: 0 !important; }
 
-// .nav.navbar-nav.navbar-right a{
-//   color: $metas-purple;
-// }
 .navbar-default {
   z-index: 1;
   -webkit-transition: all 0.35s;
@@ -354,35 +322,6 @@ nav {border-radius: 0 !important; }
 #welcomeNavBar ul li a:hover{
   color: $metas-celeste;;
 }
-.metas-logo {
-  background-image: url(metas_logo.png);
-  background-repeat: no-repeat;
-  height: 80px;
-  width: 700px;
-}
-
-// **************** EDIT PROFILE **************** //
-
-.editprofile h1, h3 {
-  color: #0EF4B5;
-}
-.editprofile .btn-custom {
-  margin-top: 1.5em;
-  border: 4px solid $metas-purple;
-  color: $metas-purple;
-  background-color: white;
-}
-.editprofile .btn-custom:hover{
-  background-color: #0EF4B5;
-}
-.editprofile input, button, select, textarea {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    margin-top: 1em;
-    width: 260px;
-    height: 35px;
-}
 
 // **************** METAS LOGOS MAIN AND FOOTER **************** //
 
@@ -428,9 +367,4 @@ input, button, select, textarea {
     font-style: italic;
     width: 290px;
     height: 40px;
-}
-.signup-title-index-form{
-  color: $metas-purple;
-  font-weight: 800;
-  margin-left: 2.3em;
 }
