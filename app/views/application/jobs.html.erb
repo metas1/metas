@@ -24,12 +24,9 @@
       <tbody>
         <tr>
           <td>
-            <h2>
-              <%= doc.first_title %>
-              <% doc.id %>
-            </h2>
             <p>
-              Click here for more info <%= link_to doc.slug, link_resolver().link_to(doc) %>
+              <%= doc.as_html_safe(link_resolver())%>
+              <% doc.id %>
             </p>
             <div class="btn btn-success pull-right">Apply</div>
           <td>
