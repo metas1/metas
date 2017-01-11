@@ -1,39 +1,39 @@
 <div class="container">
-  <form action="/search" method="GET">
-    <input type="text" name="q" value="">
-    <input type="submit" class="btn btn-info" value="Search Jobs by Keyword">
-  </form>
 
-  <h2>
-    <%=
-      case @documents.total_results_size
-      when 0
-        "No document found"
-      when 1
-        "One document found"
-      else
-        "#{@documents.total_results_size} Current Available Jobs"
-      end
-    %>
-  </h2>
+    <form action="/search" method="GET">
+      <input class="col-md-6 col-md-offset-1" type="text" name="q" value="" placeholder= "Keyword(s)">
+      &nbsp;&nbsp;<input type="submit" class="btn btn-info" value="Search" >
+    </form>
 
-    <% @documents.each do |doc| %>
+    <h2>
+      <%=
+        case @documents.total_results_size
+        when 0
+          "No document found"
+        when 1
+          "One document found"
+        else
+          "#{@documents.total_results_size} Results"
+        end
+      %>
+    </h2>
 
-    <table class="table table-striped">
+      <% @documents.each do |doc| %>
 
-      <tbody>
-        <tr>
-          <td>
-            <p>
-              <%= doc.as_html_safe(link_resolver())%>
-              <% doc.id %>
-            </p>
-            <div class="btn btn-success pull-right">Apply</div>
-          <td>
-        </tr>
-      </tbody>
-    </table>
-     <% end %>
-<hr>
-<%= paginate @documents %>
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <td>
+              <p>
+                <%= doc.as_html_safe(link_resolver())%>
+                <%#= doc.id %>
+              </p>
+              <div class="btn btn-success pull-right">Apply</div>
+            <td>
+          </tr>
+        </tbody>
+      </table>
+       <% end %>
+  <hr>
+  <%= paginate @documents %>
 </div>
