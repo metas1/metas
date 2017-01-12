@@ -12,12 +12,11 @@
 .not-modal-sign-up-form-submit-btn:hover{
   color: white;
   background-color: $lighter-purple;
-  border: 3px solid $metas-purple;
 }
 .signup-title-index-form{
   color: $metas-purple;
   font-weight: 800;
-  margin-left: 2.3em;
+  text-align: center;
 }
 // **************** MODALS **************** //
 
@@ -35,21 +34,35 @@
   background-color: $lighter-purple;
 }
 .modal-backdrop {
-   background-color: rgba(38, 23, 98, 1);
+  background-color: rgba(38, 23, 98, 1);
 }
 .modal-header{                //overrides bootstrap class for border bottom in modal forms
   border-bottom: none;
 }
 .modal-title {
-    line-height: 1.428571429;
-    font-size: 2.5em;
-    color: $metas-purple;
-    margin-left: 0.8em;
+  line-height: 1.428571429;
+  font-size: 2.5em;
+  color: $metas-purple;
+  text-align: center;
 }
 .modal-body p{
   margin-left: 2.5em;
 }
-
+.login-title-modal-form{
+  color: $metas-purple;
+  font-weight: 400;
+  text-align: center;
+  font-size: 3em;
+}
+.signup-title-modal-form{
+  color: $metas-purple;
+  font-weight: 400;
+  text-align: center;
+  font-size: 3em;
+}
+.custom-p{
+  color: $metas-purple;
+}
 // **************** EDIT PROFILE **************** //
 
 .editprofile h1, h3 {
@@ -65,11 +78,15 @@
   background-color: #0EF4B5;
 }
 .editprofile input, button, select, textarea {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    margin-top: 1em;
-    width: 260px;
-    height: 35px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin-top: 1em;
+  width: 350px;
+  height: 35px;
 }
-
+.editprofile img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px
+}

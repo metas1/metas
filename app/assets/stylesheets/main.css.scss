@@ -1,4 +1,5 @@
 $metas-celeste:  #05d5fa;
+$lighter-celeste: #37DDFB;
 $metas-purple: #261762;
 $lighter-purple: #36218b;
 $customhr: #8679b9;
@@ -140,7 +141,6 @@ header .device-container .screen img {
   color: $lighter-purple;
   padding-left: 1em;
 }
-
 
 // **************** RESOURCES INDEX PAGE**************** //
 .service-img-1{
@@ -411,6 +411,61 @@ input, button, select, textarea {
   width: 290px;
   height: 40px;
 }
+
+// **************** JOBS PAGE **************** //
+
+.jobs-page input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin-top: 0.5em;
+    font-style: normal;
+    height: 40px;
+}
+
+.job-search-btn{
+  color: white;
+  font-weight: 500;
+  font-size: 1.3em;
+  font-style: normal;
+  background-color: #05d5fa;
+  width: 7em;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+}
+.job-search-btn:hover{
+  color: white;
+  background-color: $lighter-celeste;
+}
+.job-apply-btn{
+  color: white;
+  font-weight: 300;
+  font-size: 1em;
+  font-style: normal;
+  background-color: $metas-purple;
+  width: 7em;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+}
+.job-apply-btn:hover{
+  background-color: $lighter-purple;
+  color: white;
+}
+.options-btn{
+  background-color: #f9f9f9;
+  border: 1px #ccc solid;
+}
+.filters-wrapper{
+  background-color: #e4e4e4;
+  padding-top: 1em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px #ccc solid;
+  border-right: 1px #ccc solid;
+  border-left: 1px #ccc solid;
+}
+
+
+
 
 
 
