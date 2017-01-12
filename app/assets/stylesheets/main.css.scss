@@ -114,23 +114,34 @@ header .device-container .screen img {
 }
 
 // **************** RESOURCES **************** //
-// .service-img{
-//   background-image: url(placeholder-img.jpg);
-//   background-size: cover;
-//   height: 300px;
-// }
-// .service-img-2{
-//   background-image: url(placeholder-2.jpg);
-//   background-size: cover;
-//   height: 300px;
-// }
-// #services{
-//   padding: 2em 0em 5em 0em;
-// }
-// #services h3, p{
-//   background-color: white;
-//   color: $metas-purple;
-// }
+#services-resources-page{
+  padding-bottom: 5em; 
+}
+.resources-padding{
+  padding: 1em 1em;
+}
+#services-resources-page  .service-box{
+    background-color: white;
+    top: 6em;
+    position: relative;
+    width: 23em;
+    margin-left: 1.5em;
+    padding: 0.5em 0.9em;
+    left: 30em;
+    height: 10em;
+    border-right: 5px $customhr solid;
+}
+#services-resources-page h3 {
+  color: $lighter-purple;
+  font-weight: 700;
+  padding-left: 0.5em;
+}
+#services-resources-page p {
+  color: $lighter-purple;
+  padding-left: 1em;
+}
+
+
 // **************** RESOURCES INDEX PAGE**************** //
 .service-img-1{
   background-image: url(placeholder-1.jpg);
@@ -195,7 +206,22 @@ header .device-container .screen img {
   }
   #services-index-page{         //resets padding ledt to zero so service boxes can be centered on smaller screens
     padding: 3em 0em 8em 0em;
+  }
+  #services-resources-page  .service-box{
+      background-color: white;
+      top: 17em;
+      position: relative;
+      width: 21.5em;
+      margin-left: 1em;
+      padding: 0.5em 0.9em;
+      left: 0.5em;
+      height: 10em;
+      border-bottom: 5px $customhr solid;
+      border-right: none;
   } 
+  // #welcomeNavBar ul li a:hover{
+  //   background-color: $metas-celeste;
+  // }
 }
 // **************** FOOTER **************** //
 #footer{
@@ -335,7 +361,7 @@ nav {border-radius: 0 !important; }
   font-size: 0.9em;
 }
 #welcomeNavBar ul li a:hover{
-  color: $metas-celeste;;
+  color: $metas-celeste;
 }
 
 // **************** METAS LOGOS MAIN AND FOOTER **************** //
