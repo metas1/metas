@@ -11,7 +11,7 @@
 }
 .not-modal-sign-up-form-submit-btn:hover{
   color: white;
-  background-color: #200c6e;
+  background-color: $lighter-purple;
   border: 3px solid $metas-purple;
 }
 .signup-title-index-form{
@@ -32,7 +32,7 @@
 .btn-in-modals:hover{
   color: white;
   background-color: white;
-  background-color: #200c6e;
+  background-color: $lighter-purple;
 }
 .modal-backdrop {
    background-color: rgba(38, 23, 98, 1);
