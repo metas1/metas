@@ -463,10 +463,55 @@ input, button, select, textarea {
   border-right: 1px #ccc solid;
   border-left: 1px #ccc solid;
 }
+.jobs-page h2{
+  color: $metas-purple;
+  font-weight: 600;
+}
+.jobs-page h3{
+  color: $metas-purple;
+}
+.jobs-page h4{
+  color: #696969;
+  font-weight: 500;
+}
+.jobs-page p{
+  margin: 0px 0px 0px 0px;
+}
+.jobs-page span{
+  font-size: 30px;
+  color: $metas-purple;
+  font-weight: 600;
+}
 
+.jobs-page h5{
+    color: #696969;
+    font-weight: 100;
+}
+.jobs-page p{
+    color: #696969;
+    ont-weight: 100;
+}
+.page a {
+  color: #696969;
+  font-weight: 100;
+}
 
+.next a {
+  color: #696969;
+  font-weight: 100;
+}
 
-
-
-
-
+.last a {
+  color: #696969;
+  font-weight: 100;
+}
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    // margin: 20px 0;
+    border-radius: 4px;
+    // text-align: center;
+    position: relative;
+    left: 37%;
+    // margin-left: 30em;
+}
