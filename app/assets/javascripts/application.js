@@ -16,9 +16,3 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-$(document).ready(function(){
-});
-
-function collect_ids(){
-	console.log(doc.id)
-}

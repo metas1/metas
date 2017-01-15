@@ -23,35 +23,15 @@
 
 <%= render 'footer' %>
 
-<!-- Modal for Sign up -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header col-md-offset-3">
-        <div type="button" class="close" data-dismiss="modal">&times;</div>
-      </div>
-      <div class="modal-body">
-        <%= render :template=> 'devise/registrations/new' %>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render 'partials/signup' %>
 
-<!-- Modal for Log in-->
-<div id="myModal-2" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header col-md-offset-3">
-        <div type="button" class="close" data-dismiss="modal">&times;</div>
-      </div>
-      <div class="modal-body">
-        <%= render :template=> 'devise/sessions/new' %>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render 'partials/login' %>
+
+<%= render 'partials/applytojob' %>
+
+<%= render 'partials/updatedprofile' %>
+
+<%= render 'partials/jobappreceived' %>
 
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <% # This is required for the edit button. %>
