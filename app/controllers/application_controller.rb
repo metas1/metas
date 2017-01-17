@@ -36,12 +36,12 @@ class ApplicationController < ActionController::Base
   def jobs
     id = params[:id]
     slug = params[:slug]
-    @google_id = api.experiments.current
     @documents = api.all({
       "page" => params[:page] ? params[:page] : "1",
       "page_size" => params[:page_size] ? params[:page_size] : 20, 
       "ref" => ref,
     })
+    @jobemail = Jobemail.new
   end
 
   # Single-document page action: mostly, setting the @document instance variable, and checking the URL
@@ -51,8 +51,7 @@ class ApplicationController < ActionController::Base
 
     @google_id = api.experiments.current
     @document = api.getByID(id)
-    @all_users = User.all
-    @user = current_user
+
     # This is how an URL gets checked (with a clean redirect if the slug is one that used to be right, but has changed)
     # Of course, you can change slug_checker in prismic_service.rb, depending on your URL strategy.
     @slug_checker = PrismicService.slug_checker(@document, slug)

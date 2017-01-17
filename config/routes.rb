@@ -71,6 +71,10 @@ StarterRubyRails::Application.routes.draw do
 
   get 'application/about'
 
+  # Route for sending job request emails
+  match '/jobemails',     to: 'jobemails#new',             via: 'get'
+  resources "jobemails", only: [:new, :create]
+
   # # Document detail
   get '/document/:id/:slug', to: 'application#document', constraints: {id: /[-_a-zA-Z0-9]{16}/}, as: :document
 

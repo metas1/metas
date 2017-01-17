@@ -1,6 +1,5 @@
 module PrismicService
   class << self
-
     # Easier reading in the prismic.yml configuration file.
     def config(key=nil)
       @config ||= YAML.load(ERB.new(File.new(Rails.root + "config/prismic.yml").read).result)

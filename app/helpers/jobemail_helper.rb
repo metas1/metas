@@ -1,0 +1,2 @@
+module JobemailHelper
+end
