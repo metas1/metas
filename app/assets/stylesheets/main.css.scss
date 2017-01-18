@@ -129,7 +129,7 @@ header .device-container {
   font-style: normal;
   background-color: $metas-purple;
   width: 7em;
-  margin-bottom: 0.5em;
+  margin-top: -4em;
   letter-spacing: 1px;
 }
 .job-apply-btn:hover{
@@ -139,6 +139,7 @@ header .device-container {
 .options-btn{
   background-color: #f9f9f9;
   border: 1px #ccc solid;
+  font-style: normal;
 }
 .filters-wrapper{
   background-color: #e4e4e4;
