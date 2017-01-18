@@ -1,8 +1,8 @@
+<%= render 'application/guestnavbar' %>
 <header>
     <div class="container">
-    <%= render 'guestnavbar' %>
         <div class="row">
-            <div class="col-lg-7 col-md-7">
+            <div class="col-md-7 col-md-offset-0 col-xs-10 col-xs-offset-1">
                 <div class="header-content">
                     <div class="header-content-inner">
                         <div class="metas-main-index-page-logo img-responsive"></div>
@@ -10,13 +10,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-5">
+            <div class="col-sm-5 hidden-xs">
                 <div class="device-container">
                     <div class="device-mockup iphone6_plus portrait">
                         <div class="device">
-                            <!-- <div class="screen"> -->
                                 <%= render :template=> 'devise/registrations/new-index-page-form' %>
-                            <!-- </div> -->
                         </div>
                     </div>
                 </div>
@@ -36,47 +34,55 @@
     </div><!-- container --> 
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-lg-offset-1 col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12">
-                <div class="service-img-1 img-responsive">
-                    <div class="service-box">
-                        <h3>JOB TOOLS</h3>
-                        <p>From resume to cover letters, we've got you covered.</p>
-                        <div class="customhr"></div> 
-                    </div>
-                </div>   
-            </div>
-            <div class="col-lg-4 col-lg-offset-1 col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12">
-                <div class="service-img-2 img-responsive">
-                    <div class="service-box">
-                        <h3>CAREER COUNSELING</h3>
-                        <p>Consult with our METAS coaches for personalized career advice.</p>
-                        <div class="customhr"></div> 
-                    </div>
-                </div> 
-            </div>
+        <%= link_to root_path do %>
+                <div class="col-lg-4 col-lg-offset-1 col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12">
+                    <div class="service-img-1 img-responsive">
+                        <div class="service-box">
+                            <h3>JOB TOOLS</h3>
+                            <p>From resume to cover letters, we've got you covered.</p>
+                            <div class="customhr"></div> 
+                        </div>
+                    </div>   
+                </div>
+            <% end %>
+            <%= link_to root_path do %>
+                <div class="col-lg-4 col-lg-offset-1 col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12">
+                    <div class="service-img-2 img-responsive">
+                        <div class="service-box">
+                            <h3>CAREER COUNSELING</h3>
+                            <p>Consult with our METAS coaches for personalized career advice.</p>
+                            <div class="customhr"></div> 
+                        </div>
+                    </div> 
+                </div>
+            <% end %>
         </div>   
     </div><!-- container --> 
 
     <div class="container secondrow">
         <div class="row">
-            <div class="col-lg-4 col-lg-offset-1 col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12">
-                <div class="service-img-3 img-responsive">
-                    <div class="service-box">
-                        <h3>CERTIFICATIONS 101</h3>
-                        <p>Learn about available certifications available in your industry.</p>
-                        <div class="customhr"></div> 
-                    </div>
-                </div>    
-            </div>
-            <div class="col-lg-4 col-lg-offset-1 col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12">
-                <div class="service-img-4 img-responsive">
-                    <div class="service-box">
-                        <h3>LANGUAGE CLASSES</h3>
-                        <p>Finetune your English skills for that next promotion or job opportunity.</p>
-                        <div class="customhr"></div> 
-                    </div>
-                </div> 
-            </div>
+            <%= link_to root_path do %>
+                <div class="col-lg-4 col-lg-offset-1 col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12">
+                    <div class="service-img-3 img-responsive">
+                        <div class="service-box">
+                            <h3>CERTIFICATIONS 101</h3>
+                            <p>Learn about available certifications available in your industry.</p>
+                            <div class="customhr"></div> 
+                        </div>
+                    </div>    
+                </div>
+            <% end %>
+            <%= link_to root_path do %>
+                <div class="col-lg-4 col-lg-offset-1 col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12">
+                    <div class="service-img-4 img-responsive">
+                        <div class="service-box">
+                            <h3>LANGUAGE CLASSES</h3>
+                            <p>Finetune your English skills for that next promotion or job opportunity.</p>
+                            <div class="customhr"></div> 
+                        </div>
+                    </div> 
+                </div>
+            <% end %>
         </div>   
     </div><!-- container secondrow-->  
 
@@ -93,24 +99,28 @@
     </div><!-- container --> 
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-lg-offset-1 col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12">
-                <div class="service-img-5 img-responsive">
-                    <div class="service-box">
-                        <h3>FIND A JOB</h3>
-                        <p>Find the next opportunity that best utilizes your skills and background.</p>
-                        <div class="customhr"></div> 
-                    </div>
-                </div>    
-            </div>
-            <div class="col-lg-4 col-lg-offset-1 col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12">
-                <div class="service-img-6 img-responsive">
-                    <div class="service-box">
-                        <h3>POST A JOB</h3>
-                        <p>Looking for the next addition to your team? Post to our community of some of the strongest candidates in the workforce.</p>
-                        <div class="customhr"></div> 
-                    </div>
+            <%= link_to application_jobs_path  do %>
+                <div class="col-lg-4 col-lg-offset-1 col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12">
+                    <div class="service-img-5 img-responsive">
+                        <div class="service-box">
+                            <h3>FIND A JOB</h3>
+                            <p>Find the next opportunity that best utilizes your skills and background.</p>
+                            <div class="customhr"></div> 
+                        </div>
+                    </div>    
                 </div> 
-            </div>
+            <% end %>
+            <%= link_to root_path do %>
+                <div class="col-lg-4 col-lg-offset-1 col-md-6 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-12">
+                    <div class="service-img-6 img-responsive">
+                        <div class="service-box">
+                            <h3>POST A JOB</h3>
+                            <p>Looking for the next addition to your team? Post to our community of some of the strongest candidates in the workforce.</p>
+                            <div class="customhr"></div> 
+                        </div>
+                    </div> 
+                </div>
+            <% end %>    
         </div>   
     </div><!-- container -->  
    <br />

@@ -15,7 +15,7 @@ body {
   font-family: $body-font;
 }
 header{
-  // margin-top: -100px; 
+  // margin-top: -400px; 
 }
 a {                               // For underlining a links
   -webkit-transition: all 0.35s;
@@ -33,15 +33,15 @@ header {
   width: 100%;
   min-height: auto;
   overflow-y: hidden;
-  margin:auto;
-  padding:0;
-  background: url("cropped.jpg");
+  // margin:auto;
+  // padding:0;
+  background: url("main-bg-copy.jpg");
   /* fallback for old browsers */
-  background: url("cropped.jpg");
+  background: url("main-bg-copy.jpg");
   /* Chrome 10-25, Safari 5.1-6 */
-  background: url("cropped.jpg");
+  background: url("main-bg-copy.jpg");
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 header .header-content {
@@ -59,20 +59,20 @@ header .header-content .header-content-inner h1 {
   margin-bottom: 30px;
   font-size: 30px;
 }
-header .header-content .header-content-inner .list-badges {
-  margin-bottom: 25px;
-}
-header .header-content .header-content-inner .list-badges img {
-  height: 50px;
-  margin-bottom: 25px;
-}
+// header .header-content .header-content-inner .list-badges {
+//   margin-bottom: 25px;
+// }
+// header .header-content .header-content-inner .list-badges img {
+//   height: 50px;
+//   margin-bottom: 25px;
+// }
 header .device-container {
-  max-width: 300px;
+  // max-width: 300px;
   margin: 0 auto 100px;
 }
-header .device-container .screen img {
-  border-radius: 3px;
-}
+// header .device-container .screen img {
+//   border-radius: 3px;
+// }
 @media (min-width: 768px) {
   header {
     min-height: 100%;
@@ -279,7 +279,7 @@ header .device-container .screen img {
     font-weight: 600;
     color: $metas-celeste;
   }
-  li{
+  li a{
     color: #FFFAFA;
     font-size: 14px;
     font-weight: 100;
@@ -287,8 +287,12 @@ header .device-container .screen img {
     letter-spacing: 1px;
     list-style-type: none;
   }
+  li{
+    list-style-type: none;
+  }
 #social-icons-display a{
   display: inline-block;
+  padding-right: 10px;
 }
 .fb-icon{
   background-image: url(fb-icon.svg);
@@ -318,7 +322,20 @@ header .device-container .screen img {
   width: 380px;
   background-size: contain;
 }
-
+@media only screen and (max-width : 500px) {
+  #footer{
+    padding: 3em 0em 3em 0em;
+  }
+    li{
+      text-align: center;
+    }
+    h4{
+      text-align: center;
+    }
+    #social-icons-display{
+      margin-left: 4em;
+    }
+}
 // **************** NAVBARS**************** //
 
 nav {border-radius: 0 !important; }
@@ -362,8 +379,8 @@ nav {border-radius: 0 !important; }
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-#guestNavBar{
-  margin-top: 1em;
+#guestNavBar, #welcomeNavBar{
+  position: absolute;
 }
 #guestNavBar ul li a{ 
   font-family: 'Lato', sans-serif;
@@ -388,7 +405,7 @@ nav {border-radius: 0 !important; }
   color: $metas-celeste; 
 }
 #guestNavBar h5{
-  color: $lighter-purple;
+  color: $metas-purple;
   margin-top: 1em;
   margin-bottom: 0em;
   margin-left: 8em;
@@ -447,7 +464,7 @@ nav {border-radius: 0 !important; }
   color: $metas-celeste;
 }
 #welcomeNavBar h5{
-  color: $lighter-purple;
+  color: $metas-purple;
   margin-top: 1em;
   margin-bottom: 0em;
   position: relative;
@@ -486,8 +503,8 @@ nav {border-radius: 0 !important; }
       padding: 0px 0px;
     }
     #guestNavBar ul li:nth-child(n+4) a {
-      color: white;
-      font-size: 14px;
+      color: $metas-purple !important;
+      font-size: 1.2em;
       font-family: 'Lato', sans-serif;
       font-weight: 900;
       padding: 0.7em 0.5em 0.7em 1.3em;
@@ -500,7 +517,7 @@ nav {border-radius: 0 !important; }
     }
     #guestNavBar ul li a:hover, #welcomeNavBar ul li a:hover {
       background-color: $lighter-celeste;
-      color: $lighter-purple;
+      color: $metas-purple;
     }
     #guestNavBar ul li:nth-child(n+4)  a:hover {
       background-color: $metas-celeste ! important; 
@@ -563,7 +580,6 @@ nav {border-radius: 0 !important; }
 }
 .index-page-header-content-inner-h4{
   margin-left: 1.5em;
-  font-size: 1.4em;
   color: $lighter-purple;
   font-weight: 500;
   letter-spacing: 0.7;
@@ -589,9 +605,19 @@ input, button, select, textarea {
 }
 .form-control{
   height: 40px;
+  font-size: 17px;
 }
 input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block {
     font-style: normal;
+}
+.checkbox > label{
+  color: $metas-purple;
+}
+.checkbox > label > span {
+  text-decoration: underline;
+}
+.signup-form, .login-form{
+  margin-left: 1.5em;
 }
 
 // .jobs-page p{

@@ -2,26 +2,26 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-offset-2">
+                <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-3 col-sm-offset-0 col-xs-10 col-xs-offset-2">
                     <a href="/" class="metas-logo-footer img-responsive" ></a>
                 </div>
-                <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-offset-3">
+                <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-3 col-sm-offset-0 col-xs-9 col-xs-offset-1">
                     <h4>ABOUT METAS</h4>
                     <div>
-                        <a href="/"><li>MISSION</li></a>
-                        <a href="/"><li>BROWSE JOBS</li></a>
-                        <a href="/"><li>BROWSE RESOURCES</li></a>
-                        <a href="/"><li>TERMS + CONDITIONS</li></a>
+                        <li><%= link_to "ABOUT", root_path %></li>
+                        <li><%= link_to "BROWSE JOBS", application_jobs_path %></li> 
+                        <li><%= link_to "BROWSE RESOURCES", application_resources_path %></li>
+                        <li><%= link_to "TERMS + CONDITIONS", root_path %></li>
                     </div>
                 </div>
-                <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-offset-3">
+                <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-3 col-sm-offset-0 col-xs-9 col-xs-offset-1">
                     <h4>GET INVOLVED</h4>
                     <div>
-                        <a href="google.com"><li>FOR EMPLOYERS</li></a>
-                        <a href="/"><li>CONTACT US</li></a>
+                        <li><%= link_to "FOR EMPLOYERS", root_path %></li>
+                        <li><%= link_to "CONTACT US", root_path %></li>
                     </div>
                 </div>
-                <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-0 col-xs-offset-3">
+                <div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-3 col-sm-offset-0 col-xs-9 col-xs-offset-1">
                     <h4>STAY CONNECTED</h4>
                     <div id="social-icons-display">
                         <%= link_to "", "https://www.facebook.com/", :target => "_blank", :class => "fb-icon" %>
