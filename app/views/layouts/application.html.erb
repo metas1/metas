@@ -7,17 +7,16 @@
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'metas-favicon.png' %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Lato:900|Lato|eRaleway" rel="stylesheet">
 </head>
 <body>
 
   <% if user_signed_in? %>
     <%= render 'usernavbar'  unless current_page?(application_welcome_path)%> 
-  <% else %>
-    <%= render 'guestnavbar' %>
   <% end %>
-
+<!-- 
 <p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<p class="alert"><%= alert %></p> -->
 
 <%= yield %>
 
@@ -26,12 +25,6 @@
 <%= render 'partials/signup' %>
 
 <%= render 'partials/login' %>
-
-<%= render 'partials/updatedprofile' %>
-
-<%= render 'partials/jobappreceived' %>
-
-<%= render 'partials/applytojob' %>
 
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <% # This is required for the edit button. %>

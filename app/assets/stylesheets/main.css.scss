@@ -2,9 +2,10 @@ $metas-celeste:  #05d5fa;
 $lighter-celeste: #37DDFB;
 $metas-purple: #261762;
 $lighter-purple: #36218b;
+$metas-green: #00F7A8;
 $customhr: #8679b9;
-$navbar-font: 'Arial';
-$body-font: 'Helvetica';
+// $navbar-font: 'Lato', sans-serif;
+$body-font: 'Raleway', sans-serif;
 
 html{
   height: 100%;
@@ -14,11 +15,7 @@ body {
   font-family: $body-font;
 }
 header{
-  margin-top: -125px; 
-}
-.heading-font {
-  font-weight: 200;
-  letter-spacing: 1px;
+  margin-top: -100px; 
 }
 a {                               // For underlining a links
   -webkit-transition: all 0.35s;
@@ -30,20 +27,6 @@ p {
   font-size: 15px;
   line-height: 1.5;
   margin-bottom: 20px;
-}
-@media (min-width: 768px) {
-  .navbar-default {
-    background-color: transparent;
-    border-color: transparent;
-  }
-  .navbar-default .navbar-header:hover,
-  .navbar-default .navbar-header:focus {
-    color: $metas-celeste;
-  }
-  .navbar-default .nav > li > a:hover,
-  .navbar-default .nav > li > a:focus:hover {
-    color: $metas-celeste;
-  }
 }
 header {
   position: relative;
@@ -113,7 +96,67 @@ header .device-container .screen img {
     margin: 100px auto 0;
   }
 }
+// **************** JOBS PAGE **************** //
 
+.jobs-page input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin-top: 0.5em;
+  font-style: normal;
+  height: 40px;
+}
+.job-search-btn{
+  color: white;
+  font-weight: 500;
+  font-size: 1.3em;
+  font-style: normal;
+  background-color: #05d5fa;
+  width: 7em;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+}
+.job-search-btn:hover{
+  color: white;
+  background-color: $lighter-celeste;
+}
+.job-apply-btn{
+  color: white;
+  font-weight: 300;
+  font-size: 1em;
+  font-style: normal;
+  background-color: $metas-purple;
+  width: 7em;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+}
+.job-apply-btn:hover{
+  background-color: $lighter-purple;
+  color: white;
+}
+.options-btn{
+  background-color: #f9f9f9;
+  border: 1px #ccc solid;
+}
+.filters-wrapper{
+  background-color: #e4e4e4;
+  padding-top: 1em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px #ccc solid;
+  border-right: 1px #ccc solid;
+  border-left: 1px #ccc solid;
+}
+.jobs-page h2{
+  color: $metas-purple;
+  font-weight: 600;
+}
+.jobs-page h3{
+  color: #696969;
+}
+.jobs-page h4{
+  color: #696969;
+  font-weight: 500;
+}
 // **************** RESOURCES PAGE **************** //
 #services-resources-page{
   padding-bottom: 5em; 
@@ -122,15 +165,15 @@ header .device-container .screen img {
   padding: 1em 1em;
 }
 #services-resources-page  .service-box{
-    background-color: white;
-    top: 6em;
-    position: relative;
-    width: 23em;
-    margin-left: 1.5em;
-    padding: 0.5em 0.9em;
-    left: 30em;
-    height: 10em;
-    border-right: 5px $customhr solid;
+  background-color: white;
+  top: 6em;
+  position: relative;
+  width: 23em;
+  margin-left: 1.5em;
+  padding: 0.5em 0.9em;
+  left: 30em;
+  height: 10em;
+  border-right: 5px $customhr solid;
 }
 #services-resources-page h3 {
   color: $lighter-purple;
@@ -195,12 +238,12 @@ header .device-container .screen img {
   margin-top: 6em;
 }
 .customhr {
-    height: 5px;
-    width: 23em;
-    background-color: $customhr;
+  height: 5px;
+  width: 23em;
+  background-color: $customhr;
 }
-@media only screen and (max-width:800px)
-{
+@media only screen and (max-width:800px){
+
   .service-box{                 //for adding margin to be able to read description box of service box
     margin-top: 6em;
   }
@@ -208,21 +251,23 @@ header .device-container .screen img {
     padding: 3em 0em 8em 0em;
   }
   #services-resources-page  .service-box{
-      background-color: white;
-      top: 17em;
-      position: relative;
-      width: 21.5em;
-      margin-left: 1em;
-      padding: 0.5em 0.9em;
-      left: 0.5em;
-      height: 10em;
-      border-bottom: 5px $customhr solid;
-      border-right: none;
-  } 
-  // #welcomeNavBar ul li a:hover{
-  //   background-color: $metas-celeste;
-  // }
+    background-color: white;
+    top: 17em;
+    position: relative;
+    width: 21.5em;
+    margin-left: 1em;
+    padding: 0.5em 0.9em;
+    left: 0.5em;
+    height: 10em;
+    border-bottom: 5px $customhr solid;
+    border-right: none;
+  }
 }
+// **************** ABOUT **************** //
+
+
+
+
 // **************** FOOTER **************** //
 #footer{
   background-color: $metas-purple;
@@ -276,6 +321,12 @@ header .device-container .screen img {
 
 nav {border-radius: 0 !important; }
 
+@media (min-width: 768px) {
+  .navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
 .navbar-default {
   z-index: 1;
   -webkit-transition: all 0.35s;
@@ -283,29 +334,71 @@ nav {border-radius: 0 !important; }
   transition: all 0.35s;
   font-weight: 200;
   letter-spacing: 1px;
+  border-color: transparent;
+  margin-top: 2em;
 }
-.navbar-default .navbar-header {
-  font-weight: 200;
-  letter-spacing: 1px;
-  color: $metas-purple;
+.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 25px;
 }
-
 .navbar-default .nav > li > a {
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 11px;
+  font-size: 1em;
+  font-weight: 900;
 }
-.navbar-default .nav > li > a:hover,
-.navbar-default .nav > li > a:focus:hover {
+.btn-to-login-modal{                      //on navbar
+  cursor: pointer;
+  background-color: $metas-purple;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.btn-to-signup-modal{
+  cursor: pointer;
+  background-color: $metas-purple;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#guestNavBar{
+  margin-top: 8em;
+}
+#guestNavBar ul li a{ 
+  font-family: 'Lato', sans-serif;
+  color: $lighter-purple;
+}
+#guestNavBar ul li a:hover { 
   color: $metas-celeste;
+}
+#guestNavBar ul li:nth-child(n+4) a {
+  color: white;
+  font-size: 13px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  padding: 0.7em 0.5em 0.7em 1.3em;
+  margin-top: 0.2em;
+}
+#guestNavBar ul li:nth-child(5) a {
+  padding: 0.7em 1.3em 0.7em 0.5em; 
+}
+#guestNavBar ul li:nth-child(n+4)  a:hover {
+  color: $metas-celeste; 
+}
+#guestNavBar h5{
+  color: $lighter-purple;
+  margin-top: 1em;
+  margin-bottom: 0em;
+  margin-left: 8em;
 }
 #userNavBar {
   padding: 1em 0 1em 0em;
+  margin-top: 0em;
   background-color: $metas-purple;
 }
 #userNavBar ul li a {
   color: white;
-  font-weight: 700;
+  font-weight: 900;
+  font-family: 'Lato', sans-serif;
   font-size: 0.9em;
 }
 .user-navbar-links{
@@ -314,45 +407,56 @@ nav {border-radius: 0 !important; }
 #userNavBar a:hover {
   color: $metas-celeste;
 }
-#guestNavBar ul li a{ 
-  color: $metas-purple;
-  font-weight: 700;
-  font-size: 0.9em;
-}
-#guestNavBar ul li a:hover { 
-  color: $metas-celeste;
-}
-#guestNavBar ul li:nth-child(4) a {
+#userNavBar .navbar-name{
   color: white;
+  background-color: transparent;
+  border: 1px white solid;
+  font-weight: 900;
+  font-size: 1em;
+  padding: 0.5em 0.5em;
+  border-radius: 8px;
 }
-#guestNavBar ul li:nth-child(5) a {
+#userNavBar h5{
   color: white;
-}
-#guestNavBar ul li:nth-child(4) a:hover {
-  color: $metas-celeste;
-}
-#guestNavBar ul li:nth-child(5) a:hover {
-  color: $metas-celeste;
+  margin-top: 1em;
+  margin-bottom: 0em;
+  position: relative;
+  left: 6%;
 }
 #welcomeNavBar{
-  margin-top: 50px;
+  margin-top: 100px;
 }
 #welcomeNavBar ul li a{
   color: $lighter-purple;
   font-weight: 900;
   font-size: 1em;
+  font-family: 'Lato', sans-serif;
 }
 #welcomeNavBar .navbar-name{
   color: white;
   background-color: $metas-purple;
   font-weight: 900;
   font-size: 1em;
-  margin-top: 0.5em;
   padding: 0.5em 0.5em;
   border-radius: 8px;
 }
 #welcomeNavBar ul li a:hover{
   color: $metas-celeste;
+}
+#welcomeNavBar h5{
+  color: $lighter-purple;
+  margin-top: 1em;
+  margin-bottom: 0em;
+  position: relative;
+  left: 6%;
+}
+#welcomeNavBar h6 {
+  padding: 2px 2px;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  position: relative;
+  left: 40%;
+  text-decoration: underline;
 }
 
 // **************** MOBILE FA-BARS **************** //
@@ -368,6 +472,63 @@ nav {border-radius: 0 !important; }
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
     background-color: transparent;
+}
+// **************** Extra Small Devices, Phones **************** //
+@media only screen and (max-width : 765px) {
+    .btn-to-login-modal, .btn-to-signup-modal{                      
+      cursor: pointer;
+      color: $lighter-purple !important;
+      background-color: transparent;
+      border-radius: 0px 0px;
+      padding: 0px 0px;
+    }
+    #guestNavBar ul li:nth-child(n+4) a {
+      color: white;
+      font-size: 14px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 900;
+      padding: 0.7em 0.5em 0.7em 1.3em;
+      margin-top: 0.2em;
+    }
+    .nav > li > a {
+      position: relative;
+      display: block;
+      text-align: center;
+    }
+    #guestNavBar ul li a:hover, #welcomeNavBar ul li a:hover {
+      background-color: $lighter-celeste;
+      color: $lighter-purple;
+    }
+    #guestNavBar ul li:nth-child(n+4)  a:hover {
+      background-color: $metas-celeste ! important; 
+    }
+    #guestNavBar h5{
+      margin-left: 0em;
+    }
+    #welcomeNavBar h5{
+      left: 0%;
+    }
+    #welcomeNavBar li a{
+      margin: 0px 0px;
+    }
+    #welcomeNavBar .navbar-name{
+      color: white;
+      font-family: 'Lato', sans-serif;
+      background-color: $metas-celeste;
+      font-weight: 900;
+      font-size: 1.5em;
+      padding: 2em 0.5em 1em 0em;
+      border-radius: 0px;
+      margin: -19px 0px;
+      text-align: center;
+    }
+    #userNavBar ul li a:hover {
+      background-color: $metas-celeste;
+      color: $lighter-purple;
+    }
+    #userNavBar h5{
+      left: 0%;
+    }
 }
 
 // **************** METAS LOGOS MAIN AND FOOTER **************** //
@@ -396,8 +557,8 @@ nav {border-radius: 0 !important; }
 }
 .index-page-header-content-inner-h4{
   margin-left: 1.5em;
-  font-size: 1.3em;
-  color: $metas-purple;
+  font-size: 1.4em;
+  color: $lighter-purple;
   font-weight: 500;
   letter-spacing: 0.7;
   line-height: 150%;
@@ -407,79 +568,29 @@ nav {border-radius: 0 !important; }
   background-repeat: no-repeat;
   width: 310px;
   background-size: contain;
+  margin: 1.5em 0em;
 }
+
+
+//******** FIX THIS TO NOT BE GLOBAL AND MAKE IT RESPONSIVE ******//
+
 input, button, select, textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  margin-top: 0.5em;
+  margin-top: 1.3em;
   font-style: italic;
-  width: 290px;
-  height: 40px;
 }
-
-// **************** JOBS PAGE **************** //
-
-.jobs-page input, button, select, textarea {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    margin-top: 0.5em;
+.form-control{
+  height: 45px;
+  width: 120%;
+}
+input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block {
+    width: 120%;
+    height: 45px;
     font-style: normal;
-    height: 40px;
 }
 
-.job-search-btn{
-  color: white;
-  font-weight: 500;
-  font-size: 1.3em;
-  font-style: normal;
-  background-color: #05d5fa;
-  width: 7em;
-  margin-bottom: 0.5em;
-  letter-spacing: 1px;
-}
-.job-search-btn:hover{
-  color: white;
-  background-color: $lighter-celeste;
-}
-.job-apply-btn{
-  color: white;
-  font-weight: 300;
-  font-size: 1em;
-  font-style: normal;
-  background-color: $metas-purple;
-  width: 7em;
-  margin-bottom: 0.5em;
-  letter-spacing: 1px;
-}
-.job-apply-btn:hover{
-  background-color: $lighter-purple;
-  color: white;
-}
-.options-btn{
-  background-color: #f9f9f9;
-  border: 1px #ccc solid;
-}
-.filters-wrapper{
-  background-color: #e4e4e4;
-  padding-top: 1em;
-  padding-bottom: 1.5em;
-  border-bottom: 1px #ccc solid;
-  border-right: 1px #ccc solid;
-  border-left: 1px #ccc solid;
-}
-.jobs-page h2{
-  color: $metas-purple;
-  font-weight: 600;
-}
-.jobs-page h3{
-  color: #696969;
-}
-.jobs-page h4{
-  color: #696969;
-  font-weight: 500;
-}
 // .jobs-page p{
 //   margin: 0px 0px 0px 0px;
 // }

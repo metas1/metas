@@ -14,16 +14,15 @@
   background-color: $lighter-purple;
 }
 .signup-title-index-form{
+  font-family: 'Lato', sans-serif;
   color: $metas-purple;
-  font-weight: 800;
+  font-weight: 900;
   text-align: center;
+  font-size: 2.7em;
+  margin-left: 1em;
 }
 // **************** MODALS **************** //
 
-.btn-to-modal{                      //on navbar
-  cursor: pointer;
-  background-color: $metas-purple;
-}
 .btn-in-modals{
   color: white;
   background-color: $metas-purple;
