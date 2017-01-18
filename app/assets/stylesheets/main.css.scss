@@ -15,7 +15,7 @@ body {
   font-family: $body-font;
 }
 header{
-  margin-top: -100px; 
+  // margin-top: -100px; 
 }
 a {                               // For underlining a links
   -webkit-transition: all 0.35s;
@@ -33,13 +33,15 @@ header {
   width: 100%;
   min-height: auto;
   overflow-y: hidden;
-  background: url("main-bg-copy.jpg");
+  margin:auto;
+  padding:0;
+  background: url("cropped.jpg");
   /* fallback for old browsers */
-  background: url("main-bg-copy.jpg");
+  background: url("cropped.jpg");
   /* Chrome 10-25, Safari 5.1-6 */
-  background: url("main-bg-copy.jpg");
+  background: url("cropped.jpg");
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 header .header-content {
@@ -335,7 +337,7 @@ nav {border-radius: 0 !important; }
   font-weight: 200;
   letter-spacing: 1px;
   border-color: transparent;
-  margin-top: 2em;
+  // margin-top: 2em;
 }
 .nav > li > a {
   position: relative;
@@ -361,11 +363,12 @@ nav {border-radius: 0 !important; }
   border-bottom-right-radius: 10px;
 }
 #guestNavBar{
-  margin-top: 8em;
+  margin-top: 1em;
 }
 #guestNavBar ul li a{ 
   font-family: 'Lato', sans-serif;
-  color: $lighter-purple;
+  color: $metas-purple;
+  font-size: 1.3em;
 }
 #guestNavBar ul li a:hover { 
   color: $metas-celeste;
@@ -424,12 +427,12 @@ nav {border-radius: 0 !important; }
   left: 6%;
 }
 #welcomeNavBar{
-  margin-top: 100px;
+  // margin-top: 100px;
 }
 #welcomeNavBar ul li a{
-  color: $lighter-purple;
+  color: $metas-purple;
   font-weight: 900;
-  font-size: 1em;
+  font-size: 1.2em;
   font-family: 'Lato', sans-serif;
 }
 #welcomeNavBar .navbar-name{
@@ -529,6 +532,9 @@ nav {border-radius: 0 !important; }
     #userNavBar h5{
       left: 0%;
     }
+    header{
+      background-size: cover;
+    }
 }
 
 // **************** METAS LOGOS MAIN AND FOOTER **************** //
@@ -582,12 +588,9 @@ input, button, select, textarea {
   font-style: italic;
 }
 .form-control{
-  height: 45px;
-  width: 120%;
+  height: 40px;
 }
 input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block {
-    width: 120%;
-    height: 45px;
     font-style: normal;
 }
 
