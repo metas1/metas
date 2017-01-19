@@ -13,6 +13,8 @@
 
   <% if user_signed_in? %>
     <%= render 'usernavbar'  unless current_page?(application_welcome_path)%> 
+  <% else %>  
+    <%= render 'guestnavbar'  unless current_page?(application_welcome_path)%> 
   <% end %>
 <!-- 
 <p class="notice"><%= notice %></p>

@@ -40,7 +40,7 @@ class ApplicationController < ActionController::Base
       "page" => params[:page] ? params[:page] : "1",
       "page_size" => params[:page_size] ? params[:page_size] : 20, 
       "ref" => ref,
-    })
+    })  
     @jobemail = Jobemail.new
   end
 

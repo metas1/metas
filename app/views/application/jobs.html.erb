@@ -40,15 +40,15 @@
           <div class="modal-body">
             <div class="container-fluid">
               <div class="row">
-                <div class="col-sm-11 col-sm-offset-1">
-                  <h2 class="login-title-modal-form">APPLY</h2>
+                <div class="col-sm-9 col-sm-offset-1">
+                  <h2 class="apply-to-job-title">APPLY</h2>
                   <br /> 
                   <div align="center">
                     <p>Let us connect you to your next career opportunity.</p>
                       <%#= doc.fragments["jobtitle"].as_html_safe(link_resolver()) %>
                       <%= simple_form_for @jobemail do |f| %>
                       <%= f.input :phone_number, :required => true %>
-                      <%= f.input :additional_info, :required => true %>
+                      <%= f.input :additional_info, :required => true,  :class => 'form-control' %>
                       <%= f.hidden_field :fname, :required => true, :value => current_user.first_name %>
                       <%= f.hidden_field :lname, :required => true, :value => current_user.last_name %>
                       <%= f.hidden_field :email, :required => true, :value => current_user.email %>
@@ -56,7 +56,7 @@
                       <%= f.hidden_field :job_id, :required => true, :value =>  doc.id  %>
                       <div>
                         </br>
-                        <%= f.button :submit, 'SUBMIT', :class=> "btn btn-in-modals btn-block" %>
+                        <%= f.button :submit, 'SUBMIT', :class=> "btn btn-in-modals" %>
                       </div>
                     <% end %>
                   </div>

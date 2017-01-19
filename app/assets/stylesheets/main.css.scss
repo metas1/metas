@@ -179,7 +179,7 @@ header .device-container {
   border-right: 5px $customhr solid;
 }
 #services-resources-page h3 {
-  color: $lighter-purple;
+  color: $metas-purple;
   font-weight: 700;
   padding-left: 0.5em;
 }
@@ -218,15 +218,15 @@ header .device-container {
   padding: 3em 0em 8em 5em;
 } 
 #services-index-page h2 {
-  color: $lighter-purple;
+  color: $metas-purple;
 }
 #services-index-page h3 {
-  color: $lighter-purple;
+  color: $metas-purple;
   font-weight: 700;
   padding-left: 0.5em;
 }
 #services-index-page p {
-  color: $lighter-purple;
+  color: $metas-purple;
   padding-left: 1em;
 }
 .service-box {
@@ -603,6 +603,7 @@ input, button, select, textarea {
   line-height: inherit;
   margin-top: 1.3em;
   font-style: italic;
+  width: 100%;
 }
 .form-control{
   height: 40px;
@@ -620,7 +621,29 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 .signup-form, .login-form{
   margin-left: 1.5em;
 }
-
+#job-modal p {
+  color: $metas-purple;
+}
+.jobs-page label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: normal;
+  color: turquoise;
+}
+.apply-to-job-title{
+  text-align: center;
+  color: $metas-purple;
+  font-weight: 100;
+}
+.test{
+  // width: 40em;
+}
+// .apply-to-job-title > p{
+//   text-align: center;
+//   color: $metas-purple !important;
+//   font-weight: 100;
+// }
 // .jobs-page p{
 //   margin: 0px 0px 0px 0px;
 // }
