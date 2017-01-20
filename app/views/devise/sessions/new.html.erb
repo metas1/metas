@@ -5,14 +5,12 @@
     <h2 class="login-title-modal-form">SIGN IN</h2>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="field">
-          <%= f.email_field :email, autofocus: true, autocomplete: "off", placeholder: "Your email", class: "form-control mb-2 mr-sm-2 mb-sm-0" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "off", placeholder: "Your Email", class: "form-control mb-2 mr-sm-2 mb-sm-0" %>
         </div>
 
         <div class="field">
-          <%= f.password_field :password, autocomplete: "off", placeholder: "Your password", class: "form-control mb-2 mr-sm-2 mb-sm-0" %>
+          <%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: "form-control mb-2 mr-sm-2 mb-sm-0" %>
         </div>
-
-         <br /> 
 
         <div class="actions">
           <%= f.submit "SIGN IN", class: "btn btn-in-modals btn-block"  %>
@@ -21,15 +19,15 @@
 
       <br />
 
-      <%= render "devise/shared/links" %>
+      <div class="forgotten-pw"><%= render "devise/shared/links" %></div>
 
       <br />
 
-      <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-        Not a METAS member? <%= link_to "Sign up", new_registration_path(resource_name) %><br />
+      <%- if controller_name != 'sessions' %>
+        <div class="session-offset">Not a METAS member? <span><%= link_to "Sign up", new_registration_path(resource_name) %><span></div><br />
       <% end -%>
 
-      <%= link_to "Back", root_path %>
+      <%#= link_to "Back", root_path %>
     </div>
   </div>
 </div>

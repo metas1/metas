@@ -20,11 +20,24 @@
   text-align: center;
   font-size: 2.7em;
 }
+.close{
+  color: $metas-purple;
+}
+.close:hover{
+  color: $lighter-purple;
+}
+.forgotten-pw{
+  text-align: center;
+  text-decoration: underline;
+}
 // **************** MODALS **************** //
 
 .btn-in-modals{
   color: white;
+  font-family: 'Lato', sans-serif;
   background-color: $metas-purple;
+  font-size: 1.6em;
+  font-weight: 100;
 }
 .btn-in-modals:hover{
   color: white;
@@ -43,34 +56,66 @@
   color: $metas-purple;
   text-align: center;
 }
-.modal-body p{
-  margin-left: 2.5em;
-}
 .login-title-modal-form{
   color: $metas-purple;
-  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
   text-align: center;
-  font-size: 3em;
+  font-size: 3.5em;
 }
 .signup-title-modal-form{
   color: $metas-purple;
-  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
   text-align: center;
-  font-size: 3em;
+  font-size: 3.5em;
 }
-.custom-p{
+.signup-form p{
+  color: $lighter-purple;
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 19px;
+  margin: 1.5em -3em 2em -1em;
+}
+.session-offset{
+  text-align: center;
   color: $metas-purple;
+}
+.session-offset span{
+  text-decoration: underline;
+  color: $lighter-celeste;
+}
+.checkbox > label{
+  color: $metas-purple;
+  margin-top: 0.7em;
+}
+.checkbox > label > span {
+  text-decoration: underline;
+}
+.signup-form, .login-form{
+  margin-left: 1.5em;
 }
 // **************** EDIT PROFILE **************** //
 
-.editprofile h1, h3 {
+.editprofile h2, h3 {
   color: #0EF4B5;
+  font-weight: 100;
 }
-.editprofile .btn-custom {
-  margin-top: 1.5em;
-  border: 4px solid $metas-purple;
-  color: $metas-purple;
+.saveprofile-btn{
+  margin-top: 1em;
+  border: 4px solid #261762;
+  color: #261762;
   background-color: white;
+  font-size: 1.3em;
+  padding: 4px 40px;
+}
+.uploadprofile-btn{
+  margin-top: 1em;
+  border: 4px solid #261762;
+  color: #261762;
+  background-color: white;
+  font-size: 1.3em;
+  padding: 3px 30px;
 }
 .editprofile .btn-custom:hover{
   background-color: #0EF4B5;
@@ -80,11 +125,18 @@
   font-size: inherit;
   line-height: inherit;
   margin-top: 1em;
-  width: 350px;
+  width: 340px;
   height: 35px;
 }
 .editprofile img {
   border-radius: 50%;
   width: 250px;
-  height: 250px
+  height: 250px;
+  margin-top: 2em;
 }
+.profile-pic{
+  text-align: center;
+}
+
+
+

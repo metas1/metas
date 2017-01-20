@@ -14,14 +14,11 @@ html{
 body {
   font-family: $body-font;
 }
-header{
-  // margin-top: -400px; 
-}
 a {                               // For underlining a links
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  color: $metas-celeste;
+  color: $lighter-celeste;
 }
 p {
   font-size: 15px;
@@ -33,8 +30,6 @@ header {
   width: 100%;
   min-height: auto;
   overflow-y: hidden;
-  // margin:auto;
-  // padding:0;
   background: url("main-bg-copy.jpg");
   /* fallback for old browsers */
   background: url("main-bg-copy.jpg");
@@ -59,44 +54,8 @@ header .header-content .header-content-inner h1 {
   margin-bottom: 30px;
   font-size: 30px;
 }
-// header .header-content .header-content-inner .list-badges {
-//   margin-bottom: 25px;
-// }
-// header .header-content .header-content-inner .list-badges img {
-//   height: 50px;
-//   margin-bottom: 25px;
-// }
 header .device-container {
-  // max-width: 300px;
   margin: 0 auto 100px;
-}
-// header .device-container .screen img {
-//   border-radius: 3px;
-// }
-@media (min-width: 768px) {
-  header {
-    min-height: 100%;
-  }
-  header .header-content {
-    text-align: left;
-    padding: 0;
-    height: 100vh;
-  }
-  header .header-content .header-content-inner {
-    max-width: none;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  header .header-content .header-content-inner h1 {
-    font-size: 35px;
-  }
-  header .device-container {
-    max-width: none;
-    max-height: calc(0vh);
-    margin: 100px auto 0;
-  }
 }
 // **************** JOBS PAGE **************** //
 
@@ -201,10 +160,12 @@ header .device-container {
 .service-img-3{
   @extend .service-img-1;
   background-image: url(placeholder-3.jpg);
+  margin-top: 3em;
 }
 .service-img-4{
   @extend .service-img-1;
   background-image: url(placeholder-4.jpg);
+  margin-top: 3em;
 }
 .service-img-5{
   @extend .service-img-1;
@@ -244,33 +205,8 @@ header .device-container {
   height: 5px;
   width: 23em;
   background-color: $customhr;
+  position: absolute;
 }
-@media only screen and (max-width:800px){
-
-  .service-box{                 //for adding margin to be able to read description box of service box
-    margin-top: 6em;
-  }
-  #services-index-page{         //resets padding ledt to zero so service boxes can be centered on smaller screens
-    padding: 3em 0em 8em 0em;
-  }
-  #services-resources-page  .service-box{
-    background-color: white;
-    top: 17em;
-    position: relative;
-    width: 21.5em;
-    margin-left: 1em;
-    padding: 0.5em 0.9em;
-    left: 0.5em;
-    height: 10em;
-    border-bottom: 5px $customhr solid;
-    border-right: none;
-  }
-}
-// **************** ABOUT **************** //
-
-
-
-
 // **************** FOOTER **************** //
 #footer{
   background-color: $metas-purple;
@@ -293,7 +229,7 @@ header .device-container {
   }
 #social-icons-display a{
   display: inline-block;
-  padding-right: 10px;
+  padding-right: 2.5em;
 }
 .fb-icon{
   background-image: url(fb-icon.svg);
@@ -323,30 +259,11 @@ header .device-container {
   width: 380px;
   background-size: contain;
 }
-@media only screen and (max-width : 500px) {
-  #footer{
-    padding: 3em 0em 3em 0em;
-  }
-    li{
-      text-align: center;
-    }
-    h4{
-      text-align: center;
-    }
-    #social-icons-display{
-      margin-left: 4em;
-    }
-}
+
 // **************** NAVBARS**************** //
 
 nav {border-radius: 0 !important; }
 
-@media (min-width: 768px) {
-  .navbar-default {
-    background-color: transparent;
-    border-color: transparent;
-  }
-}
 .navbar-default {
   z-index: 1;
   -webkit-transition: all 0.35s;
@@ -355,14 +272,14 @@ nav {border-radius: 0 !important; }
   font-weight: 200;
   letter-spacing: 1px;
   border-color: transparent;
-  // margin-top: 2em;
 }
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 25px;
+  padding: 10px 20px;
 }
 .navbar-default .nav > li > a {
+  font-family: 'Lato', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 1em;
@@ -380,13 +297,19 @@ nav {border-radius: 0 !important; }
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-#guestNavBar, #welcomeNavBar{
+#guestNavBar{
+  margin-top: 0.5em;
   position: absolute;
 }
-#guestNavBar ul li a{ 
-  font-family: 'Lato', sans-serif;
+#welcomeNavBar{
+  margin-top: -0.7em;
+  position: absolute;
+}
+#guestNavBar ul li a, #welcomeNavBar ul li a{ 
   color: $metas-purple;
-  font-size: 1.3em;
+}
+#userNavBar ul li a {
+  color: white;
 }
 #guestNavBar ul li a:hover { 
   color: $metas-celeste;
@@ -405,25 +328,10 @@ nav {border-radius: 0 !important; }
 #guestNavBar ul li:nth-child(n+4)  a:hover {
   color: $metas-celeste; 
 }
-#guestNavBar h5{
-  color: $metas-purple;
-  margin-top: 1em;
-  margin-bottom: 0em;
-  margin-left: 8em;
-}
 #userNavBar {
-  padding: 1em 0 1em 0em;
+  padding: 2em 0 1em 0em;
   margin-top: 0em;
   background-color: $metas-purple;
-}
-#userNavBar ul li a {
-  color: white;
-  font-weight: 900;
-  font-family: 'Lato', sans-serif;
-  font-size: 0.9em;
-}
-.user-navbar-links{
-  margin-top: 1em;
 }
 #userNavBar a:hover {
   color: $metas-celeste;
@@ -432,26 +340,33 @@ nav {border-radius: 0 !important; }
   color: white;
   background-color: transparent;
   border: 1px white solid;
-  font-weight: 900;
-  font-size: 1em;
+  font-weight: 100;
   padding: 0.5em 0.5em;
   border-radius: 8px;
 }
-#userNavBar h5{
+#userNavBar h7{
   color: white;
-  margin-top: 1em;
   margin-bottom: 0em;
   position: relative;
-  left: 6%;
 }
-#welcomeNavBar{
-  // margin-top: 100px;
-}
-#welcomeNavBar ul li a{
+#guestNavBar h7{
   color: $metas-purple;
-  font-weight: 900;
-  font-size: 1.2em;
-  font-family: 'Lato', sans-serif;
+  margin-top: 1em;
+  margin-bottom: 0em;
+  left: 5%;
+}
+#welcomeNavBar h6 a{
+  color: turquoise;
+  position: relative;
+  text-decoration: underline;
+}
+#welcomeNavBar h7{
+  color: $metas-purple;
+  padding: 2px 2px;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  position: relative;
+  left: 50%;
 }
 #welcomeNavBar .navbar-name{
   color: white;
@@ -464,21 +379,6 @@ nav {border-radius: 0 !important; }
 #welcomeNavBar ul li a:hover{
   color: $metas-celeste;
 }
-#welcomeNavBar h5{
-  color: $metas-purple;
-  margin-top: 1em;
-  margin-bottom: 0em;
-  position: relative;
-  left: 6%;
-}
-#welcomeNavBar h6 {
-  padding: 2px 2px;
-  margin-top: 0em;
-  margin-bottom: 0em;
-  position: relative;
-  left: 40%;
-  text-decoration: underline;
-}
 
 // **************** MOBILE FA-BARS **************** //
 
@@ -489,73 +389,13 @@ nav {border-radius: 0 !important; }
   margin-top: 1em;
 }
 .navbar-default .navbar-toggle {
-    border-color: transparent;
+  border-color: transparent;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    background-color: transparent;
-}
-// **************** Extra Small Devices, Phones **************** //
-@media only screen and (max-width : 765px) {
-    .btn-to-login-modal, .btn-to-signup-modal{                      
-      cursor: pointer;
-      color: $lighter-purple !important;
-      background-color: transparent;
-      border-radius: 0px 0px;
-      padding: 0px 0px;
-    }
-    #guestNavBar ul li:nth-child(n+4) a {
-      color: $metas-purple !important;
-      font-size: 1.2em;
-      font-family: 'Lato', sans-serif;
-      font-weight: 900;
-      padding: 0.7em 0.5em 0.7em 1.3em;
-      margin-top: 0.2em;
-    }
-    .nav > li > a {
-      position: relative;
-      display: block;
-      text-align: center;
-    }
-    #guestNavBar ul li a:hover, #welcomeNavBar ul li a:hover {
-      background-color: $lighter-celeste;
-      color: $metas-purple;
-    }
-    #guestNavBar ul li:nth-child(n+4)  a:hover {
-      background-color: $metas-celeste ! important; 
-    }
-    #guestNavBar h5{
-      margin-left: 0em;
-    }
-    #welcomeNavBar h5{
-      left: 0%;
-    }
-    #welcomeNavBar li a{
-      margin: 0px 0px;
-    }
-    #welcomeNavBar .navbar-name{
-      color: white;
-      font-family: 'Lato', sans-serif;
-      background-color: $metas-celeste;
-      font-weight: 900;
-      font-size: 1.5em;
-      padding: 2em 0.5em 1em 0em;
-      border-radius: 0px;
-      margin: -19px 0px;
-      text-align: center;
-    }
-    #userNavBar ul li a:hover {
-      background-color: $metas-celeste;
-      color: $lighter-purple;
-    }
-    #userNavBar h5{
-      left: 0%;
-    }
-    header{
-      background-size: cover;
-    }
+  background-color: transparent;
 }
 
-// **************** METAS LOGOS MAIN AND FOOTER **************** //
+// **************** METAS LOGOS  **************** //
 
 .metas-main-welcome-page-logo{
   background-image: url(logo-de-metas.png);
@@ -581,7 +421,7 @@ nav {border-radius: 0 !important; }
 }
 .index-page-header-content-inner-h4{
   margin-left: 1.5em;
-  color: $lighter-purple;
+  color: $metas-purple;
   font-weight: 500;
   letter-spacing: 0.7;
   line-height: 150%;
@@ -589,11 +429,15 @@ nav {border-radius: 0 !important; }
 .metas-user-navbar-logo{
   background-image: url(logo-de-metas.png);
   background-repeat: no-repeat;
-  width: 310px;
+  width: 300px;
   background-size: contain;
-  margin: 1.5em 0em;
 }
-
+.metas-guest-navbar-logo{
+  background-image: url(logo-de-metas.png);
+  background-repeat: no-repeat;
+  width: 200px;
+  background-size: contain;
+}
 
 //******** FIX THIS TO NOT BE GLOBAL AND MAKE IT RESPONSIVE ******//
 
@@ -612,15 +456,6 @@ input, button, select, textarea {
 input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block {
     font-style: normal;
 }
-.checkbox > label{
-  color: $metas-purple;
-}
-.checkbox > label > span {
-  text-decoration: underline;
-}
-.signup-form, .login-form{
-  margin-left: 1.5em;
-}
 #job-modal p {
   color: $metas-purple;
 }
@@ -636,87 +471,235 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   color: $metas-purple;
   font-weight: 100;
 }
-.test{
-  // width: 40em;
+
+// ****************       MEDIA QUERIES        **************** //
+@media (min-width: 768px) {
+  .navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .metas-user-navbar-logo{
+    width: 200px !important;
+    background-size: contain;
+    margin-bottom: 0em !important;
+    // background-color: green;
+  }
 }
-// .apply-to-job-title > p{
-//   text-align: center;
-//   color: $metas-purple !important;
-//   font-weight: 100;
-// }
-// .jobs-page p{
-//   margin: 0px 0px 0px 0px;
-// }
-// .jobs-page span{
-//   font-size: 30px;
-//   color: $metas-purple;
-//   font-weight: 600;
-// }
+// Extra Small Devices, Phones
+@media only screen and (max-width : 768px) {
+  .btn-to-login-modal, .btn-to-signup-modal{                      
+    cursor: pointer;
+    color: $lighter-purple !important;
+    background-color: transparent;
+    border-radius: 0px 0px;
+    padding: 0px 0px;
+  }
+  #guestNavBar ul li:nth-child(n+4) a {
+    color: $metas-purple !important;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    padding: 0.7em 0.5em 0.7em 1.3em;
+    margin-top: 0.2em;
+  }
+  .nav > li > a {
+    position: relative;
+    display: block;
+    text-align: center;
+  }
+  #guestNavBar ul li a:hover, #welcomeNavBar ul li a:hover {
+    background-color: $lighter-celeste;
+    color: $metas-purple;
+  }
+  #guestNavBar ul li:nth-child(n+4)  a:hover {
+    background-color: $metas-celeste ! important; 
+  }
+  #userNavBar h7{
+    color: white;
+    padding: 0em 0em;
+    text-align: center;
+    left: 0%;
+    margin-top: -1em;
+  }
+  #guestNavBar h7, #welcomeNavBar h7{
+    color: $metas-purple;
+    text-align: center;
+    padding: 0em 0em;
+    left: 0;
+    margin-top: -1em;
+  }
+  #welcomeNavBar .navbar-name{
+    color: white;
+    font-family: 'Lato', sans-serif;
+    background-color: $metas-celeste;
+    font-weight: 900;
+    font-size: 1.5em;
+    padding: 2em 0.5em 1em 0em;
+    border-radius: 0px;
+    margin: -19px 0px;
+    text-align: center;
+  }
+  #userNavBar ul li a:hover {
+    background-color: $metas-celeste;
+    color: $lighter-purple;
+  }
 
-// .jobs-page h5{
-//     color: #696969;
-//     font-weight: 100;
-// }
-// .jobs-page p{
-//     color: #696969;
-//     font-weight: 100;
-// }
-// .page a {
-//   color: #696969;
-//   font-weight: 100;
-// }
+  header{
+    background-size: cover;
+  }
+}
+// METAS LOGO ON MOBILE NAVBAR
+@media only screen and (max-width : 565px) {
+  .metas-user-navbar-logo{
+    width: 210px !important;
+    background-size: contain !important;
+    margin-bottom: 0em !important;
+    // background-color: red;
+  }
+  #userNavBar.navbar-default .navbar-header .navbar-toggle {
+    font-size: 12px;
+    color: #05d5fa;
+    padding: 0px 10px;
+    margin-top: -0.5em; 
+    width: 1em;
+  }
+}
+@media only screen and (min-width:566px) and (max-width: 721px)  {
+  .metas-user-navbar-logo{
+    width: 210px !important;
+    margin-top: -2.3em !important;
+    background-size: contain;
+    margin-bottom: 1em !important;
+    // background-color: orange;
+  }
+}
+// SERVICES
+@media only screen and (max-width:800px){
+  .service-box{                 //for adding margin to be able to read description box of service box
+    margin-top: 6em;
+  }
+  #services-index-page{         //resets padding ledt to zero so service boxes can be centered on smaller screens
+    padding: 3em 0em 8em 0em;
+  }
+  #services-resources-page  .service-box{
+    background-color: white;
+    top: 17em;
+    position: relative;
+    width: 21.5em;
+    margin-left: 1em;
+    padding: 0.5em 0.9em;
+    left: 0.5em;
+    height: 10em;
+    border-bottom: 5px $customhr solid;
+    border-right: none;
+  }
+}
+// HEADER
+@media (min-width: 768px) {
+  header {
+    min-height: 100%;
+  }
+  header .header-content {
+    text-align: left;
+    padding: 0;
+    height: 100vh;
+  }
+  header .header-content .header-content-inner {
+    max-width: none;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  header .header-content .header-content-inner h1 {
+    font-size: 35px;
+  }
+  header .device-container {
+    max-width: none;
+    max-height: calc(0vh);
+    margin: 100px auto 0;
+  }
+}
+// MOBILE RESPONSIVE
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+  body{
+    // background-color: lime;
+    width: 100%;
+  }
+  footer li{
+      text-align: center;
+    }
+  footer h4{
+      text-align: center;
+    }
+  #social-icons-display{
+      margin-left: 4em;
+  }
+  .editprofile input, button, select, textarea {
+      width: 280px !important;
+  }
+  .uploadprofile-btn{
+    font-size: 1em !important;
+  }
+  .editprofile h2{
+    font-size: 1.8em;
+  }
+}
+// // GALAXY G5
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3){
+  body{
+    // background-color: turquoise;
+  }
+  .customhr {
+    height: 5px;
+    width: 22em;
+    background-color: $customhr;
+    position: absolute;
+    margin-left: -0.2em;
+  }
+  .service-box {
+    width: 22em;
+  }
+}
+// iPhone 5
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) 
+and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
+{
+   body{
+    // background-color: yellow;
+    width: 113%;
+   }
+   .customhr {
+    height: 5px;
+    width: 22em;
+    background-color: $customhr;
+    position: absolute;
+    margin-left: -0.2em;
+  }
+  .service-box {
+    width: 22em;
+  }
+  .editprofile h2{
+    font-size: 1.5em;
+  }
+}
 
-// .next a {
-//   color: #696969;
-//   font-weight: 100;
-// }
-
-// .last a {
-//   color: #696969;
-//   font-weight: 100;
-// }
-// .pagination {
-//     display: inline-block;
-//     padding-left: 0;
-//     // margin: 20px 0;
-//     border-radius: 4px;
-//     // text-align: center;
-//     position: relative;
-//     left: 37%;
-//     // margin-left: 30em;
-// }
-
-
-/*flash*/
-
-// .alert-error {
-// background-color: #f2dede;
-// border-color: #eed3d7;
-// color: #b94a48;
-// text-align: left;
-// }
-
-// .alert-alert {
-// background-color: #f2dede;
-// border-color: #eed3d7;
-// color: #b94a48;
-// text-align: left;
-// }
-
-// .alert-success {
-// background-color: #dff0d8;
-// border-color: #d6e9c6;
-// color: #468847;
-// text-align: left;
-// }
-
-// .alert-notice {
-// background-color: #dff0d8;
-// border-color: #d6e9c6;
-// color: #468847;
-// text-align: left;
-// }
-
-
-
+@media only screen and (max-width: 565px){
+.metas-user-navbar-logo {
+    width: 210px !important;
+    background-size: contain !important;
+    margin-bottom: 0em !important;
+    margin-top: -2em;
+  }
+}
+// iPad
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  body{
+    background-color: green;
+  }
+}
 

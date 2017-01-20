@@ -1,15 +1,16 @@
 <nav id="userNavBar" class="navbar navbar-default">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header col-md-4">
+        <div class="navbar-header col-lg-2">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span><i class="pull-right fa fa-bars fa-2x" aria-hidden="true"></i>
             </button>
-            <li><%= link_to "", application_welcome_path, class: "navbar-brand metas-user-navbar-logo" %></li>
+            <!-- <a class="navbar-brand metas-user-navbar-logo img-responsive" href="welcome"></a> -->
+            <%= link_to "", application_welcome_path, class: "navbar-brand metas-user-navbar-logo img-responsive" %>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse col-md-8 user-navbar-links" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li><%= link_to "Jobs", application_jobs_path %></li> 
               <li><%= link_to "Resources", application_resources_path %></li>
@@ -17,7 +18,7 @@
               <li><%= link_to "My Profile", edit_user_registration_path%></li>
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "log_out" %></li>
               <li class="navbar-name hidden-xs">Welcome, <%= current_user.first_name %></li><br />
-              <h5 class="col-md-7 col-md-offset-5 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">Para informaci&#243;n en espa&#241;ol, llama 212-888-8888</h5>
+              <h7 class="col-md-7 col-md-offset-5 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">Para informaci&#243;n en espa&#241;ol, llama 212-888-8888</h7>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

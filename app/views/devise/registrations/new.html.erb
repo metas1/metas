@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-sm-9 col-sm-offset-1">
     <h2 class="signup-title-modal-form">SIGN UP</h2>
-    <p class="custom-p">for exlusive job opportunities and career resources</p>
+    <p>for exlusive job opportunities and career resources</p>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
 
@@ -26,7 +26,7 @@
           <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Password Confirmation", class: "form-control mb-2 mr-sm-2 mb-sm-0" %>
         </div>
 
-        <div class="checkbox">
+        <div class="checkbox hidden-xs">
           <label>
             <input type="checkbox"> I have read <span>Metas Terms and Conditions</span>
           </label>
@@ -40,11 +40,11 @@
       <br>
 
       <%- if controller_name != 'sessions' %>
-        Already a METAS member? <%= link_to "Log in", new_session_path(resource_name) %><br />
+        <div class="session-offset">Already a METAS member? <span><%= link_to "Sign in", new_session_path(resource_name) %><span></div><br />
       <% end -%>
 
-      <%= render "devise/shared/links" %>
-      <%= link_to "Back", root_path %>
+      <%#= render "devise/shared/links" %>
+      <%#= link_to "Back", root_path %>
     </div>
   </div>
 </div>    
