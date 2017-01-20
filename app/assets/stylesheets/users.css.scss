@@ -125,7 +125,7 @@
   font-size: inherit;
   line-height: inherit;
   margin-top: 1em;
-  width: 340px;
+  width: 330px;
   height: 35px;
 }
 .editprofile img {
@@ -137,6 +137,28 @@
 .profile-pic{
   text-align: center;
 }
+.profile-info{
+  padding-left: 5em;
+}
+.editprofile .form-control {
+  height: 40px;
+  font-size: 15px;
+  font-weight: 300;
+}
+.editprofile h4 {
+  font-family: 'Raleway', sans-serif;
+  color: $lighter-purple;
+  font-weight: 400;
+}
+#user_about, #user_skills{
+  padding-top: 2.0em;
+  padding-bottom: 3em;
+}
+
+
+
+
+
 
 
 

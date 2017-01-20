@@ -484,6 +484,9 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
     margin-bottom: 0em !important;
     // background-color: green;
   }
+  // .profile-info {
+  //     padding-left: 0em;
+  // }
 }
 // Extra Small Devices, Phones
 @media only screen and (max-width : 768px) {
@@ -543,9 +546,11 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
     background-color: $metas-celeste;
     color: $lighter-purple;
   }
-
   header{
     background-size: cover;
+  }
+  .profile-info {
+      padding-left: 1em !important;
   }
 }
 // METAS LOGO ON MOBILE NAVBAR
