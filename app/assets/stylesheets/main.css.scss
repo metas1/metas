@@ -371,10 +371,11 @@ nav {border-radius: 0 !important; }
 #welcomeNavBar .navbar-name{
   color: white;
   background-color: $metas-purple;
-  font-weight: 900;
+  font-weight: 500;
   font-size: 1em;
   padding: 0.5em 0.5em;
   border-radius: 8px;
+  margin-bottom: 5px;
 }
 #welcomeNavBar ul li a:hover{
   color: $metas-celeste;
@@ -406,11 +407,11 @@ nav {border-radius: 0 !important; }
 }
 .welcome-page-header-content-inner-h4{
   color: $metas-purple;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.7;
   line-height: 150%;
-  font-size: 1.5em;
-  margin-left: 1em;
+  font-size: 1.9em;
+  margin-left: -1.5em;
 }
 .metas-main-index-page-logo{
   background-image: url(logo-de-metas.png);
@@ -598,6 +599,9 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
     border-bottom: 5px $customhr solid;
     border-right: none;
   }
+  .jobtools-findjob-top{
+    margin-top: -5em !important;
+  }
 }
 // HEADER
 @media (min-width: 768px) {
@@ -652,6 +656,14 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   }
   .editprofile h2{
     font-size: 1.8em;
+  }
+  .welcome-page-header-content-inner-h4{
+    color: $metas-purple;
+    font-weight: 400;
+    letter-spacing: 0.7;
+    line-height: 150%;
+    font-size: 1.5em;
+    // margin-left: -1.5em;
   }
 }
 // // GALAXY G5
