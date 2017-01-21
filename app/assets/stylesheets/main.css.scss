@@ -101,7 +101,7 @@ header .device-container {
   font-style: normal;
 }
 .filters-wrapper{
-  background-color: #e4e4e4;
+  background-color: #f9f9f9;
   padding-top: 1em;
   padding-bottom: 1.5em;
   border-bottom: 1px #ccc solid;
@@ -260,7 +260,7 @@ header .device-container {
   background-size: contain;
 }
 
-// **************** NAVBARS**************** //
+// **************** NAVBARS **************** //
 
 nav {border-radius: 0 !important; }
 
@@ -282,7 +282,7 @@ nav {border-radius: 0 !important; }
   font-family: 'Lato', sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 1em;
+  font-size: 1.3em;
   font-weight: 900;
 }
 .btn-to-login-modal{                      //on navbar
@@ -472,7 +472,20 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   color: $metas-purple;
   font-weight: 100;
 }
-
+.pay{
+  color: $metas-purple;
+  font-size: 2em;
+  font-weight: 900;
+}
+.clock{
+  height: 50px;
+  width: 50px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+.jobs-page .text{
+  color: grey;
+}
 // ****************       MEDIA QUERIES        **************** //
 @media (min-width: 768px) {
   .navbar-default {

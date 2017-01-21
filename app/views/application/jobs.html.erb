@@ -21,15 +21,21 @@
   </h3>
 
    <!-- PRISMIC FRAGMENTS -->
-  <% @documents.each do |doc| %>
-    <h2><%= doc.fragments["jobtitle"].as_html_safe(link_resolver()) %></h2>
-    <div class="pull-right"><%= doc.fragments["pay"].as_html_safe(link_resolver()) %>/hr</div>
-    <h3><%= doc.fragments["location"].as_html_safe(link_resolver()) %></h3>
-    <h4><%= doc.fragments["description"].as_html_safe(link_resolver()) %></h4>
-    <%= doc.fragments["hours"].as_html_safe(link_resolver()) %>
-    <div><a class="btn job-apply-btn pull-right" data-toggle="modal" data-target="#job-modal-<%= doc.id %>">APPLY</a></div>
-    <!-- <div><a class="btn pull-right" data-toggle="modal" data-target="#appreceived-modal">test</a></div> -->
-    <hr>
+<% @documents.each do |doc| %>
+  <table class="table table-striped">
+    <tbody>
+  <tr>
+      <td><h2><%= doc.fragments["jobtitle"].as_html_safe(link_resolver()) %></h2>
+      <div class="pay pull-right">$<%= doc.fragments["pay"].as_html_safe(link_resolver()) %>/hr</div>
+      <h3><%= doc.fragments["location"].as_html_safe(link_resolver()) %></h3>
+      <h4><%= doc.fragments["description"].as_html_safe(link_resolver()) %></h4>
+      <%= image_tag("clock.jpg", :class => "clock") %><%= doc.fragments["hours"].as_html_safe(link_resolver()) %>
+      <div><a class="btn job-apply-btn pull-right" data-toggle="modal" data-target="#job-modal-<%= doc.id %>">APPLY</a></div></td>
+      <!-- <div><a class="btn pull-right" data-toggle="modal" data-target="#appreceived-modal">test</a></div> -->
+  </tr>
+    </table>
+
+
     <!-- APPLY TO JOB MODAL -->
     <div id="job-modal-<%=doc.id%>" class="modal fade" role="dialog">
       <div class="modal-dialog">
@@ -72,37 +78,6 @@
   <%= paginate @documents %>
 </div>
 
-
-<div class="container">
-  <h2>Striped Rows</h2>
-  <p>The .table-striped class adds zebra-stripes to a table:</p>            
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
 
 <!-- document id:<%#= doc.id %> -->
 <!-- user id:<%#= current_user.id %>   -->
