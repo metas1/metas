@@ -17,13 +17,17 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:first_name, :last_name, :email, :thumbnail, :about, :skills, :password, :current_password, :remember_me)}
   end
 
-  # This block of code is what routes users to welcome page after login and sign up
+  # Routes users to welcome page after login and sign up
   def after_sign_in_path_for(resource)
-    request.env['omniauth.origin'] || stored_location_for(resource) || application_welcome_path
+    request.referrer || application_welcome_path
   end
 
   def after_sign_up_path_for(resource)
     request.env['omniauth.origin'] || stored_location_for(resource) || application_welcome_path
+  end
+
+  def after_update_path_for(resource)
+    session[:previous_url] || application_welcome_path
   end
 
   # Rescue bad preview cookies errors for some actions
