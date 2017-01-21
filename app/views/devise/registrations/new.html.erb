@@ -40,7 +40,7 @@
       <br>
 
       <%- if controller_name != 'sessions' %>
-        <div class="session-offset">Already a METAS member? <span><%= link_to "Sign in", new_session_path(resource_name) %><span></div><br />
+        <div class="session-offset">Already a METAS member? <span><a class="guestNavBarCursor open-login" data-toggle="modal" data-target="#login-modal">Sign in</a><span></div><br />
       <% end -%>
 
       <%#= render "devise/shared/links" %>

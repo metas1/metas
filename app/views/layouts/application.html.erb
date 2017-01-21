@@ -12,7 +12,7 @@
 <body>
 
   <% if user_signed_in? %>
-    <%= render 'usernavbar'  unless current_page?(application_welcome_path)%> 
+    <%= render 'usernavbar'  unless current_page?(application_welcome_path)%>
   <% else %>  
     <%= render 'guestnavbar'  unless current_page?(application_welcome_path)%> 
   <% end %>
@@ -26,7 +26,11 @@
 
 <%= render 'partials/login' %>
 
-<%= render 'footer' %>
+<% if user_signed_in? %>
+  <%= render 'footer' %> 
+<% else %>  
+  <%= render 'guestfooter' %>
+<% end %>
 
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <% # This is required for the edit button. %>

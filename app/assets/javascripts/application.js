@@ -16,4 +16,19 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+$(document).ready(function($){
+
+	$(".open-signup").click(function(){
+		$("#login-modal").removeClass("fade").modal("hide");
+	});
+
+	$(".open-login").click(function(){
+		$("#signup-modal").removeClass("fade").modal("hide");
+	});
+
+});
+
+
+
+
 

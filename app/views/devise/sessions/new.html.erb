@@ -24,7 +24,7 @@
       <br />
 
       <%- if controller_name != 'sessions' %>
-        <div class="session-offset">Not a METAS member? <span><%= link_to "Sign up", new_registration_path(resource_name) %><span></div><br />
+        <div class="session-offset">Not a METAS member? <span><a class="guestNavBarCursor open-signup" data-toggle="modal" data-target="#signup-modal">Sign up</a><span></div><br />
       <% end -%>
 
       <%#= link_to "Back", root_path %>

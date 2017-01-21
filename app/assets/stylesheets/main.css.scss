@@ -212,6 +212,9 @@ header .device-container {
   background-color: $metas-purple;
   padding: 2em 0em 2em 0em;
 }
+#footer a{
+  text-transform: uppercase;
+  }
   h4{
     font-weight: 600;
     color: $metas-celeste;
@@ -327,6 +330,9 @@ nav {border-radius: 0 !important; }
 }
 #guestNavBar ul li:nth-child(n+4)  a:hover {
   color: $metas-celeste; 
+}
+.guestNavBarCursor{
+  cursor: pointer;
 }
 #userNavBar {
   padding: 2em 0 1em 0em;
