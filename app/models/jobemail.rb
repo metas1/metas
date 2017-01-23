@@ -4,7 +4,7 @@ class Jobemail < MailForm::Base
   attribute :lname,      :validate => true
   attribute :email,      :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
   attribute :phone_number   
-  attribute :additional_info
+  attribute :additional_information
   attribute :job_title
   attribute :job_id      
 

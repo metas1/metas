@@ -1,5 +1,5 @@
   <%= render 'partials/jobappreceived' %>
-  <%= render 'partials/applytojob' %>
+  <%#= render 'partials/applytojob' %>
   <div class="container jobs-page">
   <form action="/search" method="GET">
       <input type="text" name="q" value="" placeholder= "Keyword(s)" class="col-lg-offset-1 col-lg-8 col-md-8 col-sm-8 col-xs-8">
@@ -31,49 +31,50 @@
       <h4><%= doc.fragments["description"].as_html_safe(link_resolver()) %></h4>
       <%= image_tag("clock.jpg", :class => "clock") %><%= doc.fragments["hours"].as_html_safe(link_resolver()) %>
       <div><a class="btn job-apply-btn pull-right" data-toggle="modal" data-target="#job-modal-<%= doc.id %>">APPLY</a></div></td>
-      <!-- <div><a class="btn pull-right" data-toggle="modal" data-target="#appreceived-modal">test</a></div> -->
+      <div><a class="btn pull-right" data-toggle="modal" data-target="#appreceived-modal">test</a></div>
   </tr>
     </table>
 
 
     <!-- APPLY TO JOB MODAL -->
-    <div id="job-modal-<%=doc.id%>" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <div type="button" class="close" data-dismiss="modal">&times;</div>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-sm-9 col-sm-offset-1">
-                  <h2 class="apply-to-job-title">APPLY</h2>
-                  <br /> 
-                  <div align="center">
-                    <p>Let us connect you to your next career opportunity.</p>
-                      <%#= doc.fragments["jobtitle"].as_html_safe(link_resolver()) %>
-                      <%= simple_form_for @jobemail do |f| %>
-                      <%= f.input :phone_number, :required => true %>
-                      <%= f.input :additional_info, :required => true,  :class => 'form-control' %>
-                      <%= f.hidden_field :fname, :required => true, :value => current_user.first_name %>
-                      <%= f.hidden_field :lname, :required => true, :value => current_user.last_name %>
-                      <%= f.hidden_field :email, :required => true, :value => current_user.email %>
-                      <%= f.hidden_field :job_title, :required => true, :value =>  doc.fragments["jobtitle"].as_html_safe(link_resolver()) %>
-                      <%= f.hidden_field :job_id, :required => true, :value =>  doc.id  %>
-                      <div>
-                        </br>
-                        <%= f.button :submit, 'SUBMIT', :class=> "btn btn-in-modals" %>
-                      </div>
-                    <% end %>
-                  </div>
-                  <br />
+  <div id="job-modal-<%=doc.id%>" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div type="button" class="close" data-dismiss="modal">X</div>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-9 col-sm-offset-1">
+                <h2 class="apply-to-job-title">APPLY</h2>
+                <br /> 
+                <div align="center">
+                  <p class="applytojobmodal">Let us connect you to your next career opportunity.</p>
+                    <%#= doc.fragments["jobtitle"].as_html_safe(link_resolver()) %>
+                    <%= simple_form_for @jobemail do |f| %>
+                    <%= f.label :Phone_number %>
+                    <%= f.input :phone_number, :placeholder => '  (   )   -', :required => true, :label => '', :input_html => {:style => 'width: 250px'} %>
+                    <%= f.input :additional_information, :placeholder => 'Availability, questions, concerns', :required => true, :label => 'Additional Information', :input_html => {:style => 'height: 100px'} %>
+                    <%= f.hidden_field :fname, :required => true, :value => current_user.first_name %>
+                    <%= f.hidden_field :lname, :required => true, :value => current_user.last_name %>
+                    <%= f.hidden_field :email, :required => true, :value => current_user.email %>
+                    <%= f.hidden_field :job_title, :required => true, :value =>  doc.fragments["jobtitle"].as_html_safe(link_resolver()) %>
+                    <%= f.hidden_field :job_id, :required => true, :value =>  doc.id  %>
+                    <div>
+                      <%= f.button :submit, 'SUBMIT', :class=> "btn btn-custom btn-in-modals" %>
+                      <p class="assistance">For immediate assiatance, please call 212-888-8888</p>
+                    </div>
+                  <% end %>
                 </div>
+                <br />
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
   <% end %>
   <%= paginate @documents %>
 </div>

@@ -65,7 +65,8 @@ header .device-container {
   line-height: inherit;
   margin-top: 0.5em;
   font-style: normal;
-  height: 40px;
+  height: 35px;
+  margin-bottom: 1em;
 }
 .job-search-btn{
   color: white;
@@ -118,6 +119,9 @@ header .device-container {
 .jobs-page h4{
   color: #696969;
   font-weight: 500;
+}
+.btn-custom{
+  width: 250px;
 }
 // **************** RESOURCES PAGE **************** //
 #services-resources-page{
@@ -471,13 +475,23 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   display: inline-block;
   max-width: 100%;
   margin-bottom: 5px;
-  font-weight: normal;
-  color: turquoise;
+  font-weight: 100;
+  color: #35a4a7;
+  font-size: 1.2em;
 }
 .apply-to-job-title{
-  text-align: center;
   color: $metas-purple;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100 !important;
+  text-align: center;
+  font-size: 3.5em;
+}
+.applytojobmodal{
+  color: $metas-purple;
+  font-family: sans-serif;
   font-weight: 100;
+  font-size: 19px;
+  margin: 0em -3em 0.5em -1em;
 }
 .pay{
   color: $metas-purple;
@@ -493,6 +507,25 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 .jobs-page .text{
   color: grey;
 }
+.assistance {
+  color: lightgrey;
+  font-size: 0.9em;
+}
+#appreceived-modal h2{
+  color: $metas-purple;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100 !important;
+  text-align: center;
+  font-size: 2.4em;
+} 
+#appreceived-modal p{
+  color: $metas-purple;
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 19px;
+  margin: 1.5em -3em 1em -1em;
+}
+
 // ****************       MEDIA QUERIES        **************** //
 @media (min-width: 768px) {
   .navbar-default {
