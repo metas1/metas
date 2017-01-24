@@ -4,10 +4,9 @@ class JobemailsController < ApplicationController
 		@jobemail = Jobemail.new(params[:jobemail])
 		@jobemail.request = request
 		if @jobemail.deliver
-		    redirect_to :back, :flash => {:notice => "Email delivered!"}		
+		    # redirect_to :back, :flash => {:notice => "Email delivered!"}		
 		else
 			redirect_to :back, :flash => {:error => "Unable to send email, make sure all fields are filled!"}	
 		end		
 	end	
 end
-#{render_to_string :partial => '/shared/social_buttons'}

@@ -62,6 +62,20 @@ header .header-content .header-content-inner h1 {
 header .device-container {
   margin: 0 auto 100px;
 }
+input, button, select, textarea {        //search bar 
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin-top: 0.5em;
+  font-style: normal;
+  height: 35px;
+  margin-bottom: 1em;
+}
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+    position: absolute;
+    margin-left: -20px;
+    margin-top: -0.5em;
+}
 // **************** JOBS PAGE **************** //
 
 .jobs-page input, button, select, textarea {        //search bar 
@@ -289,7 +303,7 @@ header .device-container {
 }
 // **************** SEARCH PAGE**************** //
 
-.search-page h1 {
+.search-page h3 {
   color: $metas-purple;
 }
 .search-result li a{
@@ -448,6 +462,9 @@ nav {border-radius: 0 !important; }
   margin-bottom: 0em;
   position: relative;
 }
+.active a{
+    color: red !important;
+}
 #guestNavBar h7{
   color: $metas-purple;
   margin-top: 1em;
@@ -480,7 +497,6 @@ nav {border-radius: 0 !important; }
 #welcomeNavBar ul li a:hover{
   color: $metas-celeste;
 }
-
 // **************** MOBILE FA-BARS **************** //
 
 .navbar-default .navbar-header .navbar-toggle {

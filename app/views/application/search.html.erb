@@ -1,16 +1,6 @@
 <div class="holder">
   <div class="container search-page"> 
-    <h1><%=
-      case @documents.total_results_size
-      when 0
-        "No result found"
-      when 1
-        "One document found"
-      else
-        "#{@documents.total_results_size} documents found"
-      end
-    %></h1>
-
+  <%= render 'partials/totalresults' %> 
     <ul class="search-result">
       <% @documents.each do |doc| %>
         <li>
@@ -23,11 +13,8 @@
         </li>
       <% end %>
     </ul>
-
     <%= paginate @documents %>
-
     <hr>
-
     <p>
       <%= link_to "Back to home", application_jobs_path() %>
       <%#

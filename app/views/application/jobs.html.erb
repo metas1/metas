@@ -32,7 +32,7 @@
                 <br /> 
                 <div align="center">
                   <p class="applytojobmodal">Let us connect you to your next career opportunity.</p>
-                    <%= simple_form_for @jobemail do |f| %>
+                    <%= simple_form_for @jobemail, remote: true do |f| %>
                     <%= f.label :Phone_number %>
                     <%= f.input :phone_number, :placeholder => '  (   )   -', :required => true, :label => '', :input_html => {:style => 'width: 250px'} %>
                     <%= f.input :additional_information, :placeholder => 'Availability, questions, concerns', :required => true, :label => 'Additional Information', :input_html => {:style => 'height: 100px'} %>
@@ -42,7 +42,13 @@
                     <%= f.hidden_field :job_title, :required => true, :value =>  doc.fragments["jobtitle"].as_html_safe(link_resolver()) %>
                     <%= f.hidden_field :job_id, :required => true, :value =>  doc.id  %>
                     <div>
-                      <%= f.button :submit, 'SUBMIT', :class=> "btn btn-custom btn-in-modals" %>
+                      <div class="actions" class="btn-to-modal" data-toggle="modal" data-target="#appreceived-modal">
+                        <%= f.button :submit, 'SUBMIT', :class=> "btn btn-custom btn-in-modals" %>
+                      </div>
+                      <!-- <div class="actions" class="btn-to-modal" data-toggle="modal" data-target="#updated-modal"> -->
+                        <%#= f.submit "SAVE AND CONTINUE", class: "btn uploadprofile-btn" %>
+                      <!-- </div> -->
+                      <!-- <a class="btn pull-right" data-toggle="modal" data-target="#appreceived-modal">test</a> -->
                       <p class="assistance">For immediate assistance, please call 212-888-8888</p>
                     </div>
                   <% end %>

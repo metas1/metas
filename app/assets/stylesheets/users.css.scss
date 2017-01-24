@@ -40,6 +40,20 @@
   font-weight: 100;
   letter-spacing: 1px;
   font-style: normal;
+  padding-bottom: 1.5em;
+}
+.appreceived-btn{
+  color: white;
+  font-family: 'Lato', sans-serif;
+  background-color: $metas-purple;
+  font-size: 1.6em;
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-style: normal;
+}
+.appreceived-btn:hover{
+  color: white;
+  background-color: $lighter-purple;
 }
 .btn-in-modals:hover{
   color: white;
