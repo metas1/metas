@@ -27,10 +27,6 @@ class ApplicationController < ActionController::Base
   #   request.env['omniauth.origin'] || stored_location_for(resource) || application_welcome_path
   # end
 
-  # def after_update_path_for(resource)
-  #   session[:previous_url] || application_welcome_path
-  # end
-
   # Rescue bad preview cookies errors for some actions
   rescue_from Prismic::Error, with: :clearcookies
 
