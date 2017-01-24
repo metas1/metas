@@ -1,7 +1,7 @@
 class Jobemail < MailForm::Base
 
-  attribute :fname,      :validate => true
-  attribute :lname,      :validate => true
+  attribute :first_name,      :validate => true
+  attribute :last_name      
   attribute :email,      :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
   attribute :phone_number, :validate => true   
   attribute :additional_information, :validate => true
@@ -12,9 +12,9 @@ class Jobemail < MailForm::Base
   # in ActionMailer accepts.
   def headers
     {
-      :subject => "Job Inquiry <#{job_title}>",
+      :subject => "Job Inquiry for #{job_title}",
       :to => "metastest10@gmail.com",
-      :from => %("#{fname}" <#{email}>)
+      :from => %("#{first_name}" <#{email}>)
     }
   end
 

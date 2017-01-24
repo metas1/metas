@@ -1,0 +1,12 @@
+<h3>
+  <%=
+    case @documents.total_results_size
+    when 0
+      "No document found"
+    when 1
+      "One document found"
+    else
+      "#{@documents.total_results_size} Results"
+    end
+  %>
+</h3>

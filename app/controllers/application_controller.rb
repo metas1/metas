@@ -52,14 +52,15 @@ class ApplicationController < ActionController::Base
 
     @google_id = api.experiments.current
     @document = api.getByID(id)
+    @jobemail = Jobemail.new
 
     # This is how an URL gets checked (with a clean redirect if the slug is one that used to be right, but has changed)
     # Of course, you can change slug_checker in prismic_service.rb, depending on your URL strategy.
-    @slug_checker = PrismicService.slug_checker(@document, slug)
-    if !@slug_checker[:correct]
-      render inline: "Document not found", status: :not_found if !@slug_checker[:redirect]
-      redirect_to document_path(id, @document.slug), status: :moved_permanently if @slug_checker[:redirect]
-    end
+    # @slug_checker = PrismicService.slug_checker(@document, slug)
+    # if !@slug_checker[:correct]
+    #   render inline: "Document not found", status: :not_found if !@slug_checker[:redirect]
+    #   redirect_to document_path(id, @document.slug), status: :moved_permanently if @slug_checker[:redirect]
+    # end
   end
 
   # Search result: querying all documents containing the q parameter

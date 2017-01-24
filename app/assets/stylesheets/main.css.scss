@@ -12,7 +12,12 @@ html{
   width: 100%;
 }
 body {
+  height: 100%;
   font-family: $body-font;
+}
+.holder{                          //keeps footer on bottom when content changes
+  min-height: 100%;
+  position: relative;
 }
 a {                               // For underlining a links
   -webkit-transition: all 0.35s;
@@ -59,7 +64,7 @@ header .device-container {
 }
 // **************** JOBS PAGE **************** //
 
-.jobs-page input, button, select, textarea {
+.jobs-page input, button, select, textarea {        //search bar 
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -96,7 +101,7 @@ header .device-container {
   background-color: $lighter-purple;
   color: white;
 }
-.options-btn{
+.filter-menu{
   background-color: #f9f9f9;
   border: 1px #ccc solid;
   font-style: normal;
@@ -109,26 +114,94 @@ header .device-container {
   border-right: 1px #ccc solid;
   border-left: 1px #ccc solid;
 }
-.jobs-page h2{
+.jobs-page h2, .document-page h2{
   color: $metas-purple;
   font-weight: 600;
 }
-.jobs-page h3{
+.jobs-page h3, .document-page h3{
   color: #696969;
 }
-.jobs-page h4{
+.jobs-page h4, .document-page h4{
   color: #696969;
   font-weight: 500;
 }
 .btn-custom{
   width: 250px;
 }
+.job-modal-body{
+  margin-left: 2em;
+}
+.job-modal-body input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin-top: 1.3em;
+  font-style: italic;
+  width: 100%;
+}
+#job-modal p {
+  color: $metas-purple;
+}
+.jobs-page label, .document-page label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 100;
+  color: #35a4a7;
+  font-size: 1.2em;
+}
+.apply-to-job-title{
+  color: $metas-purple;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100 !important;
+  text-align: center;
+  font-size: 3.5em;
+}
+.applytojobmodal{
+  color: $metas-purple;
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 19px;
+  margin: 0em -3em 0.5em -1em;
+}
+.pay{
+  color: $metas-purple;
+  font-size: 2em;
+  font-weight: 900;
+}
+.clock{
+  height: 50px;
+  width: 50px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+.jobs-page .text{
+  color: grey;
+}
+.assistance {
+  color: lightgrey;
+  font-size: 0.9em;
+}
+#appreceived-modal h2{
+  color: $metas-purple;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100 !important;
+  text-align: center;
+  font-size: 2.4em;
+} 
+#appreceived-modal p{
+  color: $metas-purple;
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 19px;
+  margin: 1.5em -3em 1em -1em;
+}
 // **************** RESOURCES PAGE **************** //
 #services-resources-page{
   padding-bottom: 5em; 
 }
 .resources-padding{
-  padding: 1em 1em;
+  padding: 3em 1em 1em 1em;
 }
 #services-resources-page  .service-box{
   background-color: white;
@@ -155,7 +228,7 @@ header .device-container {
 .service-img-1{
   background-image: url(placeholder-1.jpg);
   background-size: cover;
-  height: 300px;
+  height: 260px;
 }
 .service-img-2{
   @extend .service-img-1;
@@ -163,7 +236,7 @@ header .device-container {
 }
 .service-img-3{
   @extend .service-img-1;
-  background-image: url(placeholder-3.jpg);
+  background-image: url(placeholder-5.jpg);
   margin-top: 3em;
 }
 .service-img-4{
@@ -173,7 +246,7 @@ header .device-container {
 }
 .service-img-5{
   @extend .service-img-1;
-  background-image: url(placeholder-5.jpg);
+  background-image: url(placeholder-3.jpg);
 }
 .service-img-6{
   @extend .service-img-1;
@@ -210,6 +283,22 @@ header .device-container {
   width: 23em;
   background-color: $customhr;
   position: absolute;
+}
+.add-padding{
+  padding-bottom: 1.2em;
+}
+// **************** SEARCH PAGE**************** //
+
+.search-page h1 {
+  color: $metas-purple;
+}
+.search-result li a{
+  color: black;
+  text-decoration: underline;
+  list-style-type: bullet;
+}
+.search-page ul li{
+  list-style-type: circle !important;
 }
 // **************** FOOTER **************** //
 #footer{
@@ -449,81 +538,6 @@ nav {border-radius: 0 !important; }
   background-repeat: no-repeat;
   width: 200px;
   background-size: contain;
-}
-
-//******** FIX THIS TO NOT BE GLOBAL AND MAKE IT RESPONSIVE ******//
-
-input, button, select, textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  margin-top: 1.3em;
-  font-style: italic;
-  width: 100%;
-}
-.form-control{
-  height: 40px;
-  font-size: 17px;
-}
-input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block {
-    font-style: normal;
-}
-#job-modal p {
-  color: $metas-purple;
-}
-.jobs-page label {
-  display: inline-block;
-  max-width: 100%;
-  margin-bottom: 5px;
-  font-weight: 100;
-  color: #35a4a7;
-  font-size: 1.2em;
-}
-.apply-to-job-title{
-  color: $metas-purple;
-  font-family: 'Lato', sans-serif;
-  font-weight: 100 !important;
-  text-align: center;
-  font-size: 3.5em;
-}
-.applytojobmodal{
-  color: $metas-purple;
-  font-family: sans-serif;
-  font-weight: 100;
-  font-size: 19px;
-  margin: 0em -3em 0.5em -1em;
-}
-.pay{
-  color: $metas-purple;
-  font-size: 2em;
-  font-weight: 900;
-}
-.clock{
-  height: 50px;
-  width: 50px;
-  margin-right: 5px;
-  border-radius: 50%;
-}
-.jobs-page .text{
-  color: grey;
-}
-.assistance {
-  color: lightgrey;
-  font-size: 0.9em;
-}
-#appreceived-modal h2{
-  color: $metas-purple;
-  font-family: 'Lato', sans-serif;
-  font-weight: 100 !important;
-  text-align: center;
-  font-size: 2.4em;
-} 
-#appreceived-modal p{
-  color: $metas-purple;
-  font-family: sans-serif;
-  font-weight: 100;
-  font-size: 19px;
-  margin: 1.5em -3em 1em -1em;
 }
 
 // ****************       MEDIA QUERIES        **************** //
