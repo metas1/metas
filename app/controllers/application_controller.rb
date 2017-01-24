@@ -23,9 +23,9 @@ class ApplicationController < ActionController::Base
     application_welcome_path
   end
 
-  # def after_sign_up_path_for(resource)
-  #   request.env['omniauth.origin'] || stored_location_for(resource) || application_welcome_path
-  # end
+  def after_sign_up_path_for(resource)
+    application_welcome_path
+  end
 
   # Rescue bad preview cookies errors for some actions
   rescue_from Prismic::Error, with: :clearcookies
