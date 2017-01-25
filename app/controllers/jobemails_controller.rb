@@ -3,10 +3,11 @@ class JobemailsController < ApplicationController
 	def create
 		@jobemail = Jobemail.new(params[:jobemail])
 		@jobemail.request = request
-		if @jobemail.deliver
-		    # redirect_to :back, :flash => {:notice => "Email delivered!"}		
-		else
-			redirect_to :back, :flash => {:error => "Unable to send email, make sure all fields are filled!"}	
-		end		
+
+		if @jobemail.deliver 
+			# flash[:notice] = "good"
+		else @jobemail
+			# flash[:error] = "error"
+		end
 	end	
 end

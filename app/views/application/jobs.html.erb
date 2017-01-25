@@ -14,11 +14,11 @@
         <h3><%= doc.fragments["location"].as_html_safe(link_resolver()) %></h3>
         <h4><%= doc.fragments["description"].as_html_safe(link_resolver()) %></h4>
         <%= image_tag("clock.jpg", :class => "clock") %><%= doc.fragments["hours"].as_html_safe(link_resolver()) %>
-        <div><a class="btn job-apply-btn pull-right" data-toggle="modal" data-target="#job-modal-<%= doc.id %>">APPLY</a><a class="btn pull-right" data-toggle="modal" data-target="#appreceived-modal">test</a></div></td>
+        <div><a class="btn job-apply-btn pull-right" data-toggle="modal" data-target="#job-modal-<%= doc.id %>">APPLY</a></div></td>
     </tr>
   </table>
    <!-- -------APPLY TO JOB MODAL ------------>
-  <div id="job-modal-<%=doc.id%>" class="modal fade" role="dialog">
+  <div id="job-modal-<%=doc.id%>" class="modal fade apply-modal" role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -33,22 +33,16 @@
                 <div align="center">
                   <p class="applytojobmodal">Let us connect you to your next career opportunity.</p>
                     <%= simple_form_for @jobemail, remote: true do |f| %>
-                    <%= f.label :Phone_number %>
-                    <%= f.input :phone_number, :placeholder => '  (   )   -', :required => true, :label => '', :input_html => {:style => 'width: 250px'} %>
-                    <%= f.input :additional_information, :placeholder => 'Availability, questions, concerns', :required => true, :label => 'Additional Information', :input_html => {:style => 'height: 100px'} %>
-                    <%= f.hidden_field :first_name, :required => true, :value => current_user.first_name %>
-                    <%= f.hidden_field :last_name, :required => true, :value => current_user.last_name %>
-                    <%= f.hidden_field :email, :required => true, :value => current_user.email %>
-                    <%= f.hidden_field :job_title, :required => true, :value =>  doc.fragments["jobtitle"].as_html_safe(link_resolver()) %>
-                    <%= f.hidden_field :job_id, :required => true, :value =>  doc.id  %>
-                    <div>
-                      <div class="actions" class="btn-to-modal" data-toggle="modal" data-target="#appreceived-modal">
-                        <%= f.button :submit, 'SUBMIT', :class=> "btn btn-custom btn-in-modals" %>
-                      </div>
-                      <!-- <div class="actions" class="btn-to-modal" data-toggle="modal" data-target="#updated-modal"> -->
-                        <%#= f.submit "SAVE AND CONTINUE", class: "btn uploadprofile-btn" %>
-                      <!-- </div> -->
-                      <!-- <a class="btn pull-right" data-toggle="modal" data-target="#appreceived-modal">test</a> -->
+                      <%= f.label :Phone_number %>
+                      <%= f.input :phone_number, :placeholder => '  (   )   -', :required => true, :id => 'phonenumber', :label => '', :input_html => {:style => 'width: 250px'} %>
+                      <%= f.input :additional_information, :placeholder => 'Availability, questions, concerns', :required => true, :label => 'Additional Information', :input_html => {:style => 'height: 100px'} %>
+                      <%= f.hidden_field :first_name, :required => true, :value => current_user.first_name %>
+                      <%= f.hidden_field :last_name, :required => true, :value => current_user.last_name %>
+                      <%= f.hidden_field :email, :required => true, :value => current_user.email %>
+                      <%= f.hidden_field :job_title, :required => true, :value =>  doc.fragments["jobtitle"].as_html_safe(link_resolver()) %>
+                      <%= f.hidden_field :job_id, :required => true, :value =>  doc.id  %>
+                      <div>
+                      <%= f.button :submit, 'SUBMIT', :class=> "btn btn-custom btn-in-modals sub-application-btn", :disabled => "disabled" %>
                       <p class="assistance">For immediate assistance, please call 212-888-8888</p>
                     </div>
                   <% end %>

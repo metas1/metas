@@ -13,7 +13,7 @@
             <ul class="nav navbar-nav navbar-right">
               <li><%= link_to "Jobs", application_jobs_path %></li> 
               <li><%= link_to "Resources", application_resources_path %></li>
-              <li><%= link_to "About", application_about_path %></li>
+              <li><%= link_to "About", application_welcome_path %></li>
               <li><%= link_to "My Profile", edit_user_registration_path%></li>
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "log_out" %></li>
               <li class="navbar-name hidden-xs">Welcome, <%= current_user.first_name %></li><br />
