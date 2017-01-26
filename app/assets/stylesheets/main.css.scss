@@ -171,12 +171,17 @@ input, button, select, textarea {        //search bar
   text-align: center;
   font-size: 3.5em;
 }
-.applytojobmodal{
-  color: $metas-purple;
+#updated-modal p{
+  color: $lighter-purple;
   font-family: sans-serif;
   font-weight: 100;
   font-size: 19px;
-  margin: 0em -3em 0.5em -1em;
+}
+#updated-modal h2{
+  color: #261762;
+  font-weight: 100;
+  text-align: center;
+  font-size: 3.5em;
 }
 .pay{
   color: $metas-purple;
@@ -226,7 +231,7 @@ input, button, select, textarea {        //search bar
   padding: 0.5em 0.9em;
   left: 30em;
   height: 10em;
-  border-right: 5px $customhr solid;
+  border-right: 5px solid $customhr;
 }
 #services-resources-page h3 {
   color: $metas-purple;
@@ -544,16 +549,18 @@ nav {border-radius: 0 !important; }
   line-height: 150%;
 }
 .metas-user-navbar-logo{
-  // background-image: url(logo-de-metas.png);
+  background-image: url(logo-de-metas.png);
   background-repeat: no-repeat;
-  width: 300px;
+  width: 200px;
   background-size: contain;
+  // background-color: white;
 }
 .metas-guest-navbar-logo{
   background-image: url(logo-de-metas.png);
   background-repeat: no-repeat;
   width: 200px;
   background-size: contain;
+  // background-color: maroon;
 }
 
 // ****************       MEDIA QUERIES        **************** //
@@ -568,9 +575,6 @@ nav {border-radius: 0 !important; }
     margin-bottom: 0em !important;
     // background-color: green;
   }
-  // .profile-info {
-  //     padding-left: 0em;
-  // }
 }
 // Extra Small Devices, Phones
 @media only screen and (max-width : 768px) {
@@ -583,7 +587,7 @@ nav {border-radius: 0 !important; }
   }
   #guestNavBar ul li:nth-child(n+4) a {
     color: $metas-purple !important;
-    font-size: 1em;
+    font-size: 1.3em;
     font-family: 'Lato', sans-serif;
     font-weight: 900;
     padding: 0.7em 0.5em 0.7em 1.3em;
@@ -634,10 +638,12 @@ nav {border-radius: 0 !important; }
     background-size: cover;
   }
   .profile-info {
-      padding-left: 1em !important;
+    padding-left: 1em !important;
   }
 }
-// METAS LOGO ON MOBILE NAVBAR
+
+
+// // METAS LOGO ON MOBILE NAVBAR
 @media only screen and (max-width : 565px) {
   .metas-user-navbar-logo{
     width: 210px !important;
@@ -662,31 +668,43 @@ nav {border-radius: 0 !important; }
     // background-color: orange;
   }
 }
-// SERVICES
+
+
+// // SERVICES
 @media only screen and (max-width:800px){
-  .service-box{                 //for adding margin to be able to read description box of service box
+  #services-index-page .service-box{                 //for adding margin to be able to read description box of service box
     margin-top: 6em;
   }
   #services-index-page{         //resets padding ledt to zero so service boxes can be centered on smaller screens
     padding: 3em 0em 8em 0em;
   }
+  #services-index-page .jobtools-findjob-top{
+    margin-top: -5em !important;
+  }
+  #services-resources-page .service-box{                 //for adding margin to be able to read description box of service box
+    margin-top: 6em;
+  }
+  #services-resources-page .jobtools-findjob-top{
+    margin-top: -5em !important;
+  }
   #services-resources-page  .service-box{
     background-color: white;
-    top: 17em;
+    top: 12em;
     position: relative;
     width: 21.5em;
-    margin-left: 1em;
+    margin-left: -0.1em;
     padding: 0.5em 0.9em;
     left: 0.5em;
     height: 10em;
     border-bottom: 5px $customhr solid;
     border-right: none;
   }
-  .jobtools-findjob-top{
-    margin-top: -5em !important;
+  #services-resources-page .jobs-div{
+    margin-top: -7em;
   }
 }
-// HEADER
+
+// // HEADER
 @media (min-width: 768px) {
   header {
     min-height: 100%;
@@ -712,6 +730,8 @@ nav {border-radius: 0 !important; }
     margin: 100px auto 0;
   }
 }
+
+
 // MOBILE RESPONSIVE
 @media only screen 
   and (min-device-width: 320px) 
@@ -719,20 +739,39 @@ nav {border-radius: 0 !important; }
   and (-webkit-min-device-pixel-ratio: 2)
   and (orientation: portrait) { 
   body{
-    // background-color: lime;
+    // background-color: hotpink;
     width: 100%;
   }
+  #guestNavBar ul li:nth-child(n+4) a {
+    color: #261762 !important;
+    font-size: 1.3em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    padding: 0.7em 0.5em 0.7em 1.3em;
+    margin-top: 0.2em;
+  }
+  .metas-user-navbar-logo {
+    width: 210px !important;
+    background-size: contain !important;
+    margin-bottom: 0em !important;
+    margin-top: -2em;
+    // background-color: hotpink;
+  }
   footer li{
-      text-align: center;
-    }
+    text-align: center;
+  }
   footer h4{
-      text-align: center;
-    }
+    text-align: center;
+  }
+  footer{
+    margin-top: 3em;
+  }
   #social-icons-display{
-      margin-left: 4em;
+    position: relative;
+    left: 16.5%;
   }
   .editprofile input, button, select, textarea {
-      width: 280px !important;
+    width: 280px !important;
   }
   .uploadprofile-btn{
     font-size: 1em !important;
@@ -741,31 +780,51 @@ nav {border-radius: 0 !important; }
     font-size: 1.8em;
   }
   .welcome-page-header-content-inner-h4{
-    color: $metas-purple;
-    font-weight: 400;
-    letter-spacing: 0.7;
-    line-height: 150%;
     font-size: 1.5em;
-    // margin-left: -1.5em;
+    text-align: center;
   }
-}
-// // GALAXY G5
-@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3){
-  body{
-    // background-color: turquoise;
+  .service-box {
+    width: 23em;
+    top: 12em;
+    margin-left: 1.1em;
   }
   .customhr {
     height: 5px;
-    width: 22em;
+    width: 23em;
     background-color: $customhr;
     position: absolute;
     margin-left: -0.2em;
   }
-  .service-box {
-    width: 22em;
+  .job-modal-body{
+    margin-left: 0em;
+  }
+  #appreceived-modal p{
+    text-align: center;
+    float: none;
+    margin-left: -3em;
+  }
+  .uploadpic-btn{
+    font-size: 1em !important;
+  }
+  #footer{
+    padding-left: 0.7em;
+  }
+  #footer li a {
+    letter-spacing: 3px;
+  }
+  #footer h4{
+    letter-spacing: 2px;
   }
 }
-// iPhone 5
+
+// // GALAXY S5
+// @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3){
+//   body{
+//     background-color: turquoise;
+//   }
+// }
+
+// // iPhone 5
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) 
 and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
 {
@@ -773,33 +832,107 @@ and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71)
     // background-color: yellow;
     width: 113%;
    }
-   .customhr {
-    height: 5px;
-    width: 22em;
-    background-color: $customhr;
-    position: absolute;
-    margin-left: -0.2em;
-  }
-  .service-box {
-    width: 22em;
-  }
-  .editprofile h2{
-    font-size: 1.5em;
-  }
 }
 
-@media only screen and (max-width: 565px){
-.metas-user-navbar-logo {
-    width: 210px !important;
-    background-size: contain !important;
-    margin-bottom: 0em !important;
-    margin-top: -2em;
-  }
-}
-// iPad
+// // iPad
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
   body{
-    background-color: green;
+    // background-color: orange;
+    width: 100%;
+  }
+  #guestNavBar, #welcomeNavBar{
+    margin-top: 1.5em;
+  }
+  #guestNavBar ul li{
+    font-size: 1.5em;
+  }
+  #welcomeNavBar ul li{
+    font-size: 1.2em;
+  }
+  #welcomeNavBar h7{
+    margin-top: 1em;
+    font-weight: 500;
+    font-size: 1.4em !important;
+    margin-left: -3em;
+  }
+  #guestNavBar ul li:nth-child(n+4) a{
+    font-size: 1.4em;
+    margin-top: -0.2em;
+  }
+  #guestNavBar h7{
+    margin-top: 1em;
+    position: relative;
+    font-weight: 500;
+    font-size: 2em !important;
+  }
+  header .header-content .header-content-inner{
+    top: 35%;
+    left: 6%;
+  }
+  .index-page-header-content-inner-h4 {
+    font-size: 2.3em;
+    margin-left: -1em;
+  }
+  .signup-ipad {
+    position: relative;
+    left: -80%;
+    margin-top: 50em;
+  }
+  .metas-main-index-page-logo{
+    width: 1000px;
+    height: 130px;
+  }
+  .metas-main-welcome-page-logo{
+    width: 1000px;
+    height: 130px;
+    margin-left: -10em;
+  }
+  .welcome-page-header-content-inner-h4 {
+    font-size: 2.3em;
+    margin-left: -5em;
+  }
+  #services-index-page .jobtools-findjob-top {
+    margin-top: 0em !important;
+  }
+  #social-icons-display{
+    margin-left: -2em;
+  }
+  #social-icons-display a{
+    padding-right: 0em;
+  }
+  .service-box {
+    background-color: white;
+    top: 15em;
+    position: relative;
+    width: 23em;
+    margin-left: 1em;
+    padding: 0.2em 0.2em;
+  }
+  #services-index-page {
+    padding: 3em 0em 8em 0em;
+  }
+  .customhr{
+    margin-left: -0.2em;
+  }
+  .index-page .form-control {
+    width: 150%;
+    height: 74px;
+    font-size: 24px;
+  }
+  .checkbox > label > span {
+    text-decoration: underline;
+    font-size: 16px;
+  }
+  .index-signup-title{
+    font-size: 4em !important;
+    position: relative;
+    left: 16%;
+  }
+  .index-signup-btn{
+    width: 145%;
+    font-size: 2em;
+    padding-bottom: 1.7em;
+    margin-left: 2.5em;
   }
 }
 
