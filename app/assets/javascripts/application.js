@@ -39,7 +39,8 @@ $(document).ready(function($){
 
 	        if(empty.length) {
 	            console.log('empty')
-	            $('.sub-application-btn').attr('disabled', 'disabled');
+	            // $('.sub-application-btn').attr('disabled', 'disabled');
+	            $('.sub-application-btn').removeAttr('disabled');
            		$(this).val() == empty;
 	        }else{
 	        	console.log('filled')
@@ -48,8 +49,6 @@ $(document).ready(function($){
 
 	      });
 	})()
-
-
 
 	$(".apply-modal").bind("ajax:complete", function(){
 

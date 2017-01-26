@@ -12,6 +12,7 @@
         <td><h2><%= doc.fragments["jobtitle"].as_html_safe(link_resolver()) %></h2>
         <div class="pay pull-right">$<%= doc.fragments["pay"].as_html_safe(link_resolver()) %>/hr</div>
         <h3><%= doc.fragments["location"].as_html_safe(link_resolver()) %></h3>
+        <h4><%= doc.fragments["city"].as_html_safe(link_resolver()) %></h4>
         <h4><%= doc.fragments["description"].as_html_safe(link_resolver()) %></h4>
         <%= image_tag("clock.jpg", :class => "clock") %><%= doc.fragments["hours"].as_html_safe(link_resolver()) %>
         <div><a class="btn job-apply-btn pull-right" data-toggle="modal" data-target="#job-modal-<%= doc.id %>">APPLY</a></div></td>
@@ -34,8 +35,8 @@
                   <p class="applytojobmodal">Let us connect you to your next career opportunity.</p>
                     <%= simple_form_for @jobemail, remote: true do |f| %>
                       <%= f.label :Phone_number %>
-                      <%= f.input :phone_number, :placeholder => '  (   )   -', :required => true, :id => 'phonenumber', :label => '', :input_html => {:style => 'width: 250px'} %>
-                      <%= f.input :additional_information, :placeholder => 'Availability, questions, concerns', :required => true, :label => 'Additional Information', :input_html => {:style => 'height: 100px'} %>
+                      <%= f.input :phone_number, :placeholder => '  (   )   -', :required => true, :id => 'phonenumber', :label => '', :input_html => {:style => 'width: 250px'}, :input_html => { autocomplete: 'off' }  %>
+                      <%= f.input :additional_information, :placeholder => 'Availability, questions, concerns', :required => true, :label => 'Additional Information', :input_html => {:style => 'height: 100px'}%>
                       <%= f.hidden_field :first_name, :required => true, :value => current_user.first_name %>
                       <%= f.hidden_field :last_name, :required => true, :value => current_user.last_name %>
                       <%= f.hidden_field :email, :required => true, :value => current_user.email %>

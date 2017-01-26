@@ -327,6 +327,9 @@ input, button, select, textarea {        //search bar
 #footer a{
   text-transform: uppercase;
   }
+  a:hover{
+    color: $metas-celeste;
+  }
   h4{
     font-weight: 600;
     color: $metas-celeste;
@@ -480,7 +483,13 @@ nav {border-radius: 0 !important; }
   color: turquoise;
   position: relative;
   text-decoration: underline;
-  margin-left: -1em;
+  left: 1%;
+}
+#welcomeNavBar .nav > li > a {
+  padding-right: 5px;
+}
+#userNavBar .nav > li > a {
+  padding-right: 5px;
 }
 #welcomeNavBar h7{
   color: $metas-purple;
