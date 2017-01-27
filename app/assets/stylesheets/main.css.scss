@@ -458,17 +458,31 @@ nav {border-radius: 0 !important; }
   color: $metas-celeste;
 }
 #userNavBar .navbar-name{
-  color: white;
-  background-color: transparent;
   border: 1px white solid;
-  font-weight: 100;
-  padding: 0.5em 0.5em;
   border-radius: 8px;
+}
+#userNavBar .navbar-name a{
+  text-transform: capitalize;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 #userNavBar h7{
   color: white;
   margin-bottom: 0em;
   position: relative;
+  left: 30%;
+  margin-top: 10px;
+}
+#userNavBar ul li:nth-child(5) a {
+ color: white;
+ font-family: 'Lato', sans-serif;
+}
+// #userNavBar ul li:nth-child(4) a:hover {
+//  color: $metas-celeste;
+//  font-size: 3em;
+// }
+#userNavBar ul li:nth-child(5) a:hover {
+ color: $metas-celeste;
 }
 .active a{
     color: red !important;
@@ -483,13 +497,21 @@ nav {border-radius: 0 !important; }
   color: turquoise;
   position: relative;
   text-decoration: underline;
-  left: 1%;
+  left: 78%;
+}
+#welcomeNavBar ul li:nth-child(7) a {
+ color: white;
+ font-family: 'Lato', sans-serif;
+ padding: 0.7em;
+ font-size: 1em;
+ padding-left: -4em;
+ text-transform: capitalize;
 }
 #welcomeNavBar .nav > li > a {
-  padding-right: 5px;
+  padding-right: 10px;
 }
 #userNavBar .nav > li > a {
-  padding-right: 5px;
+  padding-right: 12px;
 }
 #welcomeNavBar h7{
   color: $metas-purple;
@@ -497,14 +519,13 @@ nav {border-radius: 0 !important; }
   margin-top: 0em;
   margin-bottom: 0em;
   position: relative;
-  left: 50%;
+  left: 35%;
 }
 #welcomeNavBar .navbar-name{
   color: white;
   background-color: $metas-purple;
   font-weight: 500;
   font-size: 1em;
-  padding: 0.5em 0.5em;
   border-radius: 8px;
   margin-bottom: 5px;
 }
