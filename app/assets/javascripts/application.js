@@ -28,28 +28,28 @@ $(document).ready(function($){
 	});
 
 
-	(function() {
-	    $('.apply-modal').keyup(function() {
+	// (function() {
+	//     $('.apply-modal').keyup(function() {
 
-	        var empty = false;
+	//         var empty = false;
 
-	        empty = $(this).find("input").filter(function() {
-	            return this.value === "";
-	            empty = true;
-	        });
+	//         empty = $(this).find("input").filter(function() {
+	//             return this.value === "";
+	//             empty = true;
+	//         });
 
-	        if(empty.length) {
-	            console.log('empty')
-	            // $('.sub-application-btn').attr('disabled', 'disabled');
-	            $('.sub-application-btn').removeAttr('disabled');
-           		$(this).val() == empty;
-	        }else{
-	        	console.log('filled')
-	        	$('.sub-application-btn').removeAttr('disabled');
-	        }
+	//         if(empty.length) {
+	//             console.log('empty')
+	//             // $('.sub-application-btn').attr('disabled', 'disabled');
+	//             $('.sub-application-btn').removeAttr('disabled');
+ //           		$(this).val() == empty;
+	//         }else{
+	//         	console.log('filled')
+	//         	$('.sub-application-btn').removeAttr('disabled');
+	//         }
 
-	      });
-	})()
+	//       });
+	// })()
 
 	$(".apply-modal").bind("ajax:complete", function(){
 
