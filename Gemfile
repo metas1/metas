@@ -4,6 +4,8 @@ gem 'devise', '~> 4.0.2'
 
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
+gem 'remotipart', '~> 1.2'
+
 gem 'railties', '~> 4.2.7.1' 
 
 gem 'font-awesome-sass'
