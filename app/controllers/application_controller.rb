@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
-  # http_basic_authenticate_with :name => "lolastar", :password => "bluebird900"
+  http_basic_authenticate_with :name => "lolastar", :password => "bluebird900"
 
   # before_action :authenticate_user!
   # This code makes sure not to allow anyone to view any page other than 'index', unless they are signed in
