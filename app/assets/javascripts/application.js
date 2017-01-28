@@ -72,6 +72,35 @@ $(document).ready(function($){
 	  });
 
 	});
+
+
+	// $(function () {
+	//     $("#contactus-modal").submit(function (e) {
+	//         e.preventDefault(); //STOP default action
+	//         $.ajax({
+	//             url: "/contactforms",
+	//             type: "POST",
+	//             data: {formData: $("#contactus-modal").serialize()},
+	//             success: function (data, textStatus, jqXHR) {
+	//                 console.log('ajax works')
+	//             },
+	//             error: function (jqXHR, textStatus, errorThrown) {
+	//                 // Doing things here too
+	//                 alert('error');
+	//             }
+	//         });
+	//         return false;
+	//     });
+	// });
+
+	// $('#contactus-modal').on('ajax:success', function(event, data, status, xhr) {
+	// 	event.preventDefault();
+	// 	$('#contactus-modal').removeClass("fade").modal("hide");
+	// 	console.log('bien')
+	// });
+
+
+
 });
 
 

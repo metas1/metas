@@ -5,9 +5,9 @@ class JobemailsController < ApplicationController
 		@jobemail.request = request
 
 		if @jobemail.deliver 
-			# flash[:notice] = "good"
+			# flash[:notice] = "Your email has been sent"
 		else @jobemail
-			# flash[:error] = "error"
+			# flash[:error] = "There has been an error"
 		end
 	end	
 end

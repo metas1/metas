@@ -39,7 +39,7 @@
   font-size: 1.6em;
   font-weight: 100;
   letter-spacing: 1px;
-  font-style: normal;
+  font-style: normal !important;
   padding-bottom: 1.5em;
 }
 .appreceived-btn{
@@ -92,6 +92,13 @@
   font-weight: 100;
   font-size: 19px;
   margin: 1.5em -3em 2em -1em;
+}
+#contactus-modal p{ 
+  color: $lighter-purple;
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 19px;
+  text-align: center;
 }
 .session-offset{
   text-align: center;

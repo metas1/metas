@@ -77,6 +77,9 @@ StarterRubyRails::Application.routes.draw do
   match '/jobemails',     to: 'jobemails#new',             via: 'get'
   resources "jobemails", only: [:new, :create]
 
+  match '/contactform',     to: 'contactforms#new',             via: 'get'
+  resources "contactforms", only: [:new, :create]
+
   # # Document detail
   get '/document/:id/:slug', to: 'application#document', constraints: {id: /[-_a-zA-Z0-9]{16}/}, as: :document
 

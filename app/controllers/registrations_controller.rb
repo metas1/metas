@@ -9,6 +9,8 @@ class RegistrationsController < Devise::RegistrationsController
 	end
 
 	def update
+		@contactform = Contactform.new
+
 	  # For Rails 4
 	  account_update_params = devise_parameter_sanitizer.sanitize(:account_update)
 

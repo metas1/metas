@@ -198,8 +198,9 @@ input, button, select, textarea {        //search bar
   color: grey;
 }
 .assistance {
-  color: lightgrey;
-  font-size: 0.9em;
+  color: lightgrey !important;
+  font-size: 0.9em !important;
+  margin-top: 3px;
 }
 #appreceived-modal h2{
   color: $metas-purple;
@@ -341,6 +342,7 @@ input, button, select, textarea {        //search bar
     text-align: left;
     letter-spacing: 1px;
     list-style-type: none;
+    cursor: pointer;
   }
   li{
     list-style-type: none;

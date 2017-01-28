@@ -4,16 +4,18 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
-  http_basic_authenticate_with :name => "lolastar", :password => "bluebird900"
+  # http_basic_authenticate_with :name => "lolastar", :password => "bluebird900"
 
+  # before_action :authenticate_user!
   # This code makes sure not to allow anyone to view any page other than 'index', unless they are signed in
-  before_action :authenticate_user!, :except => [:index]
+  before_action :authenticate_user!, :only => [:welcome, :jobs, :resources, :about]
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   # protected  // For some reason uncommenting this "protected" code prevents application/jobs from showing
 
   def configure_permitted_parameters
+      @contactform = Contactform.new
       devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:first_name, :last_name, :email, :password, :remember_me)}
       devise_parameter_sanitizer.permit(:sign_in) { |u| u.permit(:email, :password, :remember_me)}
       devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:first_name, :last_name, :email, :thumbnail, :about, :skills)}
@@ -34,7 +36,12 @@ class ApplicationController < ActionController::Base
 
   # Homepage action: querying the "everything" form (all the documents, paginated by 20)
   def index
+    @contactform = Contactform.new
   end
+
+  def welcome
+    @contactform = Contactform.new
+  end 
 
   def jobs
     id = params[:id]
@@ -45,7 +52,12 @@ class ApplicationController < ActionController::Base
       "ref" => ref,
     })  
     @jobemail = Jobemail.new
+    @contactform = Contactform.new
   end
+
+  def resources
+    @contactform = Contactform.new
+  end  
 
   # Single-document page action: mostly, setting the @document instance variable, and checking the URL
   def document
