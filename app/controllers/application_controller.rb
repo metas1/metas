@@ -67,6 +67,7 @@ class ApplicationController < ActionController::Base
     @google_id = api.experiments.current
     @document = api.getByID(id)
     @jobemail = Jobemail.new
+    @contactform = Contactform.new
 
     # This is how an URL gets checked (with a clean redirect if the slug is one that used to be right, but has changed)
     # Of course, you can change slug_checker in prismic_service.rb, depending on your URL strategy.
@@ -79,6 +80,7 @@ class ApplicationController < ActionController::Base
 
   # Search result: querying all documents containing the q parameter
   def search
+    @contactform = Contactform.new
     @google_id = api.experiments.current
     @documents = api.form('everything')
                     .query(Prismic::Predicates.fulltext('document', params[:q]))
