@@ -16,6 +16,8 @@ gem 'mail_form', '~> 1.5', '>= 1.5.1'
 
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 
+gem 'lockup', '~> 1.3', '>= 1.3.2.1'
+
 gem 'autoprefixer-rails'
 
 gem 'sprockets', '2.8'

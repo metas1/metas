@@ -1,5 +1,4 @@
 StarterRubyRails::Application.routes.draw do
-  # get 'users/show'
 
   # devise_for :users
   devise_for :users, :controllers => { :registrations => :registrations } 
@@ -61,6 +60,8 @@ StarterRubyRails::Application.routes.draw do
   #     resources :products
   #   end
 
+  
+  mount Lockup::Engine, at: '/lockup'
   # # Home page
   # GET     /                                           controllers.Application.index(ref: Option[String])
   root 'application#index'
