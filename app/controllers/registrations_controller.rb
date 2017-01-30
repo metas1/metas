@@ -6,6 +6,15 @@ class RegistrationsController < Devise::RegistrationsController
 
 	def create
 	  super
+
+	  if @user.persisted?
+	  	puts 'Sending email to admin'
+	    AdminMailer.new_registration_alert(@user).deliver_now
+	    # flash[:notice] = "Welcome to METAS!"
+	  else
+	  	redirect_to :back
+	  end	
+
 	end
 
 	def update

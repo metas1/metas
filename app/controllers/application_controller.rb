@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   # before_action :authenticate_user!
-  # This code makes sure not to allow anyone to view any page other than 'index', unless they are signed in
+  # Req authenticate user when trying to access these views
   before_action :authenticate_user!, :only => [:welcome, :jobs, :resources, :about]
 
   before_action :configure_permitted_parameters, if: :devise_controller?
