@@ -10,4 +10,10 @@ $(document).ready(function(){
 	    $("#temp_display").text(concatenated_string)
 	})
 
+	$("#clear-filters").click(function(){
+		$(this).closest("form").find("select").val("-1");
+		e.preventDefault();
+		console.log("filter test")
+	})
+
 });

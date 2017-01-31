@@ -107,6 +107,17 @@ input, button, select, textarea {        //search bar
   margin-bottom: 1.2em;
   letter-spacing: 1px;
 }
+.filter-reset-btn{
+  color: $metas-celeste;
+  background-color: transparent;
+  width: 5em;
+  margin-bottom: 1.2em;
+  letter-spacing: 1px;
+  text-decoration: underline;
+}
+.filter-reset-btn:hover{
+  color: $lighter-celeste;
+}
 .job-search-btn:hover, .filter-search-btn:hover{
   color: white;
   background-color: $lighter-celeste;
@@ -325,9 +336,12 @@ input, button, select, textarea {        //search bar
   color: $metas-purple;
 }
 .search-result li a{
-  color: black;
+  color: $metas-purple;
   text-decoration: underline;
   list-style-type: bullet;
+}
+.search-result li a:hover{
+  color: $lighter-purple;
 }
 .search-page ul li{
   list-style-type: circle !important;
@@ -340,14 +354,15 @@ input, button, select, textarea {        //search bar
 #footer a{
   text-transform: uppercase;
   }
-  a:hover{
+#footer a:hover{
     color: $metas-celeste;
   }
-  h4{
+#footer h4{
     font-weight: 600;
+    letter-spacing: 1.3px;
     color: $metas-celeste;
   }
-  li a{
+#footer li a{
     color: #FFFAFA;
     font-size: 14px;
     font-weight: 100;
@@ -355,8 +370,9 @@ input, button, select, textarea {        //search bar
     letter-spacing: 1px;
     list-style-type: none;
     cursor: pointer;
+    font-family: 'Raleway', sans-serif;;
   }
-  li{
+#footer li{
     list-style-type: none;
   }
 #social-icons-display a{

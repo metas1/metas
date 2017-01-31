@@ -2,8 +2,8 @@
 <div class="container-fluid">
   <div class="row" align="center">
 
-<div id="temp_display"></div>
-    <form action="/search" method="GET">
+    <div id="temp_display"></div>
+    <form id="filters-form" action="/search" method="GET">
       <select class="type-filter">
         <option value="" type="text">Type of Employment</option>
         <option value="full time" type="text">Full-Time</option>
@@ -27,6 +27,7 @@
       </select>
 
       <button id="submit-filters" name="q" type="submit" value="submit" class="btn filter-search-btn">Go</button>
+      <button class="btn filter-reset-btn" id="clear-filters" type="reset" value="Reset /" >Clear filters</button>
     </form> 
   </div>    
 </div>
