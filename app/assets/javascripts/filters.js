@@ -1,17 +1,13 @@
 $(document).ready(function(){
-	var options = $('.states-filter');
 
-	options.change(function(){
-	    // $(this) references the current <select>
-	    var stateOption = $(this).val();
-	    console.log(stateOption);
-	    // console.log($(this).val());
+	$(".type-filter, .location-filter").change(function(){
+	    concatenated_string = $(".type-filter").val() + "+" + $(".location-filter").val();
+	    console.log($(".type-filter").val() + " " + $(".location-filter").val())
 
-	    $('#submit-filters').click(function(){
-	       $(this).val(stateOption)
-	       console.log(this.val(stateOption) + " " + "state");
-	    })
+	    $("#submit-filters").val(concatenated_string);
+	    // console.log($("#submit-filters").val(concatenated_string));
+
+	    $("#temp_display").text(concatenated_string)
 	})
-	// var submitDefaultVal = $('#submit-filters')
-	// console.log(submitDefaultVal.val() + " " + "default is submit");
+
 });
