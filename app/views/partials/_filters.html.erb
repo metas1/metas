@@ -1,30 +1,32 @@
-<div class="container-fluid filters-wrapper">
-  <div class="row">
-      <div class="dropdown col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-12 col-sm-offset-1">
-        <button class="btn filter-menu dropdown-toggle" type="button" data-toggle="dropdown">Type of Employment
-        <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-          <li><a href="#">Full-Time</a></li>
-          <li><a href="#">Part-Time</a></li>
-        </ul>
-      </div>
-      <div class="dropdown col-lg-4 col-lg-offset-0  col-md-4 col-md-offset-0 col-sm-12 col-sm-offset-1">
-        <button class="btn filter-menu dropdown-toggle" type="button" data-toggle="dropdown">Income Range
-        <span class="caret"></span></button>
-        <ul class="dropdown-menu">`
-          <li><a href="#">$10-$20</a></li>
-          <li><a href="#">$21-$30</a></li>
-          <li><a href="#">$31-$40</a></li>
-        </ul>
-      </div>
-      <div class="dropdown col-lg-4 col-lg-offset-0  col-md-4 col-md-offset-0 col-sm-12 col-sm-offset-1">
-        <button class="btn filter-menu dropdown-toggle" type="button" data-toggle="dropdown">Location
-        <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-          <li><a href="#">New York</a></li>
-          <li><a href="#">California</a></li>
-        </ul>
-      </div> 
+
+<div class="container-fluid">
+  <div class="row" align="center">
+
+<div id="temp_display"></div>
+    <form action="/search" method="GET">
+      <select class="type-filter">
+        <option value="" type="text">Type of Employment</option>
+        <option value="full time" type="text">Full-Time</option>
+        <option value="part time" type="text">Part-Time</option>
+        <option value="full time part time" type="text">Full-Time Part-Time</option>
+        <option value="contract" type="text">Contract</option>
+      </select>
+
+      <select class="pay-range-filter">
+        <option value="" type="text">Income Range</option>
+        <option value="5-10" type="text">$5 - $10</option>
+        <option value="11-20" type="text">$11 - $20</option>
+        <option value="21-30" type="text">$21 - $30</option>
+        <option value="31-40" type="text">$31 - $40</option>
+      </select>
+
+      <select class="location-filter">
+        <option value="" type="text">Location</option>
+        <option value="new york" type="text">New York</option>
+        <option value="california" type="text">California</option>
+      </select>
+
+      <button id="submit-filters" name="q" type="submit" value="submit" class="btn filter-search-btn">Go</button>
+    </form> 
   </div>    
 </div>
-

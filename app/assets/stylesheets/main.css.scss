@@ -97,7 +97,17 @@ input, button, select, textarea {        //search bar
   margin-bottom: 0.5em;
   letter-spacing: 1px;
 }
-.job-search-btn:hover{
+.filter-search-btn{
+  color: white;
+  font-weight: 500;
+  font-size: 1.3em;
+  font-style: normal;
+  background-color: #05d5fa;
+  width: 3em;
+  margin-bottom: 1.2em;
+  letter-spacing: 1px;
+}
+.job-search-btn:hover, .filter-search-btn:hover{
   color: white;
   background-color: $lighter-celeste;
 }
