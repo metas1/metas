@@ -4,8 +4,8 @@ $metas-purple: #261762;
 $lighter-purple: #36218b;
 $metas-green: #00F7A8;
 $customhr: #8679b9;
-// $navbar-font: 'Lato', sans-serif;
-$body-font: 'Raleway', sans-serif;
+// $navbar-font: 'Raleway', sans-serif;
+$body-font: 'Lato', sans-serif;
 
 html{
   height: 100%;
@@ -117,9 +117,10 @@ input, button, select, textarea {        //search bar
   font-size: 1em;
   font-style: normal;
   background-color: $metas-purple;
-  width: 7em;
-  margin-top: -4em;
+  width: 10em;
   letter-spacing: 1px;
+  margin-top: 4em;
+  margin-right: -8.4em;
 }
 .job-apply-btn:hover{
   background-color: $lighter-purple;
@@ -251,6 +252,7 @@ input, button, select, textarea {        //search bar
 }
 #services-resources-page p {
   color: $lighter-purple;
+  font-family: 'Lato', sans-serif;
   padding-left: 1em;
 }
 
@@ -406,7 +408,7 @@ nav {border-radius: 0 !important; }
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 20px;
+  padding: 10px 30px;
 }
 .navbar-default .nav > li > a {
   font-family: 'Lato', sans-serif;
@@ -462,12 +464,15 @@ nav {border-radius: 0 !important; }
   cursor: pointer;
 }
 #userNavBar {
-  padding: 2em 0 1em 0em;
+  padding: 2.5em 0 1em 0em;
   margin-top: 0em;
   background-color: $metas-purple;
 }
 #userNavBar a:hover {
   color: $metas-celeste;
+}
+#userNavBar h6 a:hover {
+  color: $metas-green;
 }
 #userNavBar .navbar-name{
   border: 1px white solid;
@@ -475,43 +480,60 @@ nav {border-radius: 0 !important; }
 }
 #userNavBar .navbar-name a{
   text-transform: capitalize;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 600;
 }
 #userNavBar h7{
   color: white;
+  margin-top: 0em;
   margin-bottom: 0em;
   position: relative;
-  left: 30%;
-  margin-top: 10px;
+  left: 37%;
+  width: 30em;
 }
 #userNavBar ul li:nth-child(5) a {
  color: white;
  font-family: 'Lato', sans-serif;
 }
-// #userNavBar ul li:nth-child(4) a:hover {
-//  color: $metas-celeste;
-//  font-size: 3em;
-// }
 #userNavBar ul li:nth-child(5) a:hover {
- color: $metas-celeste;
+  color: $metas-celeste;
 }
 .active a{
-    color: red !important;
+  color: red !important;
+}
+#userNavBar .navbar-name{
+  color: white;
+  background-color: $metas-purple;
+  font-weight: 500;
+  font-size: 1em;
+  border-radius: 8px;
+  margin-bottom: 5px;
 }
 #guestNavBar h7{
   color: $metas-purple;
   margin-top: 1em;
   margin-bottom: 0em;
-  left: 5%;
+  position: relative;
+  left: 27%;
 }
 #welcomeNavBar h6 a{
-  color: turquoise;
+  color: $metas-celeste;
   position: relative;
   text-decoration: underline;
-  left: 78%;
+  font-size: 1.2em;
+  left: 75%;
 }
-#welcomeNavBar ul li:nth-child(7) a {
+#userNavBar h6 a{
+  color: $metas-celeste;
+  position: relative;
+  text-decoration: underline;
+  left: 74%;
+  font-size: 1.2em;
+}
+#welcomeNavBar h6 a:hover {
+  color: $metas-green;
+}
+#welcomeNavBar ul li:nth-child(6) a {
  color: white;
  font-family: 'Lato', sans-serif;
  padding: 0.7em;
@@ -519,12 +541,12 @@ nav {border-radius: 0 !important; }
  padding-left: -4em;
  text-transform: capitalize;
 }
-#welcomeNavBar .nav > li > a {
-  padding-right: 10px;
-}
-#userNavBar .nav > li > a {
-  padding-right: 12px;
-}
+// #welcomeNavBar .nav > li > a {
+//   padding-right: 10px;
+// }
+// #userNavBar .nav > li > a {
+//   padding-right: 12px;
+// }
 #welcomeNavBar h7{
   color: $metas-purple;
   padding: 2px 2px;
@@ -532,6 +554,7 @@ nav {border-radius: 0 !important; }
   margin-bottom: 0em;
   position: relative;
   left: 35%;
+  width: 30em;
 }
 #welcomeNavBar .navbar-name{
   color: white;
@@ -593,8 +616,8 @@ nav {border-radius: 0 !important; }
 .metas-user-navbar-logo{
   background-image: url(logo-de-metas.png);
   background-repeat: no-repeat;
-  width: 200px;
   background-size: contain;
+  max-width: 150%;
   // background-color: white;
 }
 .metas-guest-navbar-logo{
@@ -612,7 +635,7 @@ nav {border-radius: 0 !important; }
     border-color: transparent;
   }
   .metas-user-navbar-logo{
-    width: 200px !important;
+    width: 500px !important;
     background-size: contain;
     margin-bottom: 0em !important;
     // background-color: green;

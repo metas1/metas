@@ -11,11 +11,11 @@
     <tr>
         <td><h2><%= doc.fragments["jobtitle"].as_html_safe(link_resolver()) %></h2>
         <div class="pay pull-right">$<%= doc.fragments["pay"].as_html_safe(link_resolver()) %>/hr</div>
+        <div><a class="btn job-apply-btn pull-right" data-toggle="modal" data-target="#job-modal-<%= doc.id %>">APPLY</a></div>
         <h3><%= doc.fragments["location"].as_html_safe(link_resolver()) %></h3>
         <h4><%= doc.fragments["city"].as_html_safe(link_resolver()) %></h4>
         <h4><%= doc.fragments["description"].as_html_safe(link_resolver()) %></h4>
-        <%= image_tag("clock.jpg", :class => "clock") %><%= doc.fragments["hours"].as_html_safe(link_resolver()) %>
-        <div><a class="btn job-apply-btn pull-right" data-toggle="modal" data-target="#job-modal-<%= doc.id %>">APPLY</a></div></td>
+        <%= image_tag("clock.jpg", :class => "clock") %><%= doc.fragments["hours"].as_html_safe(link_resolver()) %></td>
     </tr>
   </table>
    <!-- -------APPLY TO JOB MODAL ------------>
