@@ -4,11 +4,18 @@
 </form> 
 
 
-<form>
-<select action="/search" method="GET">
-  <option type="text" name="q" value="california" class="col-lg-offset-1 col-lg-8 col-md-8 col-sm-8 col-xs-8">California</option>
-  <option type="text" name="q" value="writer" class="col-lg-offset-1 col-lg-8 col-md-8 col-sm-8 col-xs-8">Writer</option>
-  <input type="submit" class="btn job-search-btn" value="SEARCH"> 
-</select > 
 
-</form>
+<form id="filters-form" action="/search" method="GET">
+	<select class="states-filter">
+		<option value="" disabled selected>Type of Employment</option>
+	  <option value="full time" type="text">Full-Time</option>
+	  <option value="part time" type="text">Part-Time</option>
+	</select>
+
+	<select class="states-filter">
+		<option value="" disabled selected>Location</option>
+	<option value="new york" type="text">New York</option>
+	<option value="california" type="text">California</option>
+	</select>
+  <button id="submit-filters" name="q" type="submit" value="submit">Go</button>
+</form>	

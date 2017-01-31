@@ -2,7 +2,7 @@
   <%= render 'partials/flash' %>
   <%= render 'partials/jobappreceived' %>
   <div class="container">
-  <%= link_to "Back", application_jobs_path() %>
+  <a href="javascript:history.back()">Back</a>
   	<article id="<%= @document.id %>" data-wio-id="<%= @document.id %>">
       <table class="table table-striped">
         <tr>
