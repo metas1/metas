@@ -2,7 +2,6 @@
 <div class="container-fluid">
   <div class="row" align="center">
 
-    <div id="temp_display"></div>
     <form id="filters-form" action="/search" method="GET">
       <select class="type-filter">
         <option value="" type="text">Type of Employment</option>
@@ -14,10 +13,10 @@
 
       <select class="range-filter">
         <option value="" type="text">Income Range</option>
-        <option value="5-10" type="text">$5 - $10</option>
-        <option value="11-20" type="text">$11 - $20</option>
-        <option value="21-30" type="text">$21 - $30</option>
-        <option value="31-40" type="text">$31 - $40</option>
+        <option value="5-10" type="range">$5 - $10</option>
+        <option value="11-20" type="range">$11 - $20</option>
+        <option value="21-30" type="range">$21 - $30</option>
+        <option value="31-40" type="range">$31 - $40</option>
       </select>
 
       <select class="location-filter">
