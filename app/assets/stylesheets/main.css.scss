@@ -387,20 +387,39 @@ input, button, select, textarea {        //search bar
   background-repeat: no-repeat;
   margin-left: 1em;
 }
+.fb-icon:hover {
+   background-image: url('black-fb-icon.svg');
+}
+
+
 .ig-icon{
   background-image: url(ig-icon.svg);
   height: 30px;
   width: 30px;
   background-repeat: no-repeat;
 }
+.ig-icon:hover {
+   background-image: url('black-ig-icon.svg');
+}
+
+
 .in-icon{
   @extend .ig-icon;
   background-image: url(in-icon.svg);
 }
+.in-icon:hover {
+   background-image: url('black-in-icon.svg');
+}
+
+
 .tw-icon{
   @extend .ig-icon;
   background-image: url(tw-icon.svg);
 }
+.tw-icon:hover {
+   background-image: url('black-fb-icon.svg');
+}
+
 .metas-logo-footer {
   background-image: url(logo-de-metas-footer.png);
   background-repeat: no-repeat;
