@@ -5,7 +5,7 @@ class ContactformsController < ApplicationController
 		@contactform.request = request
 
 		if @contactform.deliver 
-			flash[:notice] = 'Your email has been sent!'
+			flash[:success] = 'Well done! Your message was successfully sent.'
 			redirect_to :back
 		else @contactform
 			flash[:error] = "There has been an error and your email wasn't sent. Please try again."

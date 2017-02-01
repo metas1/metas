@@ -76,6 +76,26 @@ input, button, select, textarea {        //search bar
     margin-left: -20px;
     margin-top: -0.5em;
 }
+// **************** BOOTSTRAP FLASH **************** //
+.alert-danger, .alert-success{
+  margin: 0em 1em;
+  position: relative;
+  z-index: 2000;
+}
+.success-close{
+  width: 1em;
+  margin-top: -0.7em; 
+}
+.error-close{
+  width: 1em; 
+  margin-top: -0.7em;
+}
+.error-close span, .success-close span{
+  color: #212121;
+}
+.error-close span:hover, .success-close span:hover{
+  color: #2E2E2E;
+}
 // **************** JOBS PAGE **************** //
 
 .jobs-page input, button, select, textarea {        //search bar 
@@ -451,7 +471,7 @@ input, button, select, textarea {        //search bar
 nav {border-radius: 0 !important; }
 
 .navbar-default {
-  z-index: 1;
+  // z-index: 1;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
@@ -461,6 +481,7 @@ nav {border-radius: 0 !important; }
 }
 .nav > li > a {
   position: relative;
+  z-index: 1;
   display: block;
   padding: 10px 30px;
 }

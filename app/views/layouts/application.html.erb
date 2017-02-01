@@ -17,14 +17,24 @@
   <% else %>  
     <%= render 'guestnavbar'  unless current_page?(application_welcome_path)%> 
   <% end %>
-<!-- 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p> -->
+
+  <% if flash[:success] %>
+    <p class="alert alert-success alert-dismissible" role="alert">
+      <button type="button" class="close success-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">X</span></button>
+      <strong>Well done!</strong> Your message was successfully sent.
+    </p>
+  <% end %>
+
+  <% if flash[:error] %>
+    <p class="alert alert-danger alert-dismissible" role="alert">
+      <button type="button" class="close error-close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">X</span></button>
+      <strong>Oh snap!</strong> Your email was not sent, please try again.
+    </p>
+  <% end %>
 
 <%= yield %>
 
 <%= render 'partials/signup' %>
-
 <%= render 'partials/login' %>
 
 <% if user_signed_in? %>
