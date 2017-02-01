@@ -1,7 +1,8 @@
 class Contactform < MailForm::Base
   
-  attribute :full_name,      :validate => true
+  attribute :first_name,      :validate => true
   attribute :email,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
+  attribute :phone_number,      :validate => true
   attribute :body,      :validate => true
 
 
@@ -9,7 +10,7 @@ class Contactform < MailForm::Base
     {
       :subject => "Contact Metas",
       :to => "karen.s.sanchez08@gmail.com",
-      :from => %("#{full_name}" <#{email}>)
+      :from => %("#{first_name}" <#{email}>)
     }
   end
 end

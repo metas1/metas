@@ -162,7 +162,7 @@ input, button, select, textarea {        //search bar
   font-weight: 500;
 }
 .btn-custom{
-  width: 250px;
+  // width: 250px;
 }
 .job-modal-body{
   margin-left: 2em;
@@ -406,6 +406,24 @@ input, button, select, textarea {        //search bar
   height: 100px;
   width: 380px;
   background-size: contain;
+}
+// **************** CONTACT FORM **************** //
+#contactus-modal label {
+  display: inline-block;
+  max-width: 100%;
+  font-weight: 100;
+  color: #35a4a7;
+  font-size: 1.2em;
+}
+.contactus-modal-body{
+  margin-left: 2em;
+}
+.contactus-modal-body input, button, select, textarea {
+  font-family: 'Raleway', sans-serif;
+  font-size: inherit;
+  line-height: inherit;
+  font-style: italic;
+  width: 100%;
 }
 
 // **************** NAVBARS **************** //

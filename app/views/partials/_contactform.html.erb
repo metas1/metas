@@ -5,21 +5,30 @@
       <div class="modal-header">
         <div type="button" class="close" data-dismiss="modal">X</div>
       </div>
-      <div class="modal-body job-modal-body">
+      <div class="modal-body contactus-modal-body">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-sm-9 col-sm-offset-1 col-xs-offset-0">
+            <div class="col-sm-11 col-sm-offset-0 col-xs-offset-0">
               <h2 class="apply-to-job-title">CONTACT US</h2>
               <br /> 
               <div align="center">
-                <p>Contact us to learn more about Metas.</p>
+                <p>Get in touch with us with any questions or comments.</p>
                   <%= simple_form_for @contactform do |f| %>
-                    <%= f.input :full_name, :required => true, :placeholder => 'Enter your full name', label: false, :input_html => { autocomplete: 'off' } %>
-                    <%= f.input :email, :required => true, :placeholder => 'Enter your email', label: false, :input_html => { autocomplete: 'off' } %>
-                    <%= f.input :body, :required => true, :placeholder => 'How can we help you?', label: false, :required => true, :input_html => {:style => 'height: 100px'}%>
+                    <label>Name</label>
+                    <%= f.input :first_name, :required => true, :placeholder => 'First Name', label: false, :input_html => { autocomplete: 'off', :style => 'width: 275px' } %>
+                    <label>E-mail address</label>
+                    <%= f.input :email, :required => true, :placeholder => 'Your Email', label: false, :input_html => { autocomplete: 'off', :style => 'width: 275px' } %>
+                    <label>Phone Number</label>
+                    <%= f.input :phone_number, :required => true, :placeholder => '(  ) -', label: false, :input_html => { autocomplete: 'off', :style => 'width: 275px' } %>
+                    <label>Additional Information</label>
+                    <%= f.input :body, :required => true, :placeholder => 'Availability, questions, concerns', label: false, :required => true, :input_html => {:style => 'height: 100px'}%>
                     <div>
-                    <%= f.button :submit, 'SUBMIT', :class=> "btn btn-custom btn-in-modals sub-application-btn" %>
+                    <div class="col-lg-8 col-lg-offset-2">
+                    <%= f.button :submit, 'SUBMIT', :class=> "btn btn-in-modals" %>
+                    </div>
+                    <div class="col-lg-12 col-lg-offset-0">
                     <p class="assistance">For immediate assistance, please call 212-888-8888</p>
+                    </div>
                   </div>
                 <% end %>
               </div>
