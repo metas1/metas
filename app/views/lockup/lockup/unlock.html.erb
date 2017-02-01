@@ -1,0 +1,44 @@
+<div class="lockup-logo">
+  <%= image_tag("logo-de-metas.png", class: "responsive") %>
+</div> 
+
+
+<div class="middle-section">
+    <% if @wrong %>
+      <div class="hmm">
+        <h3>Hmm&hellip; that doesn&#8217;t seem right. Try again?</h3>
+      </div>
+    <% end %>
+
+    <%= form_for :lockup, url: { action: 'unlock' } do |form| %>
+      <% unless @wrong == true %>
+      <div id="label">
+        <label>Enter password</label>
+        <p><%= form.password_field "codeword", placeholder: "Password" %></p>
+      </div>  
+      <% else %>
+        <p><%= form.password_field "codeword", value: @codeword, class: 'nope' %></p>
+      <% end %>
+        
+      <% if lockup_hint_present? %>
+        <p id='hint_icon'>?</p>
+        <p id='hint'><%= lockup_hint_display %></p>
+      <% end %>
+
+      <% if params[:return_to].present? %>
+        <%= form.hidden_field "return_to", value: params[:return_to] %>
+      <% elsif @return_to.present? %>
+        <%= form.hidden_field "return_to", value: @return_to %>
+      <% end %>
+        
+      <p><%= button_tag "ENTER" %></p>
+    <% end %>
+</div>    
+
+<div class="social-section" align="center">
+    <h4 class="lockup-h4">STAY CONNECTED</h4>
+    <%= link_to image_tag("fb-icon.svg", width: 30, height: 30), "http://www.facebook.com"  %>
+    <%= link_to image_tag("ig-icon.svg", width: 30, height: 30), "http://www.instagram.com"  %>
+    <%= link_to image_tag("in-icon.svg", width: 30, height: 30), "http://www.linkedin.com"  %>
+    <%= link_to image_tag("tw-icon.svg", width: 30, height: 30), "http://www.twitter.com"  %>
+</div>
