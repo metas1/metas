@@ -10,7 +10,7 @@
   <table class="table table-striped">
     <tr>
         <td><h2><%= doc.fragments["jobtitle"].as_html_safe(link_resolver()) %></h2>
-        <div class="pay pull-right">$<%= doc.fragments["pay"].as_html_safe(link_resolver()) %>/hr</div>
+        <div class="pay pull-right"><%= doc.fragments["pay-range"].as_html_safe(link_resolver()) %>/hr</div>
         <div><a class="btn job-apply-btn pull-right" data-toggle="modal" data-target="#job-modal-<%= doc.id %>">APPLY</a></div>
         <h3><%= doc.fragments["location"].as_html_safe(link_resolver()) %></h3>
         <h4><%= doc.fragments["city"].as_html_safe(link_resolver()) %></h4>

@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
-	$(".type-filter, .location-filter").change(function(){
-	    concatenated_string = $(".type-filter").val() + "+" + $(".location-filter").val();
+	$(".type-filter, .pay-range, .location-filter").change(function(){
+	    concatenated_string = $(".type-filter").val() + "+" + $(".range-filter").val() + "+" + $(".location-filter").val();
 	    console.log($(".type-filter").val() + " " + $(".location-filter").val())
 
 	    $("#submit-filters").val(concatenated_string);

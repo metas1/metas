@@ -131,7 +131,7 @@ input, button, select, textarea {        //search bar
   width: 10em;
   letter-spacing: 1px;
   margin-top: 4em;
-  margin-right: -8.4em;
+  margin-right: -10.5em;
 }
 .job-apply-btn:hover{
   background-color: $lighter-purple;
@@ -160,9 +160,6 @@ input, button, select, textarea {        //search bar
 .jobs-page h4, .document-page h4{
   color: #696969;
   font-weight: 500;
-}
-.btn-custom{
-  // width: 250px;
 }
 .job-modal-body{
   margin-left: 2em;
@@ -205,7 +202,11 @@ input, button, select, textarea {        //search bar
   text-align: center;
   font-size: 3.5em;
 }
-.pay{
+.jobs-page .pay span, .document-page .pay span{
+  color: $metas-purple;
+  font-weight: 900;
+}
+.jobs-page .pay, .document-page .pay {
   color: $metas-purple;
   font-size: 2em;
   font-weight: 900;
