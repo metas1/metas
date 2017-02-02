@@ -1,7 +1,6 @@
 <div class="container jobs-page">
   <%= render 'partials/jobappreceived' %>
   <%= render 'partials/searchbar' %>
-  <%#= render 'partials/flash' %>
   <br />      
   <%= render 'partials/filters' %>
   <%= render 'partials/totalresults' %>
@@ -36,15 +35,15 @@
                     <%= simple_form_for @jobemail, remote: true do |f| %>
                       <%= f.label :Phone_number %>
                       <%= f.input :phone_number, :placeholder => '  (   )   -', :required => true, :id => 'phonenumber', :label => '', :input_html => {:style => 'width: 250px'}, :input_html => { autocomplete: 'off' }  %>
-                      <%= f.input :additional_information, :placeholder => 'Availability, questions, concerns', :required => true, :label => 'Additional Information', :input_html => {:style => 'height: 100px'}%>
+                      <%= f.input :additional_information, :placeholder => 'Availability, questions, concerns', :required => true, :id => 'additional_info', :label => 'Additional Information', :input_html => {:style => 'height: 100px'}%>
                       <%= f.hidden_field :first_name, :required => true, :value => current_user.first_name %>
                       <%= f.hidden_field :last_name, :required => true, :value => current_user.last_name %>
                       <%= f.hidden_field :email, :required => true, :value => current_user.email %>
                       <%= f.hidden_field :job_title, :required => true, :value =>  doc.fragments["jobtitle"].as_html_safe(link_resolver()) %>
                       <%= f.hidden_field :job_id, :required => true, :value =>  doc.id  %>
                       <div class="col-lg-8 col-lg-offset-2">
-                      <%= f.button :submit, 'SUBMIT', :class=> "btn btn-custom btn-in-modals sub-application-btn" %>
-                      <%#= f.button :submit, 'SUBMIT', :class=> "btn btn-custom btn-in-modals sub-application-btn", :disabled => "disabled" %>
+                      <%#= f.button :submit, 'SUBMIT', :class=> "btn btn-in-modals apply-submit", :disabled => "disabled" %>
+                      <%= f.button :submit, 'SUBMIT', :class=> "btn btn-in-modals apply-submit" %>
                       </div>
                       <div class="col-lg-12 col-lg-offset-0">
                       <p class="assistance">For immediate assistance, please call 212-888-8888</p>
@@ -61,8 +60,7 @@
   </div>
   <% end %>
   <%= paginate @documents %>
-</div><!-- container jobs-page -->
-
+  </div>
 <%#= doc.fragments["jobtitle"].as_html_safe(link_resolver()) %>
 <!-- document id:<%#= doc.id %> -->
 <!-- user id:<%#= current_user.id %>   -->

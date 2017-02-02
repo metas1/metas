@@ -5,9 +5,15 @@ class JobemailsController < ApplicationController
 		@jobemail.request = request
 
 		if @jobemail.deliver 
-			# flash[:notice] = "Your email has been sent"
+			# flash[:success] = flash
+			# redirect_to :back
 		else @jobemail
-			# flash[:error] = "There has been an error"
+			# flash[:error] = flash
+			# redirect_to :back
+		end	
+		respond_to do |format|
+		  format.html
+		  format.js
 		end
 	end	
 end
