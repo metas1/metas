@@ -1,9 +1,7 @@
 StarterRubyRails::Application.routes.draw do
 
-  # devise_for :users
   devise_for :users, :controllers => { :registrations => :registrations } 
   resources :users
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -62,11 +60,28 @@ StarterRubyRails::Application.routes.draw do
 
   
   mount Lockup::Engine, at: '/lockup'
-  # # Home page
   # GET     /                                           controllers.Application.index(ref: Option[String])
-  root 'application#index'
 
-  get 'application/welcome'
+
+  authenticated :user do
+    devise_scope :user do
+      root to: "application#welcome", :as => "application/welcome"
+    end
+  end
+
+  unauthenticated do
+    devise_scope :user do
+      root to: "application#index", :as => "application/index"
+    end
+  end
+
+  # authenticated :user do
+  #   root :to => "application#index"
+  # end
+
+  # root :to => "application#index"
+
+  # get 'application/welcome'
 
   get 'application/jobs'
 
