@@ -210,9 +210,15 @@ input, button, select, textarea {        //search bar
   text-align: center;
   font-size: 3.5em;
 }
+.contact-form-title{
+  color: $metas-purple;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100 !important;
+  text-align: center;
+  font-size: 3.5em;
+}
 #updated-modal p{
   color: $lighter-purple;
-  font-family: sans-serif;
   font-weight: 100;
   font-size: 19px;
 }
@@ -254,7 +260,6 @@ input, button, select, textarea {        //search bar
 } 
 #appreceived-modal p{
   color: $metas-purple;
-  font-family: sans-serif;
   font-weight: 100;
   font-size: 19px;
   margin: 1.5em -3em 1em -1em;
@@ -455,12 +460,21 @@ input, button, select, textarea {        //search bar
 .contactus-modal-body{
   margin-left: 2em;
 }
+.contactus-modal-body input{
+  margin-top: 0;
+}
 .contactus-modal-body input, button, select, textarea {
-  font-family: 'Raleway', sans-serif;
   font-size: inherit;
   line-height: inherit;
   font-style: italic;
   width: 100%;
+}
+#contactus-modal p{ 
+  color: $lighter-purple;
+  font-weight: 100;
+  font-size: 19px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
 }
 
 // **************** NAVBARS **************** //
@@ -586,7 +600,7 @@ nav {border-radius: 0 !important; }
   margin-top: 1em;
   margin-bottom: 0em;
   position: relative;
-  left: 27%;
+  left: 10%;
 }
 #welcomeNavBar h6 a{
   color: $metas-celeste;
@@ -605,7 +619,7 @@ nav {border-radius: 0 !important; }
 #welcomeNavBar h6 a:hover {
   color: $metas-green;
 }
-#welcomeNavBar ul li:nth-child(6) a {
+#welcomeNavBar .welcome-link a {
  color: white;
  font-family: 'Lato', sans-serif;
  padding: 0.7em;
@@ -613,12 +627,6 @@ nav {border-radius: 0 !important; }
  padding-left: -4em;
  text-transform: capitalize;
 }
-// #welcomeNavBar .nav > li > a {
-//   padding-right: 10px;
-// }
-// #userNavBar .nav > li > a {
-//   padding-right: 12px;
-// }
 #welcomeNavBar h7{
   color: $metas-purple;
   padding: 2px 2px;
@@ -920,6 +928,15 @@ nav {border-radius: 0 !important; }
     font-size: 1.5em;
     text-align: center;
   }
+  #welcomeNavBar h7 {
+    left: -1.8em;
+  }
+  #userNavBar h7 {
+    left: -1.9em;
+  }
+  .contactus-modal-body{
+    margin-left: 0em;
+  }
   .service-box {
     width: 23em;
     top: 12em;
@@ -935,10 +952,33 @@ nav {border-radius: 0 !important; }
   .job-modal-body{
     margin-left: 0em;
   }
+  .logout-welcome a {
+   color: $metas-purple !important;
+   font-family: 'Lato', sans-serif;
+   padding: 0.7em;
+   font-size: 1.3em !important;
+   padding-left: -4em;
+   text-transform: uppercase !important;
+  }
+  .logout-user a {
+   color: white !important;
+   font-family: 'Lato', sans-serif;
+   padding: 0.7em;
+   font-size: 1.3em !important;
+   padding-left: -4em;
+   text-transform: uppercase !important;
+  }
   #appreceived-modal p{
     text-align: center;
     float: none;
     margin-left: -3em;
+  }
+  .contact-form-title{
+    color: $metas-purple;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100 !important;
+    text-align: center;
+    font-size: 3em;
   }
   .uploadpic-btn{
     font-size: 1em !important;
