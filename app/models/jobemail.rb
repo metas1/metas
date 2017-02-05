@@ -13,7 +13,7 @@ class Jobemail < MailForm::Base
   def headers
     {
       :subject => "Job Inquiry for #{job_title}",
-      :to => "metastest10@gmail.com",
+      :to => "hi@metas.io",
       :from => %("#{first_name}" <#{email}>)
     }
   end
