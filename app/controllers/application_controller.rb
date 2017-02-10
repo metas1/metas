@@ -49,17 +49,6 @@ class ApplicationController < ActionController::Base
     @contactform = Contactform.new
   end
 
-  def guest
-    id = params[:id]
-    slug = params[:slug]
-    @documents = api.all({
-      "page" => params[:page] ? params[:page] : "1",
-      "page_size" => params[:page_size] ? params[:page_size] : 20, 
-      "ref" => ref,
-    }) 
-    @contactform = Contactform.new
-  end  
-
   def resources
     @contactform = Contactform.new
   end  

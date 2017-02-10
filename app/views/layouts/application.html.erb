@@ -14,11 +14,14 @@
 
   <% if user_signed_in? %>
     <%= render 'usernavbar'  unless current_page?(application_welcome_path)%>
-  <% elsif current_page?(application_guest_path)  %>
+  <% elsif current_page?(application_jobs_path) %>
+    <%= render 'jobsGuestnavbar' %>
+  <% elsif current_page?(search_path) %>
     <%= render 'jobsGuestnavbar' %>
   <% else %>  
     <%= render 'guestnavbar'  unless current_page?(application_welcome_path)%> 
   <% end %>
+
 
   <% if flash[:success] %>
     <p class="alert alert-success alert-dismissible" role="alert">

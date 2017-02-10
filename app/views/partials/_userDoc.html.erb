@@ -1,0 +1,56 @@
+  <%= render 'partials/jobappreceived' %>
+  <div class="container">
+  <a href="javascript:history.back()">Back</a>
+    <article id="<%= @document.id %>" data-wio-id="<%= @document.id %>">
+      <table class="table table-striped">
+        <tr>
+          <td><h2><%= @document.fragments["jobtitle"].as_html_safe(link_resolver()) %></h2>
+          <div class="pay pull-right"><%= @document.fragments["pay-range"].as_html_safe(link_resolver()) %>/hr</div>
+          <div><a class="btn job-apply-btn pull-right" data-toggle="modal" data-target="#job-modal-<%= @document.id %>">APPLY</a></div>
+          <h3><%= @document.fragments["location"].as_html_safe(link_resolver()) %></h3>
+          <h4><%= @document.fragments["city"].as_html_safe(link_resolver()) %></h4>
+          <h4><%= @document.fragments["description"].as_html_safe(link_resolver()) %></h4>
+          <%= image_tag("clock.jpg", :class => "clock") %><%= @document.fragments["hours"].as_html_safe(link_resolver()) %></td>
+        </tr>
+      </table>
+    </article>
+  </div>
+
+  <!-- APPLY TO JOB MODAL -->
+  <div id="job-modal-<%=@document.id%>" class="modal fade apply-modal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div type="button" class="close" data-dismiss="modal">X</div>
+        </div>
+        <div class="modal-body job-modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-9 col-sm-offset-1">
+                <h2 class="apply-to-job-title">APPLY</h2>
+                <br /> 
+                <div align="center">
+                  <p class="applytojobmodal">Let us connect you to your next career opportunity.</p>
+                    <%= simple_form_for @jobemail, remote: true do |f| %>
+                      <%= f.label :Phone_number %>
+                      <%= f.input :phone_number, :placeholder => '  (   )   -', :required => true, :id => 'phonenumber', :label => '', :input_html => {:style => 'width: 250px'}, :input_html => { autocomplete: 'off' } %>
+                      <%= f.input :additional_information, :placeholder => 'Availability, questions, concerns', :required => true, :label => 'Additional Information', :input_html => {:style => 'height: 100px'} %>
+                      <%= f.hidden_field :first_name, :required => true, :value => current_user.first_name %>
+                      <%= f.hidden_field :last_name, :required => true, :value => current_user.last_name %>
+                      <%= f.hidden_field :email, :required => true, :value => current_user.email %>
+                      <%= f.hidden_field :job_title, :required => true, :value =>  @document.fragments["jobtitle"].as_html_safe(link_resolver()) %>
+                      <%= f.hidden_field :job_id, :required => true, :value =>  @document.id  %>
+                      <div>
+                      <%= f.button :submit, 'SUBMIT', :class=> "btn btn-in-modals apply-submit", :disabled => "disabled" %>
+                      <p class="assistance">For immediate assistance, please call 212-888-8888</p>
+                    </div>
+                  <% end %>
+                </div>
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- #job-modal -->
