@@ -14,6 +14,8 @@
 
   <% if user_signed_in? %>
     <%= render 'usernavbar'  unless current_page?(application_welcome_path)%>
+  <% elsif current_page?(application_guest_path)  %>
+    <%= render 'jobsGuestnavbar' %>
   <% else %>  
     <%= render 'guestnavbar'  unless current_page?(application_welcome_path)%> 
   <% end %>

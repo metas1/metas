@@ -85,6 +85,8 @@ StarterRubyRails::Application.routes.draw do
 
   get 'application/jobs'
 
+  get 'application/guest'
+
   get 'application/resources'
 
   get 'application/about'

@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   # before_action :authenticate_user!
   # Req authenticate user when trying to access these views
-  before_action :authenticate_user!, :only => [:welcome, :jobs, :resources, :about]
+  before_action :authenticate_user!, :only => [:welcome, :resources, :about]
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
@@ -48,6 +48,17 @@ class ApplicationController < ActionController::Base
     @jobemail = Jobemail.new
     @contactform = Contactform.new
   end
+
+  def guest
+    id = params[:id]
+    slug = params[:slug]
+    @documents = api.all({
+      "page" => params[:page] ? params[:page] : "1",
+      "page_size" => params[:page_size] ? params[:page_size] : 20, 
+      "ref" => ref,
+    }) 
+    @contactform = Contactform.new
+  end  
 
   def resources
     @contactform = Contactform.new

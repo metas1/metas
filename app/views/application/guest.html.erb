@@ -1,0 +1,22 @@
+<div class="container jobs-page">
+  <%#= render 'partials/jobappreceived' %>
+  <%#= render 'partials/searchbar' %>
+  <br />      
+  <%#= render 'partials/filters' %>
+  <%= render 'partials/totalresults' %>
+<!----------- PRISMIC FRAGMENTS ---------->
+<% @documents.each do |doc| %>
+  <table class="table table-striped">
+    <tr>
+        <td><h2><%= doc.fragments["jobtitle"].as_html_safe(link_resolver()) %></h2>
+        <div class="pay pull-right"><%= doc.fragments["pay-range"].as_html_safe(link_resolver()) %>/hr</div>
+        <div><a class="btn pull-right guest-apply-btn" data-toggle="modal" data-target="#signup-modal">APPLY</a></div>
+        <h3><%= doc.fragments["location"].as_html_safe(link_resolver()) %></h3>
+        <h4><%= doc.fragments["city"].as_html_safe(link_resolver()) %></h4>
+        <h4><%= doc.fragments["description"].as_html_safe(link_resolver()) %></h4>
+        <%= image_tag("clock.jpg", :class => "clock") %><%= doc.fragments["hours"].as_html_safe(link_resolver()) %></td>
+    </tr>
+  </table>
+  <% end %>
+  <%= paginate @documents %>
+  </div>
