@@ -12,14 +12,15 @@
 </head>
 <body>
 
+
   <% if user_signed_in? %>
     <%= render 'usernavbar'  unless current_page?(application_welcome_path)%>
   <% elsif current_page?(application_jobs_path) %>
-    <%= render 'jobsGuestnavbar' %>
+    <%= render 'partials/previewNavbar' %>
   <% elsif current_page?(search_path) %>
-    <%= render 'jobsGuestnavbar' %>
+    <%= render 'partials/previewNavbar' %>
   <% else %>  
-    <%= render 'guestnavbar'  unless current_page?(application_welcome_path)%> 
+    <%= render 'guestnavbar'  unless current_page?(application_welcome_path) || current_page?(document_path) %> 
   <% end %>
 
 
