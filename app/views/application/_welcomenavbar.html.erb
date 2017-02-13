@@ -13,12 +13,12 @@
                   Welcome, <%= current_user.first_name %>
                 <% end %></li><br />
                 <li><%= link_to "Jobs", application_jobs_path %></li> 
-                <li><%= link_to "Resources", application_resources_path %></li>
-                <li><%= link_to "About", application_welcome_path %></li>
+                <!-- <li><%= link_to "Resources", application_resources_path %></li> -->
+                <!-- <li><%= link_to "About", application_welcome_path %></li> -->
                 <li class="visible-xs logout-welcome"><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "log_out" %></li>
                 <li class="navbar-name hidden-xs welcome-link"><%=link_to edit_user_registration_path do %>
                   Welcome, <%= current_user.first_name %>
-                <% end %></li><br />
+                <% end %></li><br /> <br />
                 <h6 class="hidden-xs signout"><%= link_to "Not you? Sign out.", destroy_user_session_path, method: :delete, class: "log_out" %></h6>
                 <h7 class="col-md-8 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">Para informaci&#243;n en espa&#241;ol, llama 510-200-8260</h7>
             </ul>
