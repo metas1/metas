@@ -546,7 +546,17 @@ nav {border-radius: 0 !important; }
 #welcomeNavBar{
   margin-top: -0.7em;
   position: absolute;
-  left: 20%;
+  padding-right: -20em;
+  // left: 20%;
+}
+#welcomeNavBar li{
+  left: 5em;
+}
+#guestNavBar li{
+  left: 10em;
+}
+#userNavBar li{
+  left: 10em;
 }
 #guestNavBar ul li a, #welcomeNavBar ul li a{ 
   color: $metas-purple;
@@ -576,7 +586,10 @@ nav {border-radius: 0 !important; }
 #guestNavBar ul li:nth-child(5) a {
   padding: 0.7em 1.3em 0.7em 0.5em; 
 }
-#guestNavBar ul li:nth-child(n+4)  a:hover {
+// #guestNavBar ul li:nth-child(n+4)  a:hover {
+//   color: $metas-celeste; 
+// }
+#guestNavBar ul li:nth-child(n+2)  a:hover {
   color: $metas-celeste; 
 }
 .guestNavBarCursor{
@@ -615,7 +628,7 @@ nav {border-radius: 0 !important; }
   margin-top: 0em;
   margin-bottom: 0em;
   position: relative;
-  left: -20%;
+  left: 15%;
   width: 30em;
 }
 #userNavBar ul li:nth-child(5) a {
@@ -641,7 +654,8 @@ nav {border-radius: 0 !important; }
   margin-top: 1em;
   margin-bottom: 0em;
   position: relative;
-  left: 10%;
+  width: 28em;
+  left: -15%;
 }
 // #userNavBar h6 a{
 //   color: $metas-celeste;
@@ -654,7 +668,7 @@ nav {border-radius: 0 !important; }
   color: $metas-celeste;
   position: relative;
   text-decoration: underline;
-  left: 30%;
+  left: 65%;
   font-size: 1.2em;
 }
 // #welcomeNavBar h6 a{
@@ -669,7 +683,7 @@ nav {border-radius: 0 !important; }
   position: relative;
   text-decoration: underline;
   font-size: 1.2em;
-  left: 27%;
+  left: 49%;
 }
 #welcomeNavBar h6 a:hover {
   color: $metas-green;
@@ -697,8 +711,8 @@ nav {border-radius: 0 !important; }
   margin-top: 0em;
   margin-bottom: 0em;
   position: relative;
-  left: -25%;
-  width: 30em;
+  width: 26em;
+  left: -12%;
 }
 #welcomeNavBar .navbar-name{
   color: white;
@@ -794,12 +808,12 @@ nav {border-radius: 0 !important; }
     border-radius: 0px 0px;
     padding: 0px 0px;
   }
-  #guestNavBar ul li:nth-child(n+4) a {
+  #guestNavBar ul li:nth-child(n+2) a {
     color: $metas-purple !important;
     font-size: 1.3em;
     font-family: 'Lato', sans-serif;
     font-weight: 900;
-    padding: 0.7em 0.5em 0.7em 1.3em;
+    padding: 0.7em 0.5em 0.7em 1em;
     margin-top: 0.2em;
   }
   .nav > li > a {
@@ -821,22 +835,40 @@ nav {border-radius: 0 !important; }
     left: 0%;
     margin-top: -1em;
   }
-  #guestNavBar h7, #welcomeNavBar h7{
+  #guestNavBar h7{
     color: $metas-purple;
     text-align: center;
     padding: 0em 0em;
     left: 0;
     margin-top: -1em;
+    width: 25.5em;
   }
-  .jobsGuestNavBar h7{
+  #welcomeNavBar h7{
+    color: $metas-purple;
+    text-align: center;
+    padding: 0em 0em;
+    left: 0;
+    margin-top: -1em;
+    width: 29em;
+  }
+  #welcomeNavBar li {
+    left: 0em;
+  }
+  #userNavBar li {
+    left: 0em;
+  }
+  .previewNavBar h7{
     left: -8% !important;
+  }
+  .previewNavBar li{
+    left: 5em;
   }
   #welcomeNavBar .navbar-name{
     color: white;
     font-family: 'Lato', sans-serif;
     background-color: $metas-celeste;
     font-weight: 900;
-    font-size: 1.5em;
+    font-size: 1em;
     padding: 2em 0.5em 1em 0em;
     border-radius: 0px;
     margin: -19px 0px;
@@ -1000,6 +1032,9 @@ nav {border-radius: 0 !important; }
   }
   #userNavBar h7 {
     left: -1.9em;
+  }
+  #guestNavBar li{
+    left: 0;
   }
   .contactus-modal-body{
     margin-left: 0em;
