@@ -997,6 +997,9 @@ nav {border-radius: 0 !important; }
     padding: 0.7em 0.5em 0.7em 1.3em;
     margin-top: 0.2em;
   }
+  #guestNavBar{
+    margin-top: -0.4em;
+  }
   .metas-user-navbar-logo {
     width: 210px !important;
     background-size: contain !important;
@@ -1011,7 +1014,8 @@ nav {border-radius: 0 !important; }
     text-align: center;
   }
   footer{
-    margin-top: 3em;
+    padding-bottom: 6em !important;
+    // margin-top: 3em;
   }
   #social-icons-display{
     position: relative;
