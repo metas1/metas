@@ -41,7 +41,7 @@ class ApplicationController < ActionController::Base
     id = params[:id]
     slug = params[:slug]
     @documents = api.all({
-      "orderings" => '[document.last_publication_date]', 
+      "orderings" => '[document.last_publication_date desc]', 
       "page" => params[:page] ? params[:page] : "1",
       "page_size" => params[:page_size] ? params[:page_size] : 20, 
       "ref" => ref,
