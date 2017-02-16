@@ -15,7 +15,7 @@
           <%= f.email_field :email, placeholder: "Your Email", class: "form-control mb-2 mr-sm-2 mb-sm-0" %>
         </div>
 
-        <div class="field">
+        <div class="field password-field">
           <%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: "form-control mb-2 mr-sm-2 mb-sm-0" %>
           <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %> characters minimum)</em>
