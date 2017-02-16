@@ -3,7 +3,7 @@ $(document).ready(function($){
 	$('.password-field > input').focus(function() {
 	    $(this).attr('placeholder', '6 characters minimum')
 	}).blur(function() {
-	    $(this).attr('placeholder', 'Password Confirmation')
+	    $(this).attr('placeholder', 'Password')
 	})
 
 	// To Disable Submit Button By Default
