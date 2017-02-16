@@ -23,6 +23,7 @@
     <%#= render 'guestnavbar'  unless current_page?(application_welcome_path) || current_page?(document_path) %> 
   <% end %>
 
+  <%= render 'layouts/messages' %>
 
   <% if flash[:success] %>
     <p class="alert alert-success alert-dismissible" role="alert">

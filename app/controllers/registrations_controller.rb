@@ -15,7 +15,7 @@ class RegistrationsController < Devise::RegistrationsController
 	    AdminMailer.new_registration_alert(@user).deliver_now
 	    # flash[:notice] = "Welcome to METAS!"
 	  else
-	  	redirect_to :back
+	  	# redirect_to :back
 	  end	
 
 	end
