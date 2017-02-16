@@ -133,10 +133,11 @@ input, button, select, textarea {        //search bar
 .filter-reset-btn{
   color: $metas-celeste;
   background-color: transparent;
-  width: 5em;
+  width: 6em;
   margin-bottom: 1.2em;
   letter-spacing: 1px;
   text-decoration: underline;
+  padding: 0;
 }
 .filter-reset-btn:hover{
   color: $lighter-celeste;
@@ -249,8 +250,11 @@ input, button, select, textarea {        //search bar
 .jobs-page .text{
   color: grey;
 }
+.table h4{
+  width: 70%;
+}
 .assistance {
-  color: lightgrey !important;
+  color: #4d4d4d !important;
   font-size: 0.9em !important;
   margin-top: 3px;
 }

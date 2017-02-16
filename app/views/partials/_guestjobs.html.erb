@@ -8,7 +8,7 @@
         <div><a class="btn pull-right guest-apply-btn" data-toggle="modal" data-target="#signup-modal">APPLY</a></div>
         <h3><%= doc.fragments["location"].as_html_safe(link_resolver()) %></h3>
         <h4><%= doc.fragments["city"].as_html_safe(link_resolver()) %></h4>
-        <h4><%= doc.fragments["description"].as_html_safe(link_resolver()) %></h4>
+        <h4 class="description-custom-width"><%= doc.fragments["description"].as_html_safe(link_resolver()) %></h4>
         <%= image_tag("clock.jpg", :class => "clock") %><%= doc.fragments["hours"].as_html_safe(link_resolver()) %></td>
     </tr>
   </table>
