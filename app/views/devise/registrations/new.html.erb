@@ -1,51 +1,53 @@
 <!-- DEFAULT SIGN UP FORM -->
 <%= render 'partials/previewNavbar' %>
-<div class="container-fluid signup-form holder">
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4 col-sm-9 col-sm-offset-1">
-    <h2 class="signup-title-modal-form">SIGN UP</h2>
-    <p>for exclusive job opportunities and career resources</p>
-      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= devise_error_messages! %>
+<div class="holder">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 col-sm-9 col-sm-offset-1">
+      <h2 class="signup-title-modal-form">SIGN UP</h2>
+      <p>for exclusive job opportunities and career resources</p>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
 
-        <div class="field">
-          <%= f.text_field :first_name, placeholder: "First Name", class: "form-control mb-2 mr-sm-2 mb-sm-0" %>
-        </div>
+          <div class="field">
+            <%= f.text_field :first_name, placeholder: "First Name", class: "form-control mb-2 mr-sm-2 mb-sm-0" %>
+          </div>
 
-        <div class="field">
-          <%= f.email_field :email, placeholder: "Your Email", class: "form-control mb-2 mr-sm-2 mb-sm-0" %>
-        </div>
+          <div class="field">
+            <%= f.email_field :email, placeholder: "Your Email", class: "form-control mb-2 mr-sm-2 mb-sm-0" %>
+          </div>
 
-        <div class="field">
-          <%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: "form-control mb-2 mr-sm-2 mb-sm-0" %>
-          <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
-          <% end %>
-        </div>
+          <div class="field">
+            <%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: "form-control mb-2 mr-sm-2 mb-sm-0" %>
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %>
+          </div>
 
-        <div class="field">
-          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Password Confirmation", class: "form-control mb-2 mr-sm-2 mb-sm-0" %>
-        </div>
+          <div class="field">
+            <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Password Confirmation", class: "form-control mb-2 mr-sm-2 mb-sm-0" %>
+          </div>
 
-<!--         <div class="checkbox hidden-xs">
-          <label>
-            <input type="checkbox"> I have read <span>Metas Terms and Conditions</span>
-          </label>
-        </div> -->
+  <!--         <div class="checkbox hidden-xs">
+            <label>
+              <input type="checkbox"> I have read <span>Metas Terms and Conditions</span>
+            </label>
+          </div> -->
 
-        <div class="actions">
-          <%= f.submit "SIGN UP", class: "btn btn-in-modals btn-block"  %>
-        </div>
-      <% end %>
+          <div class="actions">
+            <%= f.submit "SIGN UP", class: "btn btn-in-modals btn-block"  %>
+          </div>
+        <% end %>
 
-      <br>
+        <br>
 
-      <%- if controller_name != 'sessions' %>
-        <div class="session-offset">Already a METAS member? <span><a class="guestNavBarCursor open-login" data-toggle="modal" data-target="#login-modal">Sign in</a><span></div><br />
-      <% end -%>
+        <%- if controller_name != 'sessions' %>
+          <div class="session-offset">Already a METAS member? <span><a class="guestNavBarCursor open-login" data-toggle="modal" data-target="#login-modal">Sign in</a><span></div><br />
+        <% end -%>
 
-      <%#= render "devise/shared/links" %>
-      <%#= link_to "Back", root_path %>
+        <%#= render "devise/shared/links" %>
+        <%#= link_to "Back", root_path %>
+      </div>
     </div>
-  </div>
-</div>    
+  </div>  
+  </div>    
