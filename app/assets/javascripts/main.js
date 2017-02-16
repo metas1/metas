@@ -1,18 +1,10 @@
 $(document).ready(function($){
 
-	$(".open-signup").click(function(){
-		$("#login-modal").removeClass("fade").modal("hide");
-	});
-
-	$(".open-login").click(function(){
-		$("#signup-modal").removeClass("fade").modal("hide");
-	});
-
-	$(function() {
-	   $('.alert').delay(500).fadeIn('normal', function() {
-	      $(this).delay(2500).fadeOut();
-	   });
-	});
+	$('.password-field > input').focus(function() {
+	    $(this).attr('placeholder', '6 characters minimum')
+	}).blur(function() {
+	    $(this).attr('placeholder', 'Password Confirmation')
+	})
 
 	// To Disable Submit Button By Default
 	// $("input[type=submit]").attr('disabled','disabled');
