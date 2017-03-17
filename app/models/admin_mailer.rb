@@ -1,6 +1,6 @@
 class AdminMailer < ActionMailer::Base
 
-	default from: 'metastest10@gmail.com'
+	default from: "Metas <hi@metas.io>"
 
 	def new_registration_alert(user)
 		@user = user

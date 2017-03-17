@@ -1,8 +1,21 @@
 <html>
-  <body>
-  <h2>Hi, Tanya. A new user has signed up for an account with METAS! Say hello!</h2>
-  <h3>First name: <%= @user.first_name %></h3>
-  <h3>Email: <%= @user.email %></h3>
-    <%= yield %>
-  </body>
+	<head>
+		<meta content = 'text/html; charset = UTF-8' http-equiv = 'Content-Type' />
+	</head>
+	<body>
+		<h3 style="color:#354a5e;" >Hi, Tanya. A new user has signed up for an account with METAS!</h3>
+		<p>
+		 First name: 
+		 <%= @user.first_name %><br>
+		</p>
+
+		<p>
+		 Email:
+		 <%= @user.email %>
+		</p>
+
+		<p style="color:#354a5e !important;" > Say hello!</p>
+
+		<%= yield %>
+	</body>
 </html>
